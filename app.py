@@ -14,9 +14,8 @@ import apiai
 
 app = Flask(__name__)
 
-# Channel Access Token
+#LINEAPI認證
 line_bot_api = LineBotApi(line_channel_access_token)
-# Channel Secret
 handler = WebhookHandler(line_channel_secret)
 
 
@@ -91,18 +90,16 @@ def handle_text_message(event):
             event.reply_token,
             TextSendMessage(text=msg))
 
-    else: # 聽不懂時的回答
-        msg = "Sorry，I don't understand"
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=msg))
-
+    else: # 聽不懂時的做紀錄
+        f = open(error_message.txt,'a')
+        f.write(event.message.text)
+'''
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     line_bot_api.reply_message(event.reply_token, message)
-
+'''
 import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
