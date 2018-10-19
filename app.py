@@ -49,7 +49,7 @@ def is_alphabet(uchar):
 # ================= API語言客製區 End =================
 
 
-# ================= 先了解使用者的訊息是什麼 Start =================
+# ================= 獲得使用者訊息 =================
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):  
     msg = event.message.text # message from user
