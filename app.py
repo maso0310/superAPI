@@ -74,8 +74,9 @@ def handle_text_message(event):
             event.reply_token,
             buttons_template_message)
 
+    #以下code用來蒐集使用者錯誤的訊息來加強訓練
     elif event.message.text == "讀取錯誤": # 讀取error_text的內容
-        f = open('error_text.txt','r')
+        f = open('error_text.txt','r', encoding='UTF-8')
         print(f.text)
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=f.text))
         f.close()
