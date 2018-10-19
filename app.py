@@ -1,19 +1,25 @@
+#flask(不知道做啥的)
 from flask import Flask, request, abort
 
-from linebot import (
-    LineBotApi, WebhookHandler
-)
-from linebot.exceptions import (
-    InvalidSignatureError
-)
+#開啟各種API認證
+from config import *
+
+#lineAPI
+from linebot import (LineBotApi, WebhookHandler)
+from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
+
+#AI自然語言分析(DialogFlow)
+import apiai
 
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('TNwu7tqho7m8MnMSmG8jpAF8tWl+hzBQzb/JKdbDBJv3HkMAUJiz8uo0nS0hG89tbsjQk8IV02p/v5ChZ1txRKjMlvPufgBPak5Y5AEwJt84wc9Mocg+yeZ8oyRQcfwFKnfmNaNRJR27Qc9r6iY38AdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi(line_channel_access_token)
 # Channel Secret
-handler = WebhookHandler('d184dfc3ec38e22fb7edf6b7275023a8')
+handler = WebhookHandler(line_channel_secret)
+
+
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -29,6 +35,67 @@ def callback():
     except InvalidSignatureError:
         abort(400)
     return 'OK'
+
+# ================= API語言客製區 Start =================
+def is_alphabet(uchar):
+    if ('\u0041' <= uchar<='\u005a') or ('\u0061' <= uchar<='\u007a'):
+        print('English')
+        return "en"
+    elif '\u4e00' <= uchar<='\u9fff':
+        #print('Chinese')
+        print('Chinese')
+        return "zh-tw"
+    else:
+        return "en"
+# ================= API語言客製區 End =================
+
+
+# ================= 先了解使用者的訊息是什麼 Start =================
+@handler.add(MessageEvent, message=TextMessage)
+def handle_text_message(event):  
+    msg = event.message.text # message from user
+    uid = event.source.user_id # user id
+    # 1. 傳送使用者輸入到 dialogflow 上
+    ai_request = ai.text_request()
+    #ai_request.lang = "en"
+    ai_request.lang = is_alphabet(msg)
+    ai_request.session_id = uid
+    ai_request.query = msg
+
+    # 2. 獲得使用者的意圖
+    ai_response = json.loads(ai_request.getresponse().read())
+    user_intent = ai_response['result']['metadata']['intentName']
+
+    # 3. 根據使用者的意圖做相對應的回答
+    if user_intent == "WhatToEatForLunch": # 當使用者意圖為詢問午餐時
+        # 建立一個 button 的 template
+        buttons_template_message = TemplateSendMessage(
+            alt_text="Please tell me where you are",
+            template=ButtonsTemplate(
+                text="Please tell me where you are",
+                actions=[
+                    URITemplateAction(
+                        label="Send my location",
+                        uri="line://nv/location"
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(
+            event.reply_token,
+            buttons_template_message)
+
+    elif user_intent == "WhatToPlay": # 當使用者意圖為詢問遊戲時
+        msg = "Hello, it's not ready"
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=msg))
+
+    else: # 聽不懂時的回答
+        msg = "Sorry，I don't understand"
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=msg))
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
