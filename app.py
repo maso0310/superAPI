@@ -2,7 +2,7 @@
 from flask import Flask, request, abort
 
 #開啟各種API認證
-from config import *
+#from config import *
 
 #lineAPI
 from linebot import (LineBotApi, WebhookHandler)
