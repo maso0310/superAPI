@@ -70,9 +70,12 @@ def handle_text_message(event):
             event.reply_token,
             buttons_template_message)
 
-    elif event.message.text == "error_text": # 當使用者意圖為詢問遊戲時
+    elif event.message.text == "讀取錯誤": # 讀取error_text的內容
         f = open(error_text.txt,'r')
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=f))
+
+    elif event.message.text == "刪除錯誤": # 刪除error_text的內容
+        f = open(error_text.txt,'w')
 
     else: # 聽不懂時的做紀錄
         f = open(error_message.txt,'a')
