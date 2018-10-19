@@ -52,21 +52,6 @@ def is_alphabet(uchar):
 # ================= 獲得使用者訊息 =================
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):  
-    #msg = event.message.text # message from user
-'''
-    uid = event.source.user_id # user id
-    # 1. 傳送使用者輸入到 dialogflow 上
-    ai_request = ai.text_request()
-    #ai_request.lang = "en"
-    ai_request.lang = is_alphabet(msg)
-    ai_request.session_id = uid
-    ai_request.query = msg
-
-    # 2. 獲得使用者的意圖
-    ai_response = json.loads(ai_request.getresponse().read())
-    user_intent = ai_response['result']['metadata']['intentName']
-'''
-    # 3. 根據使用者的意圖做相對應的回答
     if event.message.text == "WhatToEatForLunch": # 當使用者意圖為詢問午餐時
         # 建立一個 button 的 template
         buttons_template_message = TemplateSendMessage(
