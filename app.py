@@ -4,6 +4,9 @@ from flask import Flask, request, abort
 #開啟各種API認證
 #from config import *
 
+#JSON編碼解碼
+import json
+
 #lineAPI
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
@@ -52,7 +55,7 @@ def is_alphabet(uchar):
 # ================= 獲得使用者訊息 =================
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
-    print(event.message.text)
+    print(json.loads.event.message.text)
     if event.message.text == "WhatToEatForLunch": # 當使用者意圖為詢問午餐時
         # 建立一個 button 的 template
         buttons_template_message = TemplateSendMessage(
@@ -72,7 +75,7 @@ def handle_text_message(event):
             buttons_template_message)
 
     elif event.message.text == "讀取錯誤": # 讀取error_text的內容
-        f = open('error_text.txt','r')
+        f = open('error_text.txt','rb')
         print(f.read)
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=f.read))
         f.close()
