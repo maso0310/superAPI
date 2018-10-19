@@ -81,9 +81,8 @@ def handle_text_message(event):
         f.close()
 
     else: # 聽不懂時在error_text做紀錄
-        f = open('error_text.txt','r+')
+        f = open('error_text.txt','a')
         f.write(event.message.text)
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=f.read))
         f.close()
 '''
 # 處理訊息
