@@ -52,7 +52,7 @@ def is_alphabet(uchar):
 # ================= 獲得使用者訊息 =================
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):  
-    msg = event.message.text # message from user
+    #msg = event.message.text # message from user
 '''
     uid = event.source.user_id # user id
     # 1. 傳送使用者輸入到 dialogflow 上
@@ -67,7 +67,7 @@ def handle_text_message(event):
     user_intent = ai_response['result']['metadata']['intentName']
 '''
     # 3. 根據使用者的意圖做相對應的回答
-    if msg == "WhatToEatForLunch": # 當使用者意圖為詢問午餐時
+    if event.message.text == "WhatToEatForLunch": # 當使用者意圖為詢問午餐時
         # 建立一個 button 的 template
         buttons_template_message = TemplateSendMessage(
             alt_text="Please tell me where you are",
@@ -85,7 +85,7 @@ def handle_text_message(event):
             event.reply_token,
             buttons_template_message)
 
-    elif msg == "error_text": # 當使用者意圖為詢問遊戲時
+    elif event.message.text == "error_text": # 當使用者意圖為詢問遊戲時
         f = open(error_text.txt,'r')
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=f))
 
