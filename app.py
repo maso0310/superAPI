@@ -55,7 +55,7 @@ def is_alphabet(uchar):
 # ================= 獲得使用者訊息 =================
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
-    print(json.loads.event.message.text)
+    print(json.loads(event.message.text))
     if event.message.text == "WhatToEatForLunch": # 當使用者意圖為詢問午餐時
         # 建立一個 button 的 template
         buttons_template_message = TemplateSendMessage(
