@@ -1,6 +1,7 @@
 apiai==1.2.3
 certifi==2018.10.15
 chardet==3.0.4
+Flask==1.0.2
 future==0.16.0
 idna==2.7
 line-bot-sdk==1.8.0
