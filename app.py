@@ -76,8 +76,8 @@ def handle_text_message(event):
 
     elif event.message.text == "讀取錯誤": # 讀取error_text的內容
         f = open('error_text.txt','r')
-        print(f.read)
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=f.read))
+        print(f.text)
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=f.text))
         f.close()
 
     elif event.message.text == "刪除錯誤": # 刪除error_text的內容
