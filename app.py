@@ -72,10 +72,11 @@ def handle_text_message(event):
             buttons_template_message)
 
     elif event.message.text == "讀取錯誤": # 讀取error_text的內容
-        f = open('error_text.txt','r')
+        f = open('error_text.txt','rb')
+        print(f)
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=f))
 
-    elif event.message.text == "刪除錯誤": # 刪除error_text的內容
+    elif event.message.text == "刪除錯誤":
         f = open('error_text.txt','w')
 
     else: # 聽不懂時的做紀錄
