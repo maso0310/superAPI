@@ -51,7 +51,8 @@ def is_alphabet(uchar):
 
 # ================= 獲得使用者訊息 =================
 @handler.add(MessageEvent, message=TextMessage)
-def handle_text_message(event):  
+def handle_text_message(event):
+    print(event.message.text)
     if event.message.text == "WhatToEatForLunch": # 當使用者意圖為詢問午餐時
         # 建立一個 button 的 template
         buttons_template_message = TemplateSendMessage(
@@ -71,14 +72,14 @@ def handle_text_message(event):
             buttons_template_message)
 
     elif event.message.text == "讀取錯誤": # 讀取error_text的內容
-        f = open(error_text.txt,'r')
+        f = open('error_text.txt','r')
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=f))
 
     elif event.message.text == "刪除錯誤": # 刪除error_text的內容
-        f = open(error_text.txt,'w')
+        f = open('error_text.txt','w')
 
     else: # 聽不懂時的做紀錄
-        f = open(error_text.txt,'a')
+        f = open('error_text.txt','a')
         f.write(event.message.text)
 '''
 # 處理訊息
