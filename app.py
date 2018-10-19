@@ -78,7 +78,7 @@ def handle_text_message(event):
         f = open(error_text.txt,'w')
 
     else: # 聽不懂時的做紀錄
-        f = open(error_message.txt,'a')
+        f = open(error_text.txt,'a')
         f.write(event.message.text)
 '''
 # 處理訊息
