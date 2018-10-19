@@ -1,0 +1,68 @@
+Imgur API
+
+
+Client ID:
+79935031ee2804a
+
+
+Client secret:
+1048d01dec6ca4a8b6041e609358f1c2540a144d
+
+
+LINE API:
+
+
+Channel secret 
+
+eeed6c17319b3f197e255e08bc2e98c3
+
+
+
+Channel access token (long-lived) 
+
+ZbWIGQOfoxOLqko0Fhh/OTjBMeeXrd+Py4xyAaNeFsa0bVP3vY05ZyOZEVj8cS9Zu+PDXGMfIUDzAGhFEjHVMN8J9ocEZsuGotbuRhzeQTML221ynVdVwXntBcIP4Ft+Sy0omAoemN84m8OxTJbFWQdB04t89/1O/w1cDnyilFU=
+
+
+
+Webhook URL Requires SSL 
+
+https://ricebug.herokuapp.com/callback
+
+
+
+# imgur key
+album_id = 'maso0310'
+
+access_token = '6132607ac020fc3e7c4919a93d8122a0fda0b8fc'
+
+refresh_token = '11fc82cbb2a6699a2ec8d68d3781b4a9f9e54bf7'
+
+
+account_id
+94360185
+account_username
+maso0310
+
+
+
+# line bot key
+
+line_channel_access_token = 'YOUR_CHANNEL_ACCESS_TOKEN'
+
+line_channel_secret = 'YOUR_CHANNEL_SECRET'
+
+
+
+Google API
+key = AIzaSyC6oj1c1hmFdluggs59FbVX5kd2t1x2MY8
+
+
+
+
+Dialogflow
+Client access token
+084bce6e157c47d39d5cb23715b47b69
+
+
+Developer access token
+12a44c68865a449bbe9d4f8beac9b3fa
