@@ -1,4 +1,2 @@
-import json
-
-data = [{'id':123,'entities':{'url':'python.org','hashtags':['#python','#pythonjp']}}]
-print(json.dumps(data,indent=2))
+f = open('error_text.txt','r',encoding='UTF-8')
+print(f.read())
