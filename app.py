@@ -67,7 +67,6 @@ def handle_text_message(event):
     ai_request = ai.text_request()
     #ai_request.lang = "en"
     ai_request.lang = is_alphabet(msg)
-    ai_request.session_id = profile.user_id
     ai_request.query = msg
 
 
