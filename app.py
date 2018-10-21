@@ -4,6 +4,9 @@ from flask import Flask, request, abort
 #開啟各種API認證
 #from config import *
 
+#基礎模組
+import time
+
 #JSON編碼解碼
 import json
 
@@ -67,10 +70,10 @@ def handle_text_message(event):
     ai_request.query = msg
     profile = line_bot_api.get_profile(uid)
     print(profile.display_name)
-    print(profile.user_id)
+    print(profile.status_message)
     print(uid)
     print(profile.picture_url)
-    print(profile.status_message)
+
 
 
     # 2. 獲得使用者的意圖
