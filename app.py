@@ -37,7 +37,7 @@ def callback():
     except InvalidSignatureError:
         abort(400)
     return 'OK'
-'''
+
 # ================= API語言客製區 Start =================
 def is_alphabet(uchar):
     if ('\u0041' <= uchar<='\u005a') or ('\u0061' <= uchar<='\u007a'):
@@ -50,23 +50,34 @@ def is_alphabet(uchar):
     else:
         return "en"
 # ================= API語言客製區 End =================
-'''
+
 
 # ================= 獲得使用者訊息 =================
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
+    profile = line_bot_api.get_profile
     print(event.message.text)
+    print(profile.user_id)
+    print(profile.picture_url)
+    print(profile.status_message)
+    print(profile.display_name)
     msg = event.message.text # message from user
-    uid = event.source.user_id # user id
+
     # 1. 傳送使用者輸入到 dialogflow 上
     ai_request = ai.text_request()
     #ai_request.lang = "en"
     ai_request.lang = is_alphabet(msg)
-    ai_request.session_id = uid
+    ai_request.session_id = profile.user_id
     ai_request.query = msg
-    print(uid)
-    
-    if event.message.text == "": # 當使用者意圖為詢問午餐時
+
+
+
+    # 2. 獲得使用者的意圖
+    ai_response = json.loads(ai_request.getresponse().read())
+    user_intent = ai_response['result']['metadata']['intentName']
+
+    # 3. 根據使用者的意圖做相對應的回答
+    if msg == "": # 當使用者意圖為詢問午餐時
         # 建立一個 button 的 template
         buttons_template_message = TemplateSendMessage(
             alt_text="Please tell me where you are",
@@ -85,17 +96,17 @@ def handle_text_message(event):
             buttons_template_message)
 
     #以下code用來蒐集使用者錯誤的訊息來加強訓練
-    elif event.message.text == "讀取錯誤": # 讀取error_text的內容
+    elif msg == "讀取錯誤": # 讀取error_text的內容
         f = open('error_text.txt','r', encoding='UTF-8')
         look = f.read()
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
 
-    elif event.message.text == "刪除錯誤": # 刪除error_text的內容
+    elif msg == "刪除錯誤": # 刪除error_text的內容
         f = open('error_text.txt','w')
 
     else: # 聽不懂時在error_text做紀錄
         f = open('error_text.txt','a')
-        f.write(event.message.text+'\n')
+        f.write(msg+'\n')
 '''
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
