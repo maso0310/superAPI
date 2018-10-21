@@ -56,7 +56,17 @@ def is_alphabet(uchar):
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
     print(event.message.text)
-    if event.message.text == "WhatToEatForLunch": # 當使用者意圖為詢問午餐時
+    msg = event.message.text # message from user
+    uid = event.source.user_id # user id
+    # 1. 傳送使用者輸入到 dialogflow 上
+    ai_request = ai.text_request()
+    #ai_request.lang = "en"
+    ai_request.lang = is_alphabet(msg)
+    ai_request.session_id = uid
+    ai_request.query = msg
+    print(uid)
+    
+    if event.message.text == "": # 當使用者意圖為詢問午餐時
         # 建立一個 button 的 template
         buttons_template_message = TemplateSendMessage(
             alt_text="Please tell me where you are",
