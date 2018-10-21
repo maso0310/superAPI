@@ -62,20 +62,22 @@ def handle_text_message(event):
     print(event.message.text)
     msg = event.message.text # message from user
     uid = event.source.user_id # user id
+    
     # 1. 傳送使用者輸入到 dialogflow 上
     ai_request = ai.text_request()
     #ai_request.lang = "en"
     ai_request.lang = is_alphabet(msg)
     ai_request.session_id = uid
-    print(uid)
     ai_request.query = msg
-    profile = line_bot_api.get_profile(uid)
-    print(profile.display_name)
-    print(profile.status_message)
-    print(uid)
-    print(profile.picture_url)
-
-
+    try:
+        profile = line_bot_api.get_profile(uid)
+        print(profile.display_name)
+        print(profile.status_message)
+        print(uid)
+        print(profile.picture_url)
+    except LineBotApiError as e:
+        #error handle 
+        print(e)
 
     # 2. 獲得使用者的意圖
     ai_response = json.loads(ai_request.getresponse().read())
