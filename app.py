@@ -67,6 +67,7 @@ def handle_text_message(event):
     #ai_request.lang = "en"
     ai_request.lang = is_alphabet(msg)
     ai_request.session_id = uid
+    print(uid)
     ai_request.query = msg
     profile = line_bot_api.get_profile(uid)
     print(profile.display_name)
