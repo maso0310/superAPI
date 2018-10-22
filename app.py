@@ -85,9 +85,9 @@ def handle_text_message(event):
     user_intent = ai_response['result']['metadata']['intentName']
 
     # 3. 根據使用者的意圖做相對應的回答
-    if event.message.text == "音樂": # 當使用者意圖為詢問午餐時
-        message = vedio_message('https://i.ytimg.com/vi/2xgLa0oLlIY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAy0U-sJrbu-CC5yjPUWpV7y6YXwA','https://youtu.be/2xgLa0oLlIY')
-        line_bot_api.reply_message(event.reply_token,message)
+    if event.message.text == "圖片範例": # 當使用者意圖為詢問午餐時
+        best_img = image_message('https://pluralsight.imgix.net/paths/python-7be70baaac.png','https://pluralsight.imgix.net/paths/python-7be70baaac.png?w=70')
+        line_bot_api.reply_message(event.reply_token,best_img)
 
     #以下code用來蒐集使用者錯誤的訊息來加強訓練
     elif event.message.text == "讀取錯誤": # 讀取error_text的內容

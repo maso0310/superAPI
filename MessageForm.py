@@ -1,7 +1,10 @@
 #LINE的各種訊息介面
 #使用方法舉例
 #from MessageForm import *
-#best_vedio = vedio_message('https://i.ytimg.com/vi/2xgLa0oLlIY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAy0U-sJrbu-CC5yjPUWpV7y6YXwA','https://youtu.be/2xgLa0oLlIY') 
+#best_img = image_message(
+#   'https://pluralsight.imgix.net/paths/python-7be70baaac.png',
+#   ''
+# ) 
 
 #lineAPI
 from linebot import (LineBotApi, WebhookHandler)
@@ -14,7 +17,7 @@ def text_message(text1):
     return message
 
 #圖片訊息介面ImageSendMessage
-def imgmessage(url1,url2):
+def image_message(url1,url2):
     message = ImageSendMessage(
         original_content_url='https://example.com/original.jpg',
         preview_image_url='https://example.com/preview.jpg'
@@ -29,8 +32,14 @@ def vedio_message(video_url,picture_url):
     )
     return message
 
-#確認訊息介面
+#AudioSendMessage(音訊訊息)
+def audio_message(url,during_time_ms):
+    message = AudioSendMessage(
+    original_content_url='https://example.com/original.m4a',
+    duration=240000
+)
 
+#確認訊息介面
 def ConfirmTemplate(label1,label2,text0,text1,text2,data1):
 
     message = TemplateSendMessage(
