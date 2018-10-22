@@ -85,22 +85,30 @@ def handle_text_message(event):
     user_intent = ai_response['result']['metadata']['intentName']
 
     # 3. 根據使用者的意圖做相對應的回答
-    if event.message.text == "test": #輸入你預期使用者會輸入的部分
+    if "test" in msg: #輸入你預期使用者會輸入的部分
         test = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,test)
 
-    #以下code用來蒐集使用者錯誤的訊息來加強訓練
-    elif event.message.text == "讀取錯誤": # 讀取error_text的內容
+    #elif "youtube" in msg:
+
+
+
+
+#========================以下code用來蒐集使用者錯誤的訊息來加強訓練
+
+    elif msg == "讀取錯誤": # 讀取error_text的內容
         f = open('error_text.txt','r', encoding='UTF-8')
         look = f.read()
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
 
-    elif event.message.text == "刪除錯誤": # 刪除error_text的內容
+    elif msg == "刪除錯誤": # 刪除error_text的內容
         f = open('error_text.txt','w')
 
     else: # 聽不懂時在error_text做紀錄
         f = open('error_text.txt','a')
         f.write(event.message.text+'\n')
+#===============================================================
+
 '''
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
