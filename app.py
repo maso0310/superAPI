@@ -86,7 +86,7 @@ def handle_text_message(event):
 
     # 3. 根據使用者的意圖做相對應的回答
     if event.message.text == "音樂": # 當使用者意圖為詢問午餐時
-        best_vedio = vedio_message('https://i.ytimg.com/vi/2xgLa0oLlIY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAy0U-sJrbu-CC5yjPUWpV7y6YXwA','https://youtu.be/2xgLa0oLlIY')
+        message = vedio_message('https://i.ytimg.com/vi/2xgLa0oLlIY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAy0U-sJrbu-CC5yjPUWpV7y6YXwA','https://youtu.be/2xgLa0oLlIY')
         line_bot_api.reply_message(event.reply_token,message)
 
     #以下code用來蒐集使用者錯誤的訊息來加強訓練
