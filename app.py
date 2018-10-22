@@ -14,6 +14,7 @@ import json
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
+from MessageForm import *
 
 #AI自然語言分析(DialogFlow)
 import apiai
@@ -84,23 +85,9 @@ def handle_text_message(event):
     user_intent = ai_response['result']['metadata']['intentName']
 
     # 3. 根據使用者的意圖做相對應的回答
-    if event.message.text == "": # 當使用者意圖為詢問午餐時
-        # 建立一個 button 的 template
-        buttons_template_message = TemplateSendMessage(
-            alt_text="Please tell me where you are",
-            template=ButtonsTemplate(
-                text="Please tell me where you are",
-                actions=[
-                    URITemplateAction(
-                        label="Send my location",
-                        uri="line://nv/location"
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(
-            event.reply_token,
-            buttons_template_message)
+    if event.message.text == "音樂": # 當使用者意圖為詢問午餐時
+        best_vedio = vedio_message('https://i.ytimg.com/vi/2xgLa0oLlIY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAy0U-sJrbu-CC5yjPUWpV7y6YXwA','https://youtu.be/2xgLa0oLlIY')
+        line_bot_api.reply_message(event.reply_token,message)
 
     #以下code用來蒐集使用者錯誤的訊息來加強訓練
     elif event.message.text == "讀取錯誤": # 讀取error_text的內容
