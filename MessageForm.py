@@ -1,7 +1,11 @@
-#LINE的各種訊息介面
-#使用方法舉例
-#from MessageForm import *
-#best_img = image_message('https://pluralsight.imgix.net/paths/python-7be70baaac.png','https://pluralsight.imgix.net/paths/python-7be70baaac.png?w=70') 
+'''
+LINE的各種訊息介面
+使用方法舉例
+
+from MessageForm import *
+test = sticker_message(1,2)
+line_bot_api.reply_message(event.reply_token,test)
+'''
 
 #lineAPI
 from linebot import (LineBotApi, WebhookHandler)
@@ -53,9 +57,63 @@ def sticker_message(package_id,sticker_id):
         sticker_id=sticker_id
     )
     return message
+#ImagemapSendMessage(組圖訊息)
+def imagemap_message(base_url,url1,text1):
+    message = ImagemapSendMessage(
+        base_url=base_url,
+        alt_text='this is an imagemap',
+        base_size=BaseSize(height=1040, width=1040),
+        actions=[
+            URIImagemapAction(
+                link_uri=url1,
+                area=ImagemapArea(
+                    x=0, y=0, width=520, height=1040
+                )
+            ),
+            MessageImagemapAction(
+                text=text1,
+                area=ImagemapArea(
+                    x=520, y=0, width=520, height=1040
+                )
+            )
+        ]
+    )
+    return message
+
+#TemplateSendMessage - ButtonsTemplate (按鈕介面訊息)
+def buttons_message(
+    image_url,title,text,
+    label1,text1,data1,
+    label2,text2,
+    label3,url1
+):
+    message = TemplateSendMessage(
+        alt_text='Buttons template',
+        template=ButtonsTemplate(
+            thumbnail_image_url=image_url,
+            title=title,
+            text=text1,
+            actions=[
+                PostbackTemplateAction(
+                    label='postback',
+                    text='postback text',
+                    data='action=buy&itemid=1'
+                ),
+                MessageTemplateAction(
+                    label='message',
+                    text='message text'
+                ),
+                URITemplateAction(
+                    label='uri',
+                    uri='http://example.com/'
+                )
+            ]
+        )
+    )
+    return message
 
 
-#確認訊息介面
+#TemplateSendMessage - ConfirmTemplate(確認介面訊息)
 def Confirm_Template(label1,label2,text0,text1,text2,data1):
 
     message = TemplateSendMessage(
@@ -141,3 +199,33 @@ def Carousel_Template(
     return message
 
 
+#TemplateSendMessage - ImageCarouselTemplate(圖片旋轉木馬)
+
+def image_carousel_message(
+    image_url1,label1,text1,data1,
+    image_url2,label2,text2,data2
+):
+    message = TemplateSendMessage(
+        alt_text='ImageCarousel template',
+        template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url='https://example.com/item1.jpg',
+                    action=PostbackTemplateAction(
+                        label='postback1',
+                        text='postback text1',
+                        data='action=buy&itemid=1'
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url='https://example.com/item2.jpg',
+                    action=PostbackTemplateAction(
+                        label='postback2',
+                        text='postback text2',
+                        data='action=buy&itemid=2'
+                    )
+                )
+            ]
+        )
+    )
+    return message
