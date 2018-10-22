@@ -85,8 +85,8 @@ def handle_text_message(event):
     user_intent = ai_response['result']['metadata']['intentName']
 
     # 3. 根據使用者的意圖做相對應的回答
-    if event.message.text == "圖片範例": # 當使用者意圖為詢問午餐時
-        best_img = image_message('https://pluralsight.imgix.net/paths/python-7be70baaac.png','https://pluralsight.imgix.net/paths/python-7be70baaac.png?w=70')
+    if event.message.text == "圖片範例": #輸入你預期使用者會輸入的部分
+        best_img = image_message('https://pluralsight.imgix.net/paths/python-7be70baaac.png?w=70','https://pluralsight.imgix.net/paths/python-7be70baaac.png')
         line_bot_api.reply_message(event.reply_token,best_img)
 
     #以下code用來蒐集使用者錯誤的訊息來加強訓練
