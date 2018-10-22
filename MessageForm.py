@@ -1,6 +1,12 @@
 #LINE的各種訊息介面
+#使用方法舉例
+#from MessageForm import *
+#best_vedio = vedio_message('https://i.ytimg.com/vi/2xgLa0oLlIY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAy0U-sJrbu-CC5yjPUWpV7y6YXwA','https://youtu.be/2xgLa0oLlIY') 
 
-
+#lineAPI
+from linebot import (LineBotApi, WebhookHandler)
+from linebot.exceptions import (InvalidSignatureError)
+from linebot.models import *
 
 #文字訊息介面TextSendMessage 
 def text_message(text1):
