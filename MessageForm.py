@@ -1,10 +1,7 @@
 #LINE的各種訊息介面
 #使用方法舉例
 #from MessageForm import *
-#best_img = image_message(
-#   'https://pluralsight.imgix.net/paths/python-7be70baaac.png',
-#   ''
-# ) 
+#best_img = image_message('https://pluralsight.imgix.net/paths/python-7be70baaac.png','https://pluralsight.imgix.net/paths/python-7be70baaac.png?w=70') 
 
 #lineAPI
 from linebot import (LineBotApi, WebhookHandler)
@@ -39,8 +36,27 @@ def audio_message(url,during_time_ms):
     duration=240000
 )
 
+#LocationSendMessage(位置訊息)
+def Location_message(title,address,latitude,longitude):
+    message = LocationSendMessage(
+        title=title,
+        address=address,
+        latitude=latitude,
+        longitude=longitude
+    )
+    return message
+
+#StickerSendMessage(貼圖訊息)
+def sticker_message(package_id,sticker_id):
+    message = StickerSendMessage(
+        package_id=package_id,
+        sticker_id=sticker_id
+    )
+    return message
+
+
 #確認訊息介面
-def ConfirmTemplate(label1,label2,text0,text1,text2,data1):
+def Confirm_Template(label1,label2,text0,text1,text2,data1):
 
     message = TemplateSendMessage(
         alt_text='Confirm template',
@@ -64,7 +80,7 @@ def ConfirmTemplate(label1,label2,text0,text1,text2,data1):
 
 #旋轉木馬按鈕訊息介面
 
-def CarouselTemplate(
+def Carousel_Template(
     pic1,pic2,
     title1,title2,
     text1,text2,
