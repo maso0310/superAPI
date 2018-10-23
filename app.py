@@ -131,10 +131,10 @@ def handle_text_message(event):
 @handler.add(MessageEvent, message=LocationMessage)
 def handle_location_message(event):
     check_list = buttons_message(
-    'https://cdn.shopify.com/s/files/1/1285/0147/products/sign2-032a_b926f437-6ca3-4b1f-abd4-172576b75ca6.png?v=1527227219','你想做什麼','選擇以下功能',
-    '搜尋附近地點','搜尋地點','這要寫什麼?',
+    'https://pic.pimg.tw/k87110/1411026253-2090326290.jpg','你想做什麼','選擇以下功能',
+    '搜尋附近地點','搜尋地點','action=buy&itemid=2',
     '紀錄位置','紀錄位置',
-    '沒做什麼','url1'
+    '沒做什麼','https://pic.pimg.tw/k87110/1411026253-2090326290.jpg'
     )
     line_bot_api.reply_message(event.reply_token,check_list)
 
