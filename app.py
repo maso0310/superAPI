@@ -136,7 +136,7 @@ def handle_location_message(event):
     '紀錄位置','紀錄位置',
     '沒做什麼','url1'
     )
-    line_bot_api.reply_message(event.reply_token,TemplateSendMessage=check_list)
+    line_bot_api.reply_message(event.reply_token,TemplateSendMessage(ButtonsTemplate=check_list))
 
 '''
 # 處理訊息
