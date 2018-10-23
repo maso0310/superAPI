@@ -83,13 +83,31 @@ def handle_text_message(event):
     # 2. 獲得使用者的意圖
     ai_response = json.loads(ai_request.getresponse().read())
     user_intent = ai_response['result']['metadata']['intentName']
+    print(user_intent)
 
     # 3. 根據使用者的意圖做相對應的回答
     if "test" in msg: #輸入你預期使用者會輸入的部分
         test = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,test)
 
-    #elif "youtube" in msg:
+    elif "餐廳，" in msg:
+        ask_place = TemplateSendMessage(
+            alt_text="Please tell me where you are",
+            template=ButtonsTemplate(
+                text="Please tell me where you are",
+                actions=[
+                    URITemplateAction(
+                        label="Send my location",
+                        uri="line://nv/location"
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token,buttons_template_message)
+
+        from nearbyplace import restaurant
+        good_restaurant = restaurant()
+
 
 
 
@@ -109,6 +127,17 @@ def handle_text_message(event):
         f.write(event.message.text+'\n')
 #===============================================================
 
+#處理位置訊息
+@handler.add(MessageEvent, message=LocationMessage)
+def handle_location_message(event):
+    check_list = buttons_message(
+    image_url,你想做什麼,選擇以下功能,
+    '搜尋附近地點','搜尋地點','這要寫什麼?',
+    '紀錄位置','紀錄位置',
+    '沒做什麼','url1'
+    )
+    line_bot_api.reply_message(event.reply_token,check_list)
+
 '''
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
@@ -116,7 +145,41 @@ def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     line_bot_api.reply_message(event.reply_token, message)
 '''
+
+
+
+
 import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
+
+    #以下為有待開發的功能列
+    #elif "筆記，" in msg:
+    #elif "行事曆，" in msg:
+    #elif "計程車，" in msg:
+    #elif "youtube，" in msg:
+    #elif "火車，" in msg:
+    #elif "航班，" in msg:
+    #elif "facebook，" in msg:
+    #elif "八卦版，" in msg:
+    #elif "健康，" in msg:
+    #elif "健身，" in msg:
+    #elif "活動，" in msg:
+    #elif "政策，" in msg:
+    #elif "加油站，" in msg:
+    #elif "郵遞區號，" in msg:
+    #elif "職缺，" in msg:
+    #elif "廣播，" in msg:
+    #elif "每日優惠，" in msg:
+    #elif "揪團購，" in msg:
+    #elif "辦活動，" in msg:
+    #elif "食譜，" in msg:
+    #elif "遊戲，" in msg:
+    #elif "運動新聞，" in msg:
+    #elif "比價，" in msg:
+    #elif "瑜珈，" in msg:
+    #elif "放鬆，" in msg:
+    #elif "輕音樂，" in msg:
+    #elif "猜謎，" in msg:
+    #elif "骰子，" in msg:

@@ -15,6 +15,8 @@ API function
 6.Facebook串聯=>可以用LINE來瀏覽，甚至發文?
 7.Evernote API=>來看看綠色大象有什麼好用的功能
 8.Google Drive API=>儲存資料、下載資料、編輯資料
+9.找餐廳
+10.能夠搜尋網路上的評價
 
 未來發展方向：
 1.健康資訊

@@ -95,17 +95,17 @@ def buttons_message(
             text=text1,
             actions=[
                 PostbackTemplateAction(
-                    label='postback',
-                    text='postback text',
-                    data='action=buy&itemid=1'
+                    label=label1,
+                    text=text1,
+                    data=data1
                 ),
                 MessageTemplateAction(
-                    label='message',
-                    text='message text'
+                    label=label2,
+                    text=text2
                 ),
                 URITemplateAction(
-                    label='uri',
-                    uri='http://example.com/'
+                    label=label3,
+                    uri=url1
                 )
             ]
         )
