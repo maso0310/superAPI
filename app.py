@@ -131,7 +131,7 @@ def handle_text_message(event):
 @handler.add(MessageEvent, message=LocationMessage)
 def handle_location_message(event):
     check_list = buttons_message(
-    image_url,你想做什麼,選擇以下功能,
+    'https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=579f876cd62a283443a6310d638eaed7/50da81cb39dbb6fd65a072570b24ab18962b37c3.jpg','你想做什麼','選擇以下功能',
     '搜尋附近地點','搜尋地點','這要寫什麼?',
     '紀錄位置','紀錄位置',
     '沒做什麼','url1'
