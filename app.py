@@ -90,9 +90,23 @@ def handle_text_message(event):
         test = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,test)
 
-    elif "搜尋附近地點" in msg:
-        test = sticker_message(1,2)
-        line_bot_api.reply_message(event.reply_token,test)
+    elif "餐廳，" in msg:
+        ask_place = TemplateSendMessage(
+            alt_text="Please tell me where you are",
+            template=ButtonsTemplate(
+                text="Please tell me where you are",
+                actions=[
+                    URITemplateAction(
+                        label="Send my location",
+                        uri="line://nv/location"
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token,buttons_template_message)
+
+        from nearbyplace import restaurant
+        good_restaurant = restaurant()
 
 
 
@@ -118,7 +132,7 @@ def handle_text_message(event):
 def handle_location_message(event):
     check_list = buttons_message(
     'https://pic.pimg.tw/k87110/1411026253-2090326290.jpg','你想做什麼','選擇以下功能',
-    '搜尋附近地點','搜尋附近地點',
+    '搜尋附近地點','餐廳，',
     '紀錄位置','紀錄位置',
     '沒做什麼','https://pic.pimg.tw/k87110/1411026253-2090326290.jpg'
     )
