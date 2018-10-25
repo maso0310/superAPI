@@ -85,7 +85,7 @@ def buttons_message(
     image_url,title,text,
     label1,data1,
     label2,text2,
-    label3,url1
+    label3,url3
 ):
     message = TemplateSendMessage(
         alt_text='Buttons template',
@@ -104,7 +104,7 @@ def buttons_message(
                 ),
                 URITemplateAction(
                     label=label3,
-                    uri=url1
+                    uri=url3
                 )
             ]
         )
