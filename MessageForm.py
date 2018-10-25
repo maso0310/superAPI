@@ -94,10 +94,13 @@ def buttons_message(
             title=title,
             text=text,
             actions=[
-                PostbackTemplateAction(
+                DatetimepickerTemplateAction(
                     label=label1,
-                            text='message text1'
-                    data=data1
+                    data=data1,
+                    mode='datetime',
+                    'initial':'2018-10-25t00:00'
+                    'max':'2018-12-31t23:59'
+                    'min':'2018-01-01t00:00'
                 ),
                 MessageTemplateAction(
                     label=label2,
