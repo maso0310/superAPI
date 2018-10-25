@@ -83,7 +83,7 @@ def imagemap_message(base_url,url1,text1):
 #TemplateSendMessage - ButtonsTemplate (按鈕介面訊息)
 def buttons_message(
     image_url,title,text,
-    label1,data1,
+    label1,text1,data1,
     label2,text2,
     label3,url1
 ):
@@ -92,7 +92,7 @@ def buttons_message(
         template=ButtonsTemplate(
             thumbnail_image_url=image_url,
             title=title,
-            text=text1,
+            text=text,
             actions=[
                 PostbackTemplateAction(
                     label=label1,
