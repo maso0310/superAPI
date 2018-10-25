@@ -132,7 +132,7 @@ def handle_text_message(event):
 def handle_location_message(event):
     check_list = buttons_message(
     'https://pic.pimg.tw/k87110/1411026253-2090326290.jpg','你想做什麼','選擇以下功能',
-    '搜尋附近地點','搜尋地點','action=buy&itemid=2',
+    '搜尋附近地點','action=buy&itemid=2',
     '紀錄位置','紀錄位置',
     '沒做什麼','https://pic.pimg.tw/k87110/1411026253-2090326290.jpg'
     )

@@ -96,7 +96,6 @@ def buttons_message(
             actions=[
                 PostbackTemplateAction(
                     label=label1,
-                    text=text1,
                     data=data1
                 ),
                 MessageTemplateAction(
