@@ -90,7 +90,7 @@ def handle_text_message(event):
         test = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,test)
 
-    elif "餐廳，" in msg:
+    elif "搜尋附近地點" in msg:
         ask_place = TemplateSendMessage(
             alt_text="Please tell me where you are",
             template=ButtonsTemplate(
