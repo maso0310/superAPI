@@ -91,22 +91,8 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,test)
 
     elif "搜尋附近地點" in msg:
-        ask_place = TemplateSendMessage(
-            alt_text="Please tell me where you are",
-            template=ButtonsTemplate(
-                text="Please tell me where you are",
-                actions=[
-                    URITemplateAction(
-                        label="Send my location",
-                        uri="line://nv/location"
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token,buttons_template_message)
-
-        from nearbyplace import restaurant
-        good_restaurant = restaurant()
+        test = sticker_message(1,2)
+        line_bot_api.reply_message(event.reply_token,test)
 
 
 
