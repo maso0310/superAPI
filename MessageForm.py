@@ -98,8 +98,8 @@ def buttons_message(
                     label=label1,
                     data=data1,
                     mode='datetime',
-                    initial='2018-10-25'
-                    max='2018-12-31'
+                    initial='2018-10-25',
+                    max='2018-12-31',
                     min='2018-01-01'
                 ),
                 MessageTemplateAction(
