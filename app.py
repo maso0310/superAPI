@@ -86,7 +86,7 @@ def handle_text_message(event):
     print(user_intent)
 
     # 3. 根據使用者的意圖做相對應的回答
-    if "test" in msg: #輸入你預期使用者會輸入的部分
+    if "偷偷回傳的訊息" in msg: #輸入你預期使用者會輸入的部分
         test = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,test)
 

@@ -97,7 +97,7 @@ def buttons_message(
                 DatetimePickerTemplateAction(
                     label=label1,
                     data=data1,
-                    mode='datetime',
+                    mode='date',
                     initial='2018-10-25',
                     max='2018-12-31',
                     min='2018-01-01'
