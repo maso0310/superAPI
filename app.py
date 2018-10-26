@@ -93,7 +93,7 @@ def handle_text_message(event):
 
     elif "Cream Tea，開團！":
         #商品縮圖網址
-        img_url = [
+        img_url = (
             'https://www.creamtea.com.tw/upload/product/201801251658180.JPG',
             'https://www.creamtea.com.tw/upload/product/201801251712060.jpeg',
             'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
@@ -104,10 +104,10 @@ def handle_text_message(event):
             'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
             'https://www.creamtea.com.tw/upload/product/201801251715090.JPG',
             'https://www.creamtea.com.tw/upload/product/201801251717160.JPG'
-        ]
+        )
 
         #商品名稱
-        title = [
+        title = (
             'CreamTea 9入家常檸檬塔',
             'CreamTea 8吋家常檸檬塔',
             'CreamTea 奶油茶原味組合-草莓果醬',
@@ -118,10 +118,10 @@ def handle_text_message(event):
             'CreamTea 奶油茶葡萄乾組合-黑醋栗果醬',
             'CreamTea 10入三溫糖蝴蝶酥',
             'CreamTea 20入三溫糖蝴蝶酥'
-        ]
+        )
 
         #商品描述
-        text1 = [
+        text1 = (
             '9入/盒',
             '8吋檸檬塔*1入 (約直徑20CM)',
             '原味司康*6入 / 自家手工凝結奶油*2入/ 英國TipTree草苺果醬*1',
@@ -132,10 +132,10 @@ def handle_text_message(event):
             '葡萄乾司康*6入 / 自家手工凝結奶油*2入/ 英國: Tip Tree 黑醋栗果醬*1',
             '10片裝/手提盒',
             '20片裝/盒'
-        ]
+        )
 
         #單價
-        label2 = [
+        label2 = (
             '$ 530',
             '$ 610',
             '$ 460',
@@ -146,11 +146,11 @@ def handle_text_message(event):
             '$ 460',
             '$ 290',
             '$ 560'
-        ]
+        )
 
 
         #我要購買的選項
-        label3 = [
+        label3 = (
             '我要+1',
             '我要+1',
             '我要+1',
@@ -161,10 +161,10 @@ def handle_text_message(event):
             '我要+1',
             '我要+1',
             '我要+1'
-        ]
+        )
 
         #用戶回傳的訊息
-        text3 = [
+        text3 = (
             'CreamTea 9入家常檸檬塔　+1',
             'CreamTea 8吋家常檸檬塔　+1',
             'CreamTea 奶油茶原味組合-草莓果醬　+1',
@@ -175,10 +175,10 @@ def handle_text_message(event):
             'CreamTea 奶油茶葡萄乾組合-黑醋栗果醬　+1',
             'CreamTea 10入三溫糖蝴蝶酥　+1',
             'CreamTea 20入三溫糖蝴蝶酥　+1'
-        ]
+        )
 
         #更多詳細資訊
-        label4 = [
+        label4 = (
             '更多詳細資訊',
             '更多詳細資訊',
             '更多詳細資訊',
@@ -189,10 +189,10 @@ def handle_text_message(event):
             '更多詳細資訊',
             '更多詳細資訊',
             '更多詳細資訊'
-        ]
+        )
 
         #使用者進入的網址
-        url4 = [
+        url4 = (
             'https://www.creamtea.com.tw/tw/product/index.aspx',
             'https://www.creamtea.com.tw/tw/product/index.aspx',
             'https://www.creamtea.com.tw/tw/product/index.aspx',
@@ -203,7 +203,7 @@ def handle_text_message(event):
             'https://www.creamtea.com.tw/tw/product/index.aspx',
             'https://www.creamtea.com.tw/tw/product/index.aspx',
             'https://www.creamtea.com.tw/tw/product/index.aspx'
-        ]
+        )
 
         buy_together = Ten_Carousel_Template(
             img_url = [0],title = [0],text1 = [0],label2 = [0],label3 = [0],text3 = [0],label4 = [0],url4 = [0],
