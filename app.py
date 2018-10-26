@@ -123,8 +123,8 @@ def handle_text_message(event):
 
         #商品描述
         text1 = [
-            '威淨®家潔組[強力酵素高效洗衣精（1.183公升）、萬用天然濃縮清潔劑（946毫升）、強效清潔劑（946毫升）、蘆薈洗碗精（946毫升）、衣物柔軟精（1.183公升）、兩個空瓶加噴霧器、一個擠壓式瓶蓋]',
-            '含威淨™萬用天然濃縮清潔易潔包(3包)、威淨™衛浴清潔易潔包(3包)、威淨™洗碗易潔包(3包)、威淨™去味清新易潔包(3包)及威淨™去漬清潔易潔包(3包)',
+            '威淨®家潔組',
+            '含威淨™濃縮清潔易潔包組與專用噴頭',
             '單瓶裝（1.183公升）',
             '單瓶裝（946毫升）',
             '單瓶裝（946毫升)',
@@ -194,16 +194,16 @@ def handle_text_message(event):
 
         #使用者進入的網址
         url4 = [
-            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%AE%B6%E6%BD%94%E7%B5%84-809481173-p+.xhtml?credituser=R8957656',
-            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%B1%85%E5%AE%B6%E6%B8%85%E6%BD%94%E6%98%93%E6%BD%94%E5%8C%85%E7%B5%84+%E5%90%AB%E5%B0%88%E7%94%A8%E7%93%B6+-1531559443-p+.xhtml?credituser=R8957656',
-            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%BC%B7%E5%8A%9B%E9%85%B5%E7%B4%A0%E9%AB%98%E6%95%88%E6%B4%97%E8%A1%A3%E7%B2%BE-644795691-p+.xhtml?credituser=R8957656',
-            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%BC%B7%E6%95%88%E6%B8%85%E6%BD%94%E5%8A%91-644795692-p+.xhtml?credituser=R8957656',
-            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E8%90%AC%E7%94%A8%E5%A4%A9%E7%84%B6%E6%BF%83%E7%B8%AE%E6%B8%85%E6%BD%94%E5%8A%91-644795688-p+.xhtml?credituser=R8957656',
-            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E6%B7%B1%E5%B1%A4%E5%8E%BB%E6%B1%A1%E6%B8%85%E6%BD%94%E5%8A%91-959119034-p+.xhtml?credituser=R8957656',
-            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%8E%BB%E5%91%B3%E9%99%A4%E6%BC%AC%E5%99%B4%E9%9C%A7-1294104564-p+.xhtml?credituser=R8957656',
-            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E8%98%86%E8%96%88%E6%B4%97%E7%A2%97%E7%B2%BE-644795689-p+.xhtml?credituser=R8957656',
-            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E6%B4%97%E8%A1%A3%E6%98%93%E6%BD%94%E5%8C%85+%E6%B8%85%E6%96%B0%E9%85%8D%E6%96%B9-1660900392-p+.xhtml?credituser=R8957656',
-            'https://tw.shop.com/MASO0310/%E6%84%9B%E7%9A%84%E5%A5%87%E8%B9%9F+trade+%E6%B4%97%E8%A1%A3%E6%98%93%E6%BD%94%E5%8C%85+%E7%84%A1%E9%A6%99%E7%B2%BE%E9%85%8D%E6%96%B9-1660900448-p+.xhtml?credituser=R8957656'
+            'http://t.cn/EZCiEdn',
+            'http://t.cn/EZCiBuc',
+            'http://t.cn/EZC6ZvA',
+            'http://t.cn/EZC6ygI',
+            'http://t.cn/EZC6qEK',
+            'http://t.cn/EZC6fmN',
+            'http://t.cn/EZC6i7h',
+            'http://t.cn/EZC6Smo',
+            'http://t.cn/EZC6NNS',
+            'http://t.cn/EZC6lr8'
         ]
 
         buy_together = Ten_Carousel_Template(
