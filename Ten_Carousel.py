@@ -19,8 +19,6 @@ def Ten_Carousel_Template(
     message = TemplateSendMessage(
         alt_text='請查看手機的訊息',
         template=CarouselTemplate(
-            imageAspectRatio='square',
-            imageSize='cover',
             columns=[
                 CarouselColumn(
                     thumbnail_image_url=img_url1_1,
@@ -171,7 +169,9 @@ def Ten_Carousel_Template(
                             uri=url10_4
                         )
                     ]
-                )
+                ),
+            imageAspectRatio='square',
+            imageSize='cover',
             ]
         )
     )
