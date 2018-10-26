@@ -222,7 +222,5 @@ def Ten_Carousel_Template(
                 )
                     ]
                 )
-            ]
         )
-    )
     return message
