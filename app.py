@@ -91,7 +91,7 @@ def handle_text_message(event):
         test = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,test)
 
-    elif "開團，":
+    elif "開團!Cream Tea":
         #商品縮圖網址
         img_url = [
             'https://www.creamtea.com.tw/upload/product/201801251658180.JPG',
@@ -217,6 +217,7 @@ def handle_text_message(event):
             img_url = [8],title = [8],text1 = [8],label2 = [8],label3 = [8],text3 = [8],label4 = [8],url4 = [8],
             img_url = [9],title = [9],text1 = [9],label2 = [9],label3 = [9],text3 = [9],label4 = [9],url4 = [9],
         )
+        line_bot_api.reply_message(event.reply_token,buy_together)
 
     elif "餐廳，" in msg:
         ask_place = TemplateSendMessage(
