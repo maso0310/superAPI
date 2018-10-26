@@ -91,47 +91,48 @@ def handle_text_message(event):
         test = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,test)
 
-    elif "Cream Tea，開團！" in msg:
+    elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
         img_url = [
-            'https://www.creamtea.com.tw/upload/product/201801251658180.JPG',
-            'https://www.creamtea.com.tw/upload/product/201801251712060.jpeg',
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
-            'https://www.creamtea.com.tw/upload/product/201801251715090.JPG',
-            'https://www.creamtea.com.tw/upload/product/201801251717160.JPG'
+            'https://img.shop.com/Image/240000/246300/246302/products/809481173__400x400__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/1531559443__400x400__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/644795691__400x400__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/644795692__400x400__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/644795688__400x400__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/959119034__400x400__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/1294104564__400x400__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/644795689__400x400__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/1660900392__400x400__.jpg',
+            'https://img.shop.com/Image/250000/250600/250614/products/1660900448__400x400__.jpg'
+
         ]
 
         #商品名稱
         title = [
-            'CreamTea 9入家常檸檬塔 $ 530',
-            'CreamTea 8吋家常檸檬塔 $ 610',
-            'CreamTea 奶油茶原味組合-草莓果醬 $ 460',
-            'CreamTea 奶油茶原味組合-覆盆子果醬 $ 460',
-            'CreamTea 奶油茶原味組合-黑醋栗果醬 $ 460',
-            'CreamTea 奶油茶葡萄乾組合-草莓果醬 $ 460',
-            'CreamTea 奶油茶葡萄乾組合-覆盆子果醬 $ 460',
-            'CreamTea 奶油茶葡萄乾組合-黑醋栗果醬 $ 460',
-            'CreamTea 10入三溫糖蝴蝶酥 $ 290',
-            'CreamTea 20入三溫糖蝴蝶酥 $ 560'
+            '威淨™ 家潔組  \nNT$1,935',
+            '威淨™居家清潔易潔包組（含專用瓶） \nNT$1,590',
+            '威淨™強力酵素高效洗衣精  \nNT$455',
+            '威淨™強效清潔劑  \nNT$410',
+            '威淨™萬用天然濃縮清潔劑  \nNT$420',
+            '威淨™深層去污清潔劑  \nNT$420',
+            '威淨™去味除漬噴霧  \nNT$410',
+            '威淨™蘆薈洗碗精  \nNT$410',
+            '威淨™洗衣易潔包–清新配方  \nNT$515',
+            '愛的奇蹟™ 洗衣易潔包－無香精配方  \nNT$515'
         ]
 
         #商品描述
         text1 = [
-            '9入/盒',
-            '8吋檸檬塔*1入 (約直徑20CM)',
-            '原味司康*6入 / 自家手工凝結奶油*2入/ 英國TipTree草苺果醬*1',
-            '原味司康*6入 / 自家手工凝結奶油*2入/ 英國TipTree覆盆子果醬*1',
-            '原味司康*6入 / 自家手工凝結奶油*2入/ 英國TipTree黑醋栗果醬*1',
-            '葡萄乾司康*6入 / 自家手工凝結奶油*2入/ 英國TipTree草莓果醬*1',
-            '葡萄乾司康*6入 / 自家手工凝結奶油*2入/ 英國TipTree覆盆子果醬*1',
-            '葡萄乾司康*6入 / 自家手工凝結奶油*2入/ 英國: Tip Tree 黑醋栗果醬*1',
-            '10片裝/手提盒',
-            '20片裝/盒'
+            '威淨®家潔組[強力酵素高效洗衣精（1.183公升）、萬用天然濃縮清潔劑（946毫升）、強效清潔劑（946毫升）、蘆薈洗碗精（946毫升）、衣物柔軟精（1.183公升）、兩個空瓶加噴霧器、一個擠壓式瓶蓋]',
+            '含威淨™萬用天然濃縮清潔易潔包(3包)、威淨™衛浴清潔易潔包(3包)、威淨™洗碗易潔包(3包)、威淨™去味清新易潔包(3包)及威淨™去漬清潔易潔包(3包)',
+            '單瓶裝（1.183公升）',
+            '單瓶裝（946毫升）',
+            '單瓶裝（946毫升)',
+            '單瓶裝（946毫升)',
+            '清香配方 - 單瓶裝（236.5毫升）',
+            '單瓶裝（946毫升）',
+            '單罐 (24包裝)',
+            '單罐 (24包裝)'
         ]
 
         #單價
@@ -165,16 +166,16 @@ def handle_text_message(event):
 
         #用戶回傳的訊息
         text3 = [
-            'CreamTea 9入家常檸檬塔　+1',
-            'CreamTea 8吋家常檸檬塔　+1',
-            'CreamTea 奶油茶原味組合-草莓果醬　+1',
-            'CreamTea 奶油茶原味組合-覆盆子果醬　+1',
-            'CreamTea 奶油茶原味組合-黑醋栗果醬　+1',
-            'CreamTea 奶油茶葡萄乾組合-草莓果醬　+1',
-            'CreamTea 奶油茶葡萄乾組合-覆盆子果醬　+1',
-            'CreamTea 奶油茶葡萄乾組合-黑醋栗果醬　+1',
-            'CreamTea 10入三溫糖蝴蝶酥　+1',
-            'CreamTea 20入三溫糖蝴蝶酥　+1'
+            '威淨™ 家潔組　+1',
+            '威淨™居家清潔易潔包組　+1',
+            '威淨™強力酵素高效洗衣精　+1',
+            '威淨™強效清潔劑　+1',
+            '威淨™萬用天然濃縮清潔劑　+1',
+            '威淨™深層去污清潔劑　+1',
+            '威淨™去味除漬噴霧　+1',
+            '威淨™蘆薈洗碗精　+1',
+            '威淨™洗衣易潔包–清新配方　+1',
+            '愛的奇蹟™ 洗衣易潔包－無香精配方　+1'
         ]
 
         #更多詳細資訊
@@ -193,16 +194,16 @@ def handle_text_message(event):
 
         #使用者進入的網址
         url4 = [
-            'https://www.creamtea.com.tw/tw/product/index.aspx',
-            'https://www.creamtea.com.tw/tw/product/index.aspx',
-            'https://www.creamtea.com.tw/tw/product/index.aspx',
-            'https://www.creamtea.com.tw/tw/product/index.aspx',
-            'https://www.creamtea.com.tw/tw/product/index.aspx',
-            'https://www.creamtea.com.tw/tw/product/index.aspx',
-            'https://www.creamtea.com.tw/tw/product/index.aspx',
-            'https://www.creamtea.com.tw/tw/product/index.aspx',
-            'https://www.creamtea.com.tw/tw/product/index.aspx',
-            'https://www.creamtea.com.tw/tw/product/index.aspx'
+            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%AE%B6%E6%BD%94%E7%B5%84-809481173-p+.xhtml?credituser=R8957656',
+            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%B1%85%E5%AE%B6%E6%B8%85%E6%BD%94%E6%98%93%E6%BD%94%E5%8C%85%E7%B5%84+%E5%90%AB%E5%B0%88%E7%94%A8%E7%93%B6+-1531559443-p+.xhtml?credituser=R8957656',
+            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%BC%B7%E5%8A%9B%E9%85%B5%E7%B4%A0%E9%AB%98%E6%95%88%E6%B4%97%E8%A1%A3%E7%B2%BE-644795691-p+.xhtml?credituser=R8957656',
+            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%BC%B7%E6%95%88%E6%B8%85%E6%BD%94%E5%8A%91-644795692-p+.xhtml?credituser=R8957656',
+            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E8%90%AC%E7%94%A8%E5%A4%A9%E7%84%B6%E6%BF%83%E7%B8%AE%E6%B8%85%E6%BD%94%E5%8A%91-644795688-p+.xhtml?credituser=R8957656',
+            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E6%B7%B1%E5%B1%A4%E5%8E%BB%E6%B1%A1%E6%B8%85%E6%BD%94%E5%8A%91-959119034-p+.xhtml?credituser=R8957656',
+            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E5%8E%BB%E5%91%B3%E9%99%A4%E6%BC%AC%E5%99%B4%E9%9C%A7-1294104564-p+.xhtml?credituser=R8957656',
+            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E8%98%86%E8%96%88%E6%B4%97%E7%A2%97%E7%B2%BE-644795689-p+.xhtml?credituser=R8957656',
+            'https://tw.shop.com/MASO0310/%E7%BE%8E%E5%AE%89%E5%A8%81%E6%B7%A8+trade+%E6%B4%97%E8%A1%A3%E6%98%93%E6%BD%94%E5%8C%85+%E6%B8%85%E6%96%B0%E9%85%8D%E6%96%B9-1660900392-p+.xhtml?credituser=R8957656',
+            'https://tw.shop.com/MASO0310/%E6%84%9B%E7%9A%84%E5%A5%87%E8%B9%9F+trade+%E6%B4%97%E8%A1%A3%E6%98%93%E6%BD%94%E5%8C%85+%E7%84%A1%E9%A6%99%E7%B2%BE%E9%85%8D%E6%96%B9-1660900448-p+.xhtml?credituser=R8957656'
         ]
 
         buy_together = Ten_Carousel_Template(
