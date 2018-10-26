@@ -206,16 +206,16 @@ def handle_text_message(event):
         ]
 
         buy_together = Ten_Carousel_Template(
-            img_url = [0],title = [0],text1 = [0],label2 = [0],label3 = [0],text3 = [0],label4 = [0],url4 = [0],
-            img_url = [1],title = [1],text1 = [1],label2 = [1],label3 = [1],text3 = [1],label4 = [1],url4 = [1],
-            img_url = [2],title = [2],text1 = [2],label2 = [2],label3 = [2],text3 = [2],label4 = [2],url4 = [2],
-            img_url = [3],title = [3],text1 = [3],label2 = [3],label3 = [3],text3 = [3],label4 = [3],url4 = [3],
-            img_url = [4],title = [4],text1 = [4],label2 = [4],label3 = [4],text3 = [4],label4 = [4],url4 = [4],
-            img_url = [5],title = [5],text1 = [5],label2 = [5],label3 = [5],text3 = [5],label4 = [5],url4 = [5],
-            img_url = [6],title = [6],text1 = [6],label2 = [6],label3 = [6],text3 = [6],label4 = [6],url4 = [6],
-            img_url = [7],title = [7],text1 = [7],label2 = [7],label3 = [7],text3 = [7],label4 = [7],url4 = [7],
-            img_url = [8],title = [8],text1 = [8],label2 = [8],label3 = [8],text3 = [8],label4 = [8],url4 = [8],
-            img_url = [9],title = [9],text1 = [9],label2 = [9],label3 = [9],text3 = [9],label4 = [9],url4 = [9],
+            img_url[0],title[0],text1[0],label2[0],label3[0],text3[0],label4[0],url4[0],
+            img_url[1],title[1],text1[1],label2[1],label3[1],text3[1],label4[1],url4[1],
+            img_url[2],title[2],text1[2],label2[2],label3[2],text3[2],label4[2],url4[2],
+            img_url[3],title[3],text1[3],label2[3],label3[3],text3[3],label4[3],url4[3],
+            img_url[4],title[4],text1[4],label2[4],label3[4],text3[4],label4[4],url4[4],
+            img_url[5],title[5],text1[5],label2[5],label3[5],text3[5],label4[5],url4[5],
+            img_url[6],title[6],text1[6],label2[6],label3[6],text3[6],label4[6],url4[6],
+            img_url[7],title[7],text1[7],label2[7],label3[7],text3[7],label4[7],url4[7],
+            img_url[8],title[8],text1[8],label2[8],label3[8],text3[8],label4[8],url4[8],
+            img_url[9],title[9],text1[9],label2[9],label3[9],text3[9],label4[9],url4[9]
         )
         line_bot_api.reply_message(event.reply_token,buy_together)
 
