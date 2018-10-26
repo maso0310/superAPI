@@ -19,7 +19,7 @@ def Ten_Carousel_Template(
     message = TemplateSendMessage(
         alt_text='Carousel template',
         template=CarouselTemplate(
-            imageAspectRatio='rectangle',
+            imageAspectRatio='square',
             imageSize='contain',
             columns=[
                 CarouselColumn(
