@@ -22,6 +22,7 @@ def Ten_Carousel_Template(
             columns=[
                 CarouselColumn(
                     thumbnail_image_url=img_url1_1,
+                    imageAspectRatio='rectangle',
                     title=title1_1,
                     text=text1_1,
                     actions=[
