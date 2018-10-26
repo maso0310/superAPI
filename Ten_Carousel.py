@@ -22,7 +22,7 @@ def Ten_Carousel_Template(
             columns=[
                 CarouselColumn(
                     thumbnail_image_url=img_url1_1,
-                    imageAspectRatio='square',
+                    imageAspectRatio='rectangle',
                     imageSize='contain',
                     title=title1_1,
                     text=text1_1,
@@ -39,7 +39,7 @@ def Ten_Carousel_Template(
                 ),
                 CarouselColumn(
                     thumbnail_image_url=img_url2_1,
-                    imageAspectRatio='square',
+                    imageAspectRatio='rectangle',
                     imageSize='contain',
                     title=title2_1,
                     text=text2_1,
@@ -56,7 +56,7 @@ def Ten_Carousel_Template(
                 ),
                 CarouselColumn(
                     thumbnail_image_url=img_url3_1,
-                    imageAspectRatio='square',
+                    imageAspectRatio='rectangle',
                     imageSize='contain',
                     title=title3_1,
                     text=text3_1,
@@ -73,7 +73,7 @@ def Ten_Carousel_Template(
                 ),
                 CarouselColumn(
                     thumbnail_image_url=img_url4_1,
-                    imageAspectRatio='square',
+                    imageAspectRatio='rectangle',
                     imageSize='contain',
                     title=title4_1,
                     text=text4_1,
@@ -90,7 +90,7 @@ def Ten_Carousel_Template(
                 ),
                 CarouselColumn(
                     thumbnail_image_url=img_url5_1,
-                    imageAspectRatio='square',
+                    imageAspectRatio='rectangle',
                     imageSize='contain',
                     title=title5_1,
                     text=text5_1,
