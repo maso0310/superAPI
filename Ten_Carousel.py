@@ -27,8 +27,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label1_2,
-                            text='',
-                            data=''
+                            text='text1_2',
+                            data='data1_2'
                         ),
                         MessageTemplateAction(
                             label=label1_3,
@@ -47,8 +47,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label2_2,
-                            text='',
-                            data=''
+                            text='text2_2',
+                            data='data2_2'
                         ),
                         MessageTemplateAction(
                             label=label2_3,
@@ -67,8 +67,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label3_2,
-                            text='',
-                            data=''
+                            text='text3_2',
+                            data='data3_2'
                         ),
                         MessageTemplateAction(
                             label=label3_3,
@@ -87,8 +87,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label4_2,
-                            text='',
-                            data=''
+                            text='text4_2',
+                            data='data4_2'
                         ),
                         MessageTemplateAction(
                             label=label4_3,
@@ -107,8 +107,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label5_2,
-                            text='',
-                            data=''
+                            text='text5_2',
+                            data='data5_2'
                         ),
                         MessageTemplateAction(
                             label=label5_3,
@@ -127,8 +127,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label6_2,
-                            text='',
-                            data=''
+                            text='text6_2',
+                            data='data6_2'
                         ),
                         MessageTemplateAction(
                             label=label6_3,
@@ -147,8 +147,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label7_2,
-                            text='',
-                            data=''
+                            text='text7_2',
+                            data='data7_2'
                         ),
                         MessageTemplateAction(
                             label=label7_3,
@@ -167,8 +167,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label8_2,
-                            text='',
-                            data=''
+                            text='text8_2',
+                            data='data8_2'
                         ),
                         MessageTemplateAction(
                             label=label8_3,
@@ -187,8 +187,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label9_2,
-                            text='',
-                            data=''
+                            text='text9_2',
+                            data='data9_2'
                         ),
                         MessageTemplateAction(
                             label=label9_3,
@@ -207,8 +207,8 @@ def Ten_Carousel_Template(
                     actions=[
                         PostbackTemplateAction(
                             label=label10_2,
-                            text='',
-                            data=''
+                            text='text10_2',
+                            data='data10_2'
                         ),
                         MessageTemplateAction(
                             label=label10_3,
