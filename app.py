@@ -93,7 +93,7 @@ def handle_text_message(event):
 
     elif "Cream Tea，開團！":
         #商品縮圖網址
-        img_url = (
+        img_url = [
             'https://www.creamtea.com.tw/upload/product/201801251658180.JPG',
             'https://www.creamtea.com.tw/upload/product/201801251712060.jpeg',
             'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
@@ -104,10 +104,10 @@ def handle_text_message(event):
             'https://www.creamtea.com.tw/upload/product/201801251652110.JPG',
             'https://www.creamtea.com.tw/upload/product/201801251715090.JPG',
             'https://www.creamtea.com.tw/upload/product/201801251717160.JPG'
-        )
+        ]
 
         #商品名稱
-        title = (
+        title = [
             'CreamTea 9入家常檸檬塔',
             'CreamTea 8吋家常檸檬塔',
             'CreamTea 奶油茶原味組合-草莓果醬',
@@ -118,10 +118,10 @@ def handle_text_message(event):
             'CreamTea 奶油茶葡萄乾組合-黑醋栗果醬',
             'CreamTea 10入三溫糖蝴蝶酥',
             'CreamTea 20入三溫糖蝴蝶酥'
-        )
+        ]
 
         #商品描述
-        text1 = (
+        text1 = [
             '9入/盒',
             '8吋檸檬塔*1入 (約直徑20CM)',
             '原味司康*6入 / 自家手工凝結奶油*2入/ 英國TipTree草苺果醬*1',
@@ -132,10 +132,10 @@ def handle_text_message(event):
             '葡萄乾司康*6入 / 自家手工凝結奶油*2入/ 英國: Tip Tree 黑醋栗果醬*1',
             '10片裝/手提盒',
             '20片裝/盒'
-        )
+        ]
 
         #單價
-        label2 = (
+        label2 = [
             '$ 530',
             '$ 610',
             '$ 460',
@@ -146,11 +146,11 @@ def handle_text_message(event):
             '$ 460',
             '$ 290',
             '$ 560'
-        )
+        ]
 
 
         #我要購買的選項
-        label3 = (
+        label3 = [
             '我要+1',
             '我要+1',
             '我要+1',
@@ -161,10 +161,10 @@ def handle_text_message(event):
             '我要+1',
             '我要+1',
             '我要+1'
-        )
+        ]
 
         #用戶回傳的訊息
-        text3 = (
+        text3 = [
             'CreamTea 9入家常檸檬塔　+1',
             'CreamTea 8吋家常檸檬塔　+1',
             'CreamTea 奶油茶原味組合-草莓果醬　+1',
@@ -175,10 +175,10 @@ def handle_text_message(event):
             'CreamTea 奶油茶葡萄乾組合-黑醋栗果醬　+1',
             'CreamTea 10入三溫糖蝴蝶酥　+1',
             'CreamTea 20入三溫糖蝴蝶酥　+1'
-        )
+        ]
 
         #更多詳細資訊
-        label4 = (
+        label4 = [
             '更多詳細資訊',
             '更多詳細資訊',
             '更多詳細資訊',
@@ -189,10 +189,10 @@ def handle_text_message(event):
             '更多詳細資訊',
             '更多詳細資訊',
             '更多詳細資訊'
-        )
+        ]
 
         #使用者進入的網址
-        url4 = (
+        url4 = [
             'https://www.creamtea.com.tw/tw/product/index.aspx',
             'https://www.creamtea.com.tw/tw/product/index.aspx',
             'https://www.creamtea.com.tw/tw/product/index.aspx',
@@ -203,30 +203,19 @@ def handle_text_message(event):
             'https://www.creamtea.com.tw/tw/product/index.aspx',
             'https://www.creamtea.com.tw/tw/product/index.aspx',
             'https://www.creamtea.com.tw/tw/product/index.aspx'
-        )
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        ]
 
         buy_together = Ten_Carousel_Template(
-            'https://www.creamtea.com.tw/upload/product/201801251658180.JPG','CreamTea 9入家常檸檬塔',,text1 = [0],label2 = [0],label3 = [0],text3 = [0],label4 = [0],url4 = [0],
-            'https://www.creamtea.com.tw/upload/product/201801251712060.jpeg','CreamTea 8吋家常檸檬塔',text1 = [1],label2 = [1],label3 = [1],text3 = [1],label4 = [1],url4 = [1],
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG','CreamTea 奶油茶原味組合-草莓果醬',text1 = [2],label2 = [2],label3 = [2],text3 = [2],label4 = [2],url4 = [2],
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG','CreamTea 奶油茶原味組合-覆盆子果醬',text1 = [3],label2 = [3],label3 = [3],text3 = [3],label4 = [3],url4 = [3],
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG','CreamTea 奶油茶原味組合-黑醋栗果醬',text1 = [4],label2 = [4],label3 = [4],text3 = [4],label4 = [4],url4 = [4],
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG','CreamTea 奶油茶葡萄乾組合-草莓果醬',text1 = [5],label2 = [5],label3 = [5],text3 = [5],label4 = [5],url4 = [5],
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG','CreamTea 奶油茶葡萄乾組合-覆盆子果醬',text1 = [6],label2 = [6],label3 = [6],text3 = [6],label4 = [6],url4 = [6],
-            'https://www.creamtea.com.tw/upload/product/201801251652110.JPG','CreamTea 奶油茶葡萄乾組合-黑醋栗果醬',text1 = [7],label2 = [7],label3 = [7],text3 = [7],label4 = [7],url4 = [7],
-            'https://www.creamtea.com.tw/upload/product/201801251715090.JPG','CreamTea 10入三溫糖蝴蝶酥',text1 = [8],label2 = [8],label3 = [8],text3 = [8],label4 = [8],url4 = [8],
-            'https://www.creamtea.com.tw/upload/product/201801251717160.JPG','CreamTea 20入三溫糖蝴蝶酥',text1 = [9],label2 = [9],label3 = [9],text3 = [9],label4 = [9],url4 = [9],
+            img_url = [0],title = [0],text1 = [0],label2 = [0],label3 = [0],text3 = [0],label4 = [0],url4 = [0],
+            img_url = [1],title = [1],text1 = [1],label2 = [1],label3 = [1],text3 = [1],label4 = [1],url4 = [1],
+            img_url = [2],title = [2],text1 = [2],label2 = [2],label3 = [2],text3 = [2],label4 = [2],url4 = [2],
+            img_url = [3],title = [3],text1 = [3],label2 = [3],label3 = [3],text3 = [3],label4 = [3],url4 = [3],
+            img_url = [4],title = [4],text1 = [4],label2 = [4],label3 = [4],text3 = [4],label4 = [4],url4 = [4],
+            img_url = [5],title = [5],text1 = [5],label2 = [5],label3 = [5],text3 = [5],label4 = [5],url4 = [5],
+            img_url = [6],title = [6],text1 = [6],label2 = [6],label3 = [6],text3 = [6],label4 = [6],url4 = [6],
+            img_url = [7],title = [7],text1 = [7],label2 = [7],label3 = [7],text3 = [7],label4 = [7],url4 = [7],
+            img_url = [8],title = [8],text1 = [8],label2 = [8],label3 = [8],text3 = [8],label4 = [8],url4 = [8],
+            img_url = [9],title = [9],text1 = [9],label2 = [9],label3 = [9],text3 = [9],label4 = [9],url4 = [9],
         )
         line_bot_api.reply_message(event.reply_token,buy_together)
 
