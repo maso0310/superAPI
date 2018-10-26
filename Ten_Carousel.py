@@ -5,16 +5,16 @@ from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
 
 def Ten_Carousel_Template(
-    img_url1_1,title1_1,text1_1,label1_2,label1_3,text1_3,label1_4,url1_4,
-    img_url2_1,title2_1,text2_1,label2_2,label2_3,text2_3,label2_4,url2_4,
-    img_url3_1,title3_1,text3_1,label3_2,label3_3,text3_3,label3_4,url3_4,
-    img_url4_1,title4_1,text4_1,label4_2,label4_3,text4_3,label4_4,url4_4,
-    img_url5_1,title5_1,text5_1,label5_2,label5_3,text5_3,label5_4,url5_4,
-    img_url6_1,title6_1,text6_1,label6_2,label6_3,text6_3,label6_4,url6_4,
-    img_url7_1,title7_1,text7_1,label7_2,label7_3,text7_3,label7_4,url7_4,
-    img_url8_1,title8_1,text8_1,label8_2,label8_3,text8_3,label8_4,url8_4,
-    img_url9_1,title9_1,text9_1,label9_2,label9_3,text9_3,label9_4,url9_4,
-    img_url10_1,title10_1,text10_1,label10_2,label10_3,text10_3,label10_4,url10_4
+    img_url1_1,title1_1,text1_1,label1_3,text1_3,label1_4,url1_4,
+    img_url2_1,title2_1,text2_1,label2_3,text2_3,label2_4,url2_4,
+    img_url3_1,title3_1,text3_1,label3_3,text3_3,label3_4,url3_4,
+    img_url4_1,title4_1,text4_1,label4_3,text4_3,label4_4,url4_4,
+    img_url5_1,title5_1,text5_1,label5_3,text5_3,label5_4,url5_4,
+    img_url6_1,title6_1,text6_1,label6_3,text6_3,label6_4,url6_4,
+    img_url7_1,title7_1,text7_1,label7_3,text7_3,label7_4,url7_4,
+    img_url8_1,title8_1,text8_1,label8_3,text8_3,label8_4,url8_4,
+    img_url9_1,title9_1,text9_1,label9_3,text9_3,label9_4,url9_4,
+    img_url10_1,title10_1,text10_1,label10_3,text10_3,label10_4,url10_4
 ):
     message = TemplateSendMessage(
         alt_text='Carousel template',
@@ -25,11 +25,6 @@ def Ten_Carousel_Template(
                     title=title1_1,
                     text=text1_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label1_2,
-                            text='text1_2',
-                            data='data1_2'
-                        ),
                         MessageTemplateAction(
                             label=label1_3,
                             text=text1_3
@@ -45,11 +40,6 @@ def Ten_Carousel_Template(
                     title=title2_1,
                     text=text2_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label2_2,
-                            text='text2_2',
-                            data='data2_2'
-                        ),
                         MessageTemplateAction(
                             label=label2_3,
                             text=text2_3
@@ -65,11 +55,6 @@ def Ten_Carousel_Template(
                     title=title3_1,
                     text=text3_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label3_2,
-                            text='text3_2',
-                            data='data3_2'
-                        ),
                         MessageTemplateAction(
                             label=label3_3,
                             text=text3_3
@@ -85,11 +70,6 @@ def Ten_Carousel_Template(
                     title=title4_1,
                     text=text4_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label4_2,
-                            text='text4_2',
-                            data='data4_2'
-                        ),
                         MessageTemplateAction(
                             label=label4_3,
                             text=text4_3
@@ -105,11 +85,6 @@ def Ten_Carousel_Template(
                     title=title5_1,
                     text=text5_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label5_2,
-                            text='text5_2',
-                            data='data5_2'
-                        ),
                         MessageTemplateAction(
                             label=label5_3,
                             text=text5_3
@@ -125,11 +100,6 @@ def Ten_Carousel_Template(
                     title=title6_1,
                     text=text6_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label6_2,
-                            text='text6_2',
-                            data='data6_2'
-                        ),
                         MessageTemplateAction(
                             label=label6_3,
                             text=text6_3
@@ -145,11 +115,6 @@ def Ten_Carousel_Template(
                     title=title7_1,
                     text=text7_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label7_2,
-                            text='text7_2',
-                            data='data7_2'
-                        ),
                         MessageTemplateAction(
                             label=label7_3,
                             text=text7_3
@@ -165,11 +130,6 @@ def Ten_Carousel_Template(
                     title=title8_1,
                     text=text8_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label8_2,
-                            text='text8_2',
-                            data='data8_2'
-                        ),
                         MessageTemplateAction(
                             label=label8_3,
                             text=text8_3
@@ -185,11 +145,6 @@ def Ten_Carousel_Template(
                     title=title9_1,
                     text=text9_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label9_2,
-                            text='text9_2',
-                            data='data9_2'
-                        ),
                         MessageTemplateAction(
                             label=label9_3,
                             text=text9_3
@@ -205,11 +160,6 @@ def Ten_Carousel_Template(
                     title=title10_1,
                     text=text10_1,
                     actions=[
-                        PostbackTemplateAction(
-                            label=label10_2,
-                            text='text10_2',
-                            data='data10_2'
-                        ),
                         MessageTemplateAction(
                             label=label10_3,
                             text=text10_3
