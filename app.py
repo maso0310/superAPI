@@ -91,7 +91,7 @@ def handle_text_message(event):
         test = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,test)
 
-    elif "Cream Tea，開團！":
+    elif "Cream Tea，開團！" in msg:
         #商品縮圖網址
         img_url = [
             'https://www.creamtea.com.tw/upload/product/201801251658180.JPG',
