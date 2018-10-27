@@ -19,12 +19,12 @@ def Ten_Carousel_Template(
     message = TemplateSendMessage(
         alt_text='請查看手機的訊息',
         template=CarouselTemplate(
+            imageAspectRatio='square',
+            imageSize='cover',
+            imageBackgroundColor= "#a8e8fb",
             columns=[
                 CarouselColumn(
                     thumbnail_image_url=img_url1_1,
-                    imageAspectRatio='square',
-                    imageSize='cover',
-                    imageBackgroundColor= "#a8e8fb",
                     title=title1_1,
                     text=text1_1,
                     actions=[
