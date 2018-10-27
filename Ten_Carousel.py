@@ -171,8 +171,8 @@ def Ten_Carousel_Template(
                     ]
                 )
             ],
-            imageAspectRatio='square',
-            imageSize='cover',
+            imageAspectRatio=square,
+            imageSize=cover,
         )
     )
     return message
