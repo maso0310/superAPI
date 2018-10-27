@@ -91,7 +91,7 @@ def handle_text_message(event):
         test1 = sticker_message(1,2)
         test2 = sticker_message(1,3)
         message = [test1,test2]
-        line_bot_api.reply_message(event.reply_token,test)
+        line_bot_api.reply_message(event.reply_token,message)
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
