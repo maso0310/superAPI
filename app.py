@@ -94,16 +94,16 @@ def handle_text_message(event):
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
         img_url = [
-            'https://img.shop.com/Image/240000/246300/246302/products/809481173__900x1200__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/1531559443__900x1200__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/644795691__900x1200__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/644795692__900x1200__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/644795688__900x1200__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/959119034__900x1200__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/1294104564__900x1200__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/644795689__900x1200__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/1660900392__900x1200__.jpg',
-            'https://img.shop.com/Image/250000/250600/250614/products/1660900448__900x1200__.jpg'
+            'https://img.shop.com/Image/240000/246300/246302/products/809481173__900x900__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/1531559443__900x900__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/644795691__900x900__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/644795692__900x900__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/644795688__900x900__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/959119034__900x900__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/1294104564__900x900__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/644795689__900x900__.jpg',
+            'https://img.shop.com/Image/240000/246300/246302/products/1660900392__900x900__.jpg',
+            'https://img.shop.com/Image/250000/250600/250614/products/1660900448__900x900__.jpg'
 
         ]
 
