@@ -171,7 +171,7 @@ def Ten_Carousel_Template(
                     ]
                 )
             ],
-            imageAspectRatio='rectangle',
+            imageAspectRatio='square',
             imageSize='cover',
             imageBackgroundColor= "#a8e8fb"
         )
