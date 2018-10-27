@@ -22,6 +22,9 @@ def Ten_Carousel_Template(
             columns=[
                 CarouselColumn(
                     thumbnail_image_url=img_url1_1,
+                    imageAspectRatio='square',
+                    imageSize='cover',
+                    imageBackgroundColor= "#a8e8fb",
                     title=title1_1,
                     text=text1_1,
                     actions=[
@@ -170,10 +173,7 @@ def Ten_Carousel_Template(
                         )
                     ]
                 )
-            ],
-            imageAspectRatio='square',
-            imageSize='cover',
-            imageBackgroundColor= "#a8e8fb"
+            ]
         )
     )
     return message
