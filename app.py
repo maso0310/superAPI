@@ -6,6 +6,8 @@ from flask import Flask, request, abort
 
 #基礎模組
 import time
+import re
+import csv
 
 #JSON編碼解碼
 import json
@@ -87,149 +89,20 @@ def handle_text_message(event):
     print(user_intent)
 
     # 3. 根據使用者的意圖做相對應的回答
-    if "test" in msg: #輸入你預期使用者會輸入的部分
+    if "支出項目" in msg: #輸入你預期使用者會輸入的部分
         #商品縮圖網址
-        img_url = [
-            'https://img.shop.com/Image/240000/246300/246302/products/809481173__2400x2400__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/1531559443__2400x2400__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/644795691__2400x2400__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/644795692__2400x2400__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/644795688__2400x2400__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/959119034__2400x2400__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/1294104564__2400x2400__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/644795689__2400x2400__.jpg',
-            'https://img.shop.com/Image/240000/246300/246302/products/1660900392__2400x2400__.jpg',
-            'https://img.shop.com/Image/250000/250600/250614/products/1660900448__2400x2400__.jpg'
-
-        ]
-
-        #商品名稱
-        title = [
-            '威淨™ 家潔組  \nNT$1,935',
-            '威淨™居家清潔易潔包組（含專用瓶） \nNT$1,590',
-            '威淨™強力酵素高效洗衣精  \nNT$455',
-            '威淨™強效清潔劑  \nNT$410',
-            '威淨™萬用天然濃縮清潔劑  \nNT$420',
-            '威淨™深層去污清潔劑  \nNT$420',
-            '威淨™去味除漬噴霧  \nNT$410',
-            '威淨™蘆薈洗碗精  \nNT$410',
-            '威淨™洗衣易潔包–清新配方  \nNT$515',
-            '愛的奇蹟™ 洗衣易潔包－無香精配方  \nNT$515'
-        ]
-
-        #商品描述
-        text1 = [
-            '威淨®家潔組',
-            '含威淨™濃縮清潔易潔包組與專用噴頭',
-            '單瓶裝（1.183公升）',
-            '單瓶裝（946毫升）',
-            '單瓶裝（946毫升)',
-            '單瓶裝（946毫升)',
-            '清香配方 - 單瓶裝（236.5毫升）',
-            '單瓶裝（946毫升）',
-            '單罐 (24包裝)',
-            '單罐 (24包裝)'
-        ]
-
-        #單價
-        label2 = [
-            '$ 530',
-            '$ 610',
-            '$ 460',
-            '$ 460',
-            '$ 460',
-            '$ 460',
-            '$ 460',
-            '$ 460',
-            '$ 290',
-            '$ 560'
-        ]
-
-
-        #我要購買的選項
-        label3 = [
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1'
-        ]
-
-        #用戶回傳的訊息
-        text3 = [
-            '威淨™ 家潔組　+1',
-            '威淨™居家清潔易潔包組　+1',
-            '威淨™強力酵素高效洗衣精　+1',
-            '威淨™強效清潔劑　+1',
-            '威淨™萬用天然濃縮清潔劑　+1',
-            '威淨™深層去污清潔劑　+1',
-            '威淨™去味除漬噴霧　+1',
-            '威淨™蘆薈洗碗精　+1',
-            '威淨™洗衣易潔包–清新配方　+1',
-            '愛的奇蹟™ 洗衣易潔包－無香精配方　+1'
-        ]
-
-        #更多詳細資訊
-        label4 = [
-            '更多詳細資訊',
-            '更多詳細資訊',
-            '更多詳細資訊',
-            '更多詳細資訊',
-            '更多詳細資訊',
-            '更多詳細資訊',
-            '更多詳細資訊',
-            '更多詳細資訊',
-            '更多詳細資訊',
-            '更多詳細資訊'
-        ]
-
-        #使用者進入的網址
-        url4 = [
-            'http://t.cn/EZCiEdn',
-            'http://t.cn/EZCiBuc',
-            'http://t.cn/EZC6ZvA',
-            'http://t.cn/EZC6ygI',
-            'http://t.cn/EZC6qEK',
-            'http://t.cn/EZC6fmN',
-            'http://t.cn/EZC6i7h',
-            'http://t.cn/EZC6Smo',
-            'http://t.cn/EZC6NNS',
-            'http://t.cn/EZC6lr8'
-        ]
-
-        buy_together1 = Ten_Carousel_Template(
-            img_url[0],title[0],text1[0],label3[0],text3[0],label4[0],url4[0],
-            img_url[1],title[1],text1[1],label3[1],text3[1],label4[1],url4[1],
-            img_url[2],title[2],text1[2],label3[2],text3[2],label4[2],url4[2],
-            img_url[3],title[3],text1[3],label3[3],text3[3],label4[3],url4[3],
-            img_url[4],title[4],text1[4],label3[4],text3[4],label4[4],url4[4],
-            img_url[5],title[5],text1[5],label3[5],text3[5],label4[5],url4[5],
-            img_url[6],title[6],text1[6],label3[6],text3[6],label4[6],url4[6],
-            img_url[7],title[7],text1[7],label3[7],text3[7],label4[7],url4[7],
-            img_url[8],title[8],text1[8],label3[8],text3[8],label4[8],url4[8],
-            img_url[9],title[9],text1[9],label3[9],text3[9],label4[9],url4[9]
-        )
-        buy_together2 = Ten_Carousel_Template(
-            img_url[0],title[0],text1[0],label3[0],text3[0],label4[0],url4[0],
-            img_url[1],title[1],text1[1],label3[1],text3[1],label4[1],url4[1],
-            img_url[2],title[2],text1[2],label3[2],text3[2],label4[2],url4[2],
-            img_url[3],title[3],text1[3],label3[3],text3[3],label4[3],url4[3],
-            img_url[4],title[4],text1[4],label3[4],text3[4],label4[4],url4[4],
-            img_url[5],title[5],text1[5],label3[5],text3[5],label4[5],url4[5],
-            img_url[6],title[6],text1[6],label3[6],text3[6],label4[6],url4[6],
-            img_url[7],title[7],text1[7],label3[7],text3[7],label4[7],url4[7],
-            img_url[8],title[8],text1[8],label3[8],text3[8],label4[8],url4[8],
-            img_url[9],title[9],text1[9],label3[9],text3[9],label4[9],url4[9]
-        )
-
-
-        message = [buy_together1,buy_together2]
-        line_bot_api.reply_message(event.reply_token,message)
+        item = '項目.*'
+        money = '\d' 
+        pay_for = re.findall(item,event.message.text)
+        pay_money = re.findall(money,event.message.text)
+        date = time.strftime('%Y-%M-%D',time.localtime())
+        with open('財務紀錄.csv',newline='', mode='a',encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow([date,pay_for,pay_money])
+        with open('財務紀錄.csv',mode='r',encoding='utf-8') as f:
+            reader = csv.reader(f)
+            for row in reader:
+            line_bot_api.reply_message(event.reply_token,row)
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
@@ -249,16 +122,16 @@ def handle_text_message(event):
 
         #商品名稱
         title = [
-            '威淨™ 家潔組'+'\n'+'NT$1,935',
-            '威淨™居家清潔易潔包組（含專用瓶）'+'\n'+'NT$1,590',
-            '威淨™強力酵素高效洗衣精'+'\n'+'NT$455',
-            '威淨™強效清潔劑'+'\n'+'NT$410',
-            '威淨™萬用天然濃縮清潔劑'+'\n'+'NT$420',
-            '威淨™深層去污清潔劑'+'\n'+'NT$420',
-            '威淨™去味除漬噴霧'+'\n'+'NT$410',
-            '威淨™蘆薈洗碗精'+'\n'+'NT$410',
-            '威淨™洗衣易潔包–清新配方'+'\n'+'NT$515',
-            '愛的奇蹟™ 洗衣易潔包－無香精配方'+'\n'+'NT$515'
+            '威淨™ 家潔組  NT$1,935',
+            '威淨™居家清潔易潔包組（含專用瓶）  NT$1,590',
+            '威淨™強力酵素高效洗衣精  NT$455',
+            '威淨™強效清潔劑  NT$410',
+            '威淨™萬用天然濃縮清潔劑  NT$420',
+            '威淨™深層去污清潔劑  NT$420',
+            '威淨™去味除漬噴霧  NT$410',
+            '威淨™蘆薈洗碗精  NT$410',
+            '威淨™洗衣易潔包–清新配方  NT$515',
+            '愛的奇蹟™ 洗衣易潔包－無香精配方  NT$515'
         ]
 
         #商品描述
