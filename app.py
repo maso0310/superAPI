@@ -115,7 +115,7 @@ def handle_text_message(event):
                 b=row[1]
                 c=row[2]
                 print(a,b,c)
-                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a+b+C))
+                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a+b+c))
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
