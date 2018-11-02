@@ -89,7 +89,7 @@ def handle_text_message(event):
     print(user_intent)
 
     # 3. 根據使用者的意圖做相對應的回答
-    if "支出項目" in msg: #輸入你預期使用者會輸入的部分
+    if "支出" in msg: #輸入你預期使用者會輸入的部分
         #商品縮圖網址
 
         item = ' .*[\u4e00-\u9fa5]'
