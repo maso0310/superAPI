@@ -1,6 +1,5 @@
 import csv
 
-with open('財務紀錄.csv',mode='r') as f:
-    reader = csv.reader(f)
-    for row in reader:
+with open('財務紀錄.csv',mode='r',encoding='utf-8') as f:
+    for row in csv.DictReader(f):
         print(row)
