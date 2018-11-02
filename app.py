@@ -95,14 +95,15 @@ def handle_text_message(event):
         money = '\d' 
         pay_for = re.findall(item,event.message.text)
         pay_money = re.findall(money,event.message.text)
-        date = time.strftime('%Y-%M-%D',time.localtime())
+        pay_for_text = pay_for[0]
+        pay_money_text = pay_money[0]
+        date = time.strftime('%Y-%m-%d',time.localtime())
         with open('財務紀錄.csv',newline='', mode='a',encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow([date,pay_for,pay_money])
-        a = "已記錄"+date+"花費"+pay_for+pay_money+"元"
+        a = "已記錄"+date+"花費"+pay_for_text+pay_money_text+"元"
         print(a.type)
-        b = text_message(a)
-        line_bot_api.reply_message(event.reply_token,b)
+        line_bot_api.reply_message(event.reply_token,a)
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
