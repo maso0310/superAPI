@@ -102,7 +102,7 @@ def handle_text_message(event):
             writer = csv.writer(f)
             writer.writerow([date,pay_for,pay_money])
         a = "已記錄"+date+"花費"+pay_for_text+pay_money_text+"元"
-        print(a.type)
+        print(type(a))
         line_bot_api.reply_message(event.reply_token,a)
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
