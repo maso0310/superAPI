@@ -113,7 +113,7 @@ def handle_text_message(event):
             reader = csv.reader(f)
             for row in reader:
                 print(row)
-                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=row[:]))
+                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=row))
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
