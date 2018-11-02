@@ -91,6 +91,7 @@ def handle_text_message(event):
     # 3. 根據使用者的意圖做相對應的回答
     if "支出項目" in msg: #輸入你預期使用者會輸入的部分
         #商品縮圖網址
+
         item = ' .*[\u4e00-\u9fa5]'
         money = '[0-9].*' 
         pay_for = re.findall(item,event.message.text)
@@ -100,17 +101,26 @@ def handle_text_message(event):
         print(pay_for_text)
         print(pay_money_text)
         date = time.strftime('%Y-%m-%d',time.localtime())
+        '''
         with open('財務紀錄.csv',newline='', mode='a') as f:
             writer = csv.writer(f)
             writer.writerow([date,pay_for[0],pay_money[0]])
+        '''
         a = "已記錄"+date+pay_for_text+pay_money_text+"元"
+        b = date,pay_for_text,pay_money_text
+        f = open('財務紀錄.txt','a')
+        f.write(b+'\n')
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
     
     elif "帳簿" in msg:
+    '''
         with open('財務紀錄.csv',mode='r',encoding='utf-8') as f:
             for row in csv.DictReader(f):
                 a = row['日期']+row['項目']+row['金額']
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
+    '''
+            f = open('財務紀錄.txt','r', encoding='UTF-8')
+            look = f.read()
+            line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
