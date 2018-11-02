@@ -91,7 +91,7 @@ def handle_text_message(event):
     # 3. 根據使用者的意圖做相對應的回答
     if "支出項目" in msg: #輸入你預期使用者會輸入的部分
         #商品縮圖網址
-        item = '項目.*'
+        item = '"".*'
         money = '\d' 
         pay_for = re.findall(item,event.message.text)
         pay_money = re.findall(money,event.message.text)
@@ -104,6 +104,13 @@ def handle_text_message(event):
         a = "已記錄"+date+"花費"+pay_for_text+pay_money_text+"元"
         print(type(a))
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
+    
+    elif "帳簿" in msg:
+        with open('財務紀錄.csv',newline='', mode='r',encoding='utf-8') as f:
+            reader = csv.reader(f)
+            for row in reader:
+                print(row)
+                print(type(row))
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
