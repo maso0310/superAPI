@@ -108,13 +108,11 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
     
     elif "帳簿" in msg:
-        a = []
         with open('財務紀錄.csv',mode='r',encoding='utf-8') as f:
             reader = csv.reader(f)
             for row in reader:
                 print(row)
-                a=row[:]
-                print(a)
+                a = row[:]
                 line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
