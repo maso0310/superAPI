@@ -99,9 +99,7 @@ def handle_text_message(event):
         with open('財務紀錄.csv',newline='', mode='a',encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow([date,pay_for,pay_money])
-            a = '紀錄完畢'
-            print(a)
-            line_bot_api.reply_message(event.reply_token,a)
+        line_bot_api.reply_message(event.reply_token,pay_for)
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
