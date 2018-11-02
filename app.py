@@ -107,7 +107,7 @@ def handle_text_message(event):
             writer.writerow([date,pay_for[0],pay_money[0]])
         '''
         a = "已記錄"+date+pay_for_text+pay_money_text+"元"
-        b = date,pay_for_text,pay_money_text
+        b = date+pay_for_text+pay_money_text
         f = open('財務紀錄.txt','a')
         f.write(b+'\n')
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
