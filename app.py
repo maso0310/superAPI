@@ -97,6 +97,8 @@ def handle_text_message(event):
         pay_money = re.findall(money,event.message.text)
         pay_for_text = pay_for[0]
         pay_money_text = pay_money[0]
+        print(pay_for_text)
+        print(pay_money_text)
         date = time.strftime('%Y-%m-%d',time.localtime())
         with open('財務紀錄.csv',newline='', mode='a',encoding='utf-8') as f:
             writer = csv.writer(f)
@@ -106,7 +108,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
     
     elif "帳簿" in msg:
-        with open('財務紀錄.csv',newline='', mode='r',encoding='utf-8') as f:
+        with open('財務紀錄.csv',newline='', mode='rb') as f:
             reader = csv.reader(f)
             for row in reader:
                 print(row)
