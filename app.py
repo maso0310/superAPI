@@ -91,8 +91,8 @@ def handle_text_message(event):
     # 3. 根據使用者的意圖做相對應的回答
     if "支出項目" in msg: #輸入你預期使用者會輸入的部分
         #商品縮圖網址
-        item = '"".*'
-        money = '\d' 
+        item = '" ".*'
+        money = '[0-9]' 
         pay_for = re.findall(item,event.message.text)
         pay_money = re.findall(money,event.message.text)
         pay_for_text = pay_for[0]
