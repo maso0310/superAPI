@@ -108,7 +108,7 @@ def handle_text_message(event):
         '''
         a = "已記錄"+date+pay_for_text+pay_money_text+"元"
         b = date+pay_for_text+pay_money_text
-        f = open('財務紀錄.txt','a')
+        f = open('finance.txt','a')
         f.write(b+'\n')
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
     
@@ -116,7 +116,7 @@ def handle_text_message(event):
 #        with open('財務紀錄.csv',mode='r',encoding='utf-8') as f:
 #            for row in csv.DictReader(f):
 #                a = row['日期']+row['項目']+row['金額']
-        f = open('財務紀錄.txt','r')
+        f = open('finance.txt','r',encoding='UTF-8')
         look = f.read()
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
 
