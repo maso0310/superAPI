@@ -116,7 +116,7 @@ def handle_text_message(event):
 #        with open('財務紀錄.csv',mode='r',encoding='utf-8') as f:
 #            for row in csv.DictReader(f):
 #                a = row['日期']+row['項目']+row['金額']
-        f = open('財務紀錄.txt','rb')
+        f = open('財務紀錄.txt','r')
         look = f.read()
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
 
