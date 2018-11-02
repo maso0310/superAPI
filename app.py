@@ -113,14 +113,14 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
     
     elif "帳簿" in msg:
-    '''
+'''
         with open('財務紀錄.csv',mode='r',encoding='utf-8') as f:
             for row in csv.DictReader(f):
                 a = row['日期']+row['項目']+row['金額']
-    '''
-            f = open('財務紀錄.txt','r', encoding='UTF-8')
-            look = f.read()
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
+'''
+        f = open('財務紀錄.txt','r', encoding='UTF-8')
+        look = f.read()
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
