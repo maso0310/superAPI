@@ -100,18 +100,17 @@ def handle_text_message(event):
         print(pay_for_text)
         print(pay_money_text)
         date = time.strftime('%Y-%m-%d',time.localtime())
-        with open('財務紀錄.csv',newline='', mode='a',encoding='utf-8') as f:
+        with open('財務紀錄.csv',newline='', mode='a') as f:
             writer = csv.writer(f)
             writer.writerow([date,pay_for[0],pay_money[0]])
-        a = "已記錄"+date+"花費"+pay_for_text+pay_money_text+"元"
-        print(type(a))
+        a = "已記錄"+date+pay_for_text+pay_money_text+"元"
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
     
     elif "帳簿" in msg:
         with open('財務紀錄.csv',mode='r',encoding='utf-8') as f:
             for row in csv.DictReader(f):
-                print(row['日期'],row['項目'],row['金額'])
                 a = row['日期']+row['項目']+row['金額']
+
                 line_bot_api.reply_message(event.reply_token,TextSendMessage(text=a))
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
