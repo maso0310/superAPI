@@ -113,12 +113,10 @@ def handle_text_message(event):
             except Exception as ex:
                 print('無法連線Google試算表', ex)
                 sys.exit(1)
-            pattern = ' .*'
-
             textt=""
             textt+=event.message.text
             if textt!="":
-                worksheet.append_row('2018-11-14 03:35', '測試成功')
+                worksheet.append_row('2018-11-14', textt))
                 print('新增一列資料到試算表' ,GSpreadSheet)
                 return textt
 
