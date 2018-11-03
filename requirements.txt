@@ -3,6 +3,10 @@ certifi==2018.10.15
 chardet==3.0.4
 Flask==1.0.2
 future==0.16.0
+google-api-python-client==1.7.4
+google-auth==1.5.1
+google-auth-httplib2==0.0.3
+gspread==3.0.1
 idna==2.7
 line-bot-sdk==1.8.0
 numpy==1.15.2
