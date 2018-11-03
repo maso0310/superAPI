@@ -116,7 +116,7 @@ def handle_text_message(event):
             textt=""
             textt+=event.message.text
             if textt!="":
-                worksheet.append_row('2018-11-14', textt))
+                worksheet.append_row('2018-11-14', textt)
                 print('新增一列資料到試算表' ,GSpreadSheet)
                 return textt
 
