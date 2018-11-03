@@ -101,7 +101,7 @@ def handle_text_message(event):
         #GDriveJSON就輸入下載下來Json檔名稱
         #GSpreadSheet是google試算表名稱
         GDriveJSON = 'LineBot.json'
-        GSpreadSheet = 'BotTest'
+        GSpreadSheet = 'LineBot'
         while True:
             try:
                 scope = ['https://spreadsheets.google.com/feeds']
