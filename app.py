@@ -102,9 +102,7 @@ def handle_text_message(event):
         GSpreadSheet = 'LineBot'
         while True:
             try:
-                scope = [
-                    "https://spreadsheets.google.com/feeds",
-                    "https://accounts.google.com/o/oauth2/auth"]
+                scope = ["https://spreadsheets.google.com/feeds","https://accounts.google.com/o/oauth2/auth"]
                 key = SAC.from_json_keyfile_name(GDriveJSON, scope)
                 gc = gspread.authorize(key)
                 worksheet = gc.open(GSpreadSheet).sheet1
