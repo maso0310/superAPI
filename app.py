@@ -114,7 +114,7 @@ def handle_text_message(event):
             textt+=event.message.text
             if textt!="":
                 date = time.strftime('%Y-%m-%d',time.localtime())
-                worksheet.append_row(date, textt)
+                worksheet.append_row('date','test')
                 print('新增一列資料到試算表' ,GSpreadSheet)
                 line_bot_api.reply_message(event.reply_token,TextSendMessage(text="紀錄成功"))
                 return textt
