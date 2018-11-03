@@ -96,8 +96,6 @@ def handle_text_message(event):
 
     # 3. 根據使用者的意圖做相對應的回答
     if "表單" in msg:
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="紀錄成功"))
-        pass
         #GDriveJSON就輸入下載下來Json檔名稱
         #GSpreadSheet是google試算表名稱
         GDriveJSON = 'LineBot.json'
@@ -115,8 +113,10 @@ def handle_text_message(event):
             textt=""
             textt+=event.message.text
             if textt!="":
-                worksheet.append_row((datetime.datetime.now(), textt))
+                date = time.strftime('%Y-%m-%d',time.localtime())
+                worksheet.append_row(date), textt))
                 print('新增一列資料到試算表' ,GSpreadSheet)
+                line_bot_api.reply_message(event.reply_token,TextSendMessage(text="紀錄成功"))
                 return textt
 
     elif "支出" in msg: #輸入你預期使用者會輸入的部分
