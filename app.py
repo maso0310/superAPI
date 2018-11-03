@@ -104,7 +104,7 @@ def handle_text_message(event):
         GSpreadSheet = 'LineBot'
         while True:
             try:
-                scope = ['https://spreadsheets.google.com/feeds']
+                scope = ['https://www.googleapis.com/auth/spreadsheets']
                 key = SAC.from_json_keyfile_name(GDriveJSON, scope)
                 gc = gspread.authorize(key)
                 worksheet = gc.open(GSpreadSheet).sheet1
@@ -116,7 +116,7 @@ def handle_text_message(event):
             if textt!="":
                 worksheet.append_row((datetime.datetime.now(), textt))
                 print('新增一列資料到試算表' ,GSpreadSheet)
-                return textt  
+                return textt
 
     elif "支出" in msg: #輸入你預期使用者會輸入的部分
         #商品縮圖網址
