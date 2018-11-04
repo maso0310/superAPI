@@ -155,7 +155,7 @@ def handle_text_message(event):
             'http://fs1.shop123.com.tw/400394/upload/product/4003944100pic_origin_eb32cd885190_ars_300_300.jpg',
             'http://fs1.shop123.com.tw/400394/upload/product/4003944099pic_small_576755.jpeg',
             'http://fs1.shop123.com.tw/400394/upload/product/4003944098pic_small_186428.jpg',
-            'http://fs1.shop123.com.tw/400394/upload/product/4003944097pic_small_679905.jpeg',
+            'http://fs1.shop123.com.tw/400394/upload/product/4003944097pic_small_679905.jpg',
             'http://fs1.shop123.com.tw/400394/upload/product/4003944096pic_small_352361.jpg',
             'http://fs1.shop123.com.tw/400394/upload/product/4003944101pic_small_133304.jpg'
         ]
@@ -322,7 +322,7 @@ def handle_text_message(event):
             img_urlK[5],titleK[5],text1K[5],label3K[5],text3K[5],label4K[5],url4K[5],
             img_urlK[6],titleK[6],text1K[6],label3K[6],text3K[6],label4K[6],url4K[6]
         )
-        partner_store = msg1,msg2
+        partner_store = 'msg1,msg2'
         line_bot_api.reply_message(event.reply_token,partner_store)
 
 
