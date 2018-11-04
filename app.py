@@ -156,7 +156,8 @@ def handle_text_message(event):
             'http://fs1.shop123.com.tw/400394/upload/product/4003944099pic_small_576755.jpeg',
             'http://fs1.shop123.com.tw/400394/upload/product/4003944098pic_small_186428.jpg',
             'http://fs1.shop123.com.tw/400394/upload/product/4003944097pic_small_679905.jpeg',
-            'http://fs1.shop123.com.tw/400394/upload/product/4003944096pic_small_352361.jpg'
+            'http://fs1.shop123.com.tw/400394/upload/product/4003944096pic_small_352361.jpg',
+            'http://fs1.shop123.com.tw/400394/upload/product/4003944101pic_small_133304.jpg'
         ]
 
         #商品名稱
@@ -179,7 +180,6 @@ def handle_text_message(event):
             '來自北海道的乳源，成就豐厚芳醇的自然風味，再搭配上昭和蛋糕專用麵粉製成的蛋糕，以絕佳比例引領平衡口感。',
             '結合脆粒分明的巧克力豆，為Ｑ彈可口的蛋糕體增加了饒富趣味的口感，北海道奶霜裡蘊藏著醇厚的巧克力香氣與質感，在舌尖裡瞬間融化成令人驚豔的滋味！',
             '剛入口的起司帶點口感與焦香，是義大利帕達諾起司醇厚的風味，搭配紮實濃郁的起司蛋糕，可以品嚐它在口中化開的細膩質感，感受起司獨特的鹹香與微酸的魅力。'
-
         ]
 
         #我要購買的選項
