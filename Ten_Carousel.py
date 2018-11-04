@@ -128,53 +128,6 @@ def Ten_Carousel_Template(
                         )
                     ]
                 )
-'''
-                CarouselColumn(
-                    thumbnail_image_url=img_url8_1,
-                    title=title8_1,
-                    text=text8_1,
-                    actions=[
-                        MessageTemplateAction(
-                            label=label8_3,
-                            text=text8_3
-                        ),
-                        URITemplateAction(
-                            label=label8_4,
-                            uri=url8_4
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url=img_url9_1,
-                    title=title9_1,
-                    text=text9_1,
-                    actions=[
-                        MessageTemplateAction(
-                            label=label9_3,
-                            text=text9_3
-                        ),
-                        URITemplateAction(
-                            label=label9_4,
-                            uri=url9_4
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url=img_url10_1,
-                    title=title10_1,
-                    text=text10_1,
-                    actions=[
-                        MessageTemplateAction(
-                            label=label10_3,
-                            text=text10_3
-                        ),
-                        URITemplateAction(
-                            label=label10_4,
-                            uri=url10_4
-                        )
-                    ]
-                )
-'''
             ]
         )
     )
