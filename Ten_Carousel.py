@@ -128,7 +128,7 @@ def Ten_Carousel_Template(
                         )
                     ]
                 )
-                '''
+'''
                 CarouselColumn(
                     thumbnail_image_url=img_url8_1,
                     title=title8_1,
@@ -172,7 +172,7 @@ def Ten_Carousel_Template(
                             label=label10_4,
                             uri=url10_4
                         )
-                        '''
+'''
                     ]
                 )
             ]
