@@ -233,10 +233,7 @@ def handle_text_message(event):
             img_url[3],title[3],text1[3],label3[3],text3[3],label4[3],url4[3],
             img_url[4],title[4],text1[4],label3[4],text3[4],label4[4],url4[4],
             img_url[5],title[5],text1[5],label3[5],text3[5],label4[5],url4[5],
-            img_url[6],title[6],text1[6],label3[6],text3[6],label4[6],url4[6],
-            img_url[7],title[7],text1[7],label3[7],text3[7],label4[7],url4[7],
-            img_url[8],title[8],text1[8],label3[8],text3[8],label4[8],url4[8],
-            img_url[9],title[9],text1[9],label3[9],text3[9],label4[9],url4[9]
+            img_url[6],title[6],text1[6],label3[6],text3[6],label4[6],url4[6]
         )
 
         img_urlK = [
@@ -324,10 +321,7 @@ def handle_text_message(event):
             img_urlK[3],titleK[3],text1K[3],label3K[3],text3K[3],label4K[3],url4K[3],
             img_urlK[4],titleK[4],text1K[4],label3K[4],text3K[4],label4K[4],url4K[4],
             img_urlK[5],titleK[5],text1K[5],label3K[5],text3K[5],label4K[5],url4K[5],
-            img_urlK[6],titleK[6],text1K[6],label3K[6],text3K[6],label4K[6],url4K[6],
-            img_urlK[7],titleK[7],text1K[7],label3K[7],text3K[7],label4K[7],url4K[7],
-            img_urlK[8],titleK[8],text1K[8],label3K[8],text3K[8],label4K[8],url4K[8],
-            img_urlK[9],titleK[9],text1K[9],label3K[9],text3K[9],label4K[9],url4K[9]
+            img_urlK[6],titleK[6],text1K[6],label3K[6],text3K[6],label4K[6],url4K[6]
         )
         partner_store = (msg1,msg2)
         line_bot_api.reply_message(event.reply_token,partner_store)
