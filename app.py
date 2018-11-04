@@ -226,7 +226,7 @@ def handle_text_message(event):
             'http://buy.yannick.com.tw/product.php?pid_for_show=4101'
         ]
 
-        msg = Ten_Carousel_Template(
+        msg1 = Ten_Carousel_Template(
             img_url[0],title[0],text1[0],label3[0],text3[0],label4[0],url4[0],
             img_url[1],title[1],text1[1],label3[1],text3[1],label4[1],url4[1],
             img_url[2],title[2],text1[2],label3[2],text3[2],label4[2],url4[2],
@@ -255,7 +255,6 @@ def handle_text_message(event):
             '宮崎肉多多羊肉爐3包組  1468$免運',
             '滿2000加購人蔘烏骨雞湯買一送一  450$',
             '滿2000加購黑蒜頭烏骨雞湯買一送一  450$'
-
         ]
 
         #商品描述
@@ -323,7 +322,7 @@ def handle_text_message(event):
             img_urlK[5],titleK[5],text1K[5],label3K[5],text3K[5],label4K[5],url4K[5],
             img_urlK[6],titleK[6],text1K[6],label3K[6],text3K[6],label4K[6],url4K[6]
         )
-        partner_store = [msg,msg2]
+        partner_store = (msg1,msg2)
         line_bot_api.reply_message(event.reply_token,partner_store)
 
 
