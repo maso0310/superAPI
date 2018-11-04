@@ -172,8 +172,10 @@ def Ten_Carousel_Template(
                             label=label10_4,
                             uri=url10_4
                         )
-'''
                     ]
                 )
+'''
+            ]
         )
+    )
     return message
