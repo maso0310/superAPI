@@ -184,7 +184,7 @@ def handle_text_message(event):
 
         #我要購買的選項
         label3 = [
-            '邀您共襄盛舉《食尚厚黑學》',
+            '《食尚厚黑學》',
             '我要+1',
             '我要+1',
             '我要+1',
@@ -195,7 +195,7 @@ def handle_text_message(event):
 
         #用戶回傳的訊息
         text3 = [
-            '想問如何購買亞尼克生乳捲？',
+            '亞尼克官網https://reurl.cc/6y9gk',
             '極致黑+1',
             '靜岡抹茶+1',
             '特黑巧克力+1',
@@ -281,7 +281,7 @@ def handle_text_message(event):
 
         #用戶回傳的訊息
         text3K = [
-            '宮崎水產官網 https://www.give-me-the-money.com/',
+            '宮崎水產官網 https://reurl.cc/Kxq6R',
             '大包裝骰子牛3入+1',
             '懷舊牛肉爐3入+1',
             '鮭魚土魠魚3入組合+1',
