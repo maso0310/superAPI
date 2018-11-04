@@ -151,7 +151,7 @@ def handle_text_message(event):
     
     elif "商展精選" in msg:
         img_url = [
-            'http://fs1.shop123.com.tw/400394/upload/harddisc/4003940_file_126638530340202018110103.jpg',
+            'https://i.imgur.com/8O8fwXP.jpg',
             'http://fs1.shop123.com.tw/400394/upload/product/4003944100pic_origin_eb32cd885190_ars_300_300.jpg',
             'http://fs1.shop123.com.tw/400394/upload/product/4003944099pic_small_576755.jpeg',
             'http://fs1.shop123.com.tw/400394/upload/product/4003944098pic_small_186428.jpg',
