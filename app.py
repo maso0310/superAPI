@@ -323,7 +323,7 @@ def handle_text_message(event):
             img_urlK[6],titleK[6],text1K[6],label3K[6],text3K[6],label4K[6],url4K[6]
         )
         partner_store = msg1
-        line_bot_api.reply_message(event.reply_token,partner_store)
+        line_bot_api.reply_message(event.reply_token,msg2)
 
 
 
