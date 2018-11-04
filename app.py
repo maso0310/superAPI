@@ -106,6 +106,7 @@ def handle_text_message(event):
                 key = SAC.from_json_keyfile_name(GDriveJSON, scope)
                 gc = gspread.authorize(key)
                 worksheet = gc.open(GSpreadSheet).sheet1
+                print("登入成功")
             except Exception as ex:
                 print('無法連線Google試算表', ex)
                 sys.exit(1)
@@ -147,6 +148,191 @@ def handle_text_message(event):
         f = open('finance.txt','r',encoding='UTF-8')
         look = f.read()
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
+    
+    elif "商展精選" in msg:
+        img_url = [
+            'http://fs1.shop123.com.tw/400394/upload/harddisc/4003940_file_126638530340202018110103.jpg',
+            'http://fs1.shop123.com.tw/400394/upload/product/4003944100pic_origin_eb32cd885190_ars_300_300.jpg',
+            'http://fs1.shop123.com.tw/400394/upload/product/4003944099pic_small_576755.jpeg',
+            'http://fs1.shop123.com.tw/400394/upload/product/4003944098pic_small_186428.jpg',
+            'http://fs1.shop123.com.tw/400394/upload/product/4003944097pic_small_679905.jpeg',
+            'http://fs1.shop123.com.tw/400394/upload/product/4003944096pic_small_352361.jpg'
+        ]
+
+        #商品名稱
+        title = [
+            '美安大會亞尼克生乳捲優惠資訊',
+            '亞尼克生乳捲-極致黑  原價450$/條',
+            '亞尼克生乳捲-靜岡抹茶  原價420$/條',
+            '亞尼克生乳捲-特黑巧克力  原價380/條',
+            '亞尼克生乳捲-原味  原價380/條',
+            '亞尼克生乳捲-黑魔粒雙漩  原價420$/條',
+            '亞尼克起司磚-原味  原價380$/條'
+        ]
+
+        #商品描述
+        text1 = [
+            '活動期間11/01~11/11，3件以上免運',
+            '《獨家商品》天然竹炭粉凝聚的黑金魅力讓蛋糕捲充滿光澤美感，捲入北海道奶霜與糖炒芝麻交融的美味。',
+            '奢侈地使用日本靜岡製造的高級抹茶粉，香氣深厚濃郁，甘甜不澀，獲獎無數。',
+            '來自北海道的乳源，成就豐厚芳醇的自然風味，再搭配上昭和蛋糕專用麵粉製成的蛋糕，以絕佳比例引領平衡口感。 ',
+            '來自北海道的乳源，成就豐厚芳醇的自然風味，再搭配上昭和蛋糕專用麵粉製成的蛋糕，以絕佳比例引領平衡口感。',
+            '結合脆粒分明的巧克力豆，為Ｑ彈可口的蛋糕體增加了饒富趣味的口感，北海道奶霜裡蘊藏著醇厚的巧克力香氣與質感，在舌尖裡瞬間融化成令人驚豔的滋味！',
+            '剛入口的起司帶點口感與焦香，是義大利帕達諾起司醇厚的風味，搭配紮實濃郁的起司蛋糕，可以品嚐它在口中化開的細膩質感，感受起司獨特的鹹香與微酸的魅力。'
+
+        ]
+
+        #我要購買的選項
+        label3 = [
+            '邀您共襄盛舉《食尚厚黑學》',
+            '我要+1',
+            '我要+1',
+            '我要+1',
+            '我要+1',
+            '我要+1',
+            '我要+1'
+        ]
+
+        #用戶回傳的訊息
+        text3 = [
+            '想問如何購買亞尼克生乳捲？',
+            '極致黑+1',
+            '靜岡抹茶+1',
+            '特黑巧克力+1',
+            '原味生乳捲+1',
+            '黑魔粒雙漩+1',
+            '起司磚+1'
+        ]
+
+        #更多詳細資訊
+        label4 = [
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情'
+        ]
+
+        #使用者進入的網址
+        url4 = [
+            'http://buy.yannick.com.tw/website_module.php?website_module_classify_sn=154',
+            'http://buy.yannick.com.tw/product.php?pid_for_show=4100',
+            'http://buy.yannick.com.tw/product.php?pid_for_show=4099',
+            'http://buy.yannick.com.tw/product.php?pid_for_show=4098',
+            'http://buy.yannick.com.tw/product.php?pid_for_show=4097',
+            'http://buy.yannick.com.tw/product.php?pid_for_show=4096',
+            'http://buy.yannick.com.tw/product.php?pid_for_show=4101'
+        ]
+
+        msg = Ten_Carousel_Template(
+            img_url[0],title[0],text1[0],label3[0],text3[0],label4[0],url4[0],
+            img_url[1],title[1],text1[1],label3[1],text3[1],label4[1],url4[1],
+            img_url[2],title[2],text1[2],label3[2],text3[2],label4[2],url4[2],
+            img_url[3],title[3],text1[3],label3[3],text3[3],label4[3],url4[3],
+            img_url[4],title[4],text1[4],label3[4],text3[4],label4[4],url4[4],
+            img_url[5],title[5],text1[5],label3[5],text3[5],label4[5],url4[5],
+            img_url[6],title[6],text1[6],label3[6],text3[6],label4[6],url4[6],
+            img_url[7],title[7],text1[7],label3[7],text3[7],label4[7],url4[7],
+            img_url[8],title[8],text1[8],label3[8],text3[8],label4[8],url4[8],
+            img_url[9],title[9],text1[9],label3[9],text3[9],label4[9],url4[9]
+        )
+
+        img_urlK = [
+            'https://www.give-me-the-money.com/_imagecache/%E6%9C%AA%E5%91%BD%E5%90%8D.jpg',
+            'https://i.imgur.com/bpYXSFr.jpg',
+            'https://i.imgur.com/SxDWzYq.jpg',
+            'https://i.imgur.com/YrOY6PY.jpg',
+            'https://i.imgur.com/w6IsmPx.jpg',
+            'https://i.imgur.com/89U2tMG.jpg',
+            'https://i.imgur.com/Y4EVZQQ.jpg'
+        ]
+
+        #商品名稱
+        titleK = [
+            '宮崎水產新鮮肉品火鍋優惠資訊',
+            '骰子牛大包裝3包入  890$免運',
+            '懷舊牛肉爐3包入  1299$免運',
+            '頂級智利鮭魚+厚片土魠魚各3片  1489$免運',
+            '宮崎肉多多羊肉爐3包組  1468$免運',
+            '滿2000加購人蔘烏骨雞湯買一送一  450$',
+            '滿2000加購黑蒜頭烏骨雞湯買一送一  450$'
+
+        ]
+
+        #商品描述
+        text1K = [
+            '多種品項優質肉品一試成主顧',
+            '骰子牛360g(包)',
+            '懷舊牛肉爐1250g(包)',
+            '鮭魚375g(片)土魠魚300g(片)',
+            '肉多多羊肉爐1250g(包)',
+            '人蔘雞湯2800g(包)',
+            '黑蒜頭雞湯2800g(包)'
+        ]
+
+        #我要購買的選項
+        label3K = [
+            '看全系列商品',
+            '我要+1',
+            '我要+1',
+            '我要+1',
+            '我要+1',
+            '我要+1',
+            '我要+1'
+        ]
+
+        #用戶回傳的訊息
+        text3K = [
+            '宮崎水產官網 https://www.give-me-the-money.com/',
+            '大包裝骰子牛3入+1',
+            '懷舊牛肉爐3入+1',
+            '鮭魚土魠魚3入組合+1',
+            '肉多多羊肉爐+1',
+            '滿2000加購人蔘雞湯+1',
+            '滿2000加購黑蒜頭雞湯+1'
+        ]
+
+        #更多詳細資訊
+        label4K = [
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情',
+            '瞭解詳情'
+
+        ]
+
+        #使用者進入的網址
+        url4K = [
+            'https://www.give-me-the-money.com/',
+            'https://www.give-me-the-money.com/ecommerce/3/20.html',
+            'https://www.give-me-the-money.com/ecommerce/13/117.html',
+            'https://www.give-me-the-money.com/ecommerce/25-324/169.html',
+            'https://www.give-me-the-money.com/ecommerce/13/73.html',
+            'https://www.give-me-the-money.com/ecommerce/24-324/183.html',
+            'https://www.give-me-the-money.com/ecommerce/24-324/178.html'
+        ]
+
+        msg2 = Ten_Carousel_Template(
+            img_urlK[0],titleK[0],text1K[0],label3K[0],text3K[0],label4K[0],url4K[0],
+            img_urlK[1],titleK[1],text1K[1],label3K[1],text3K[1],label4K[1],url4K[1],
+            img_urlK[2],titleK[2],text1K[2],label3K[2],text3K[2],label4K[2],url4K[2],
+            img_urlK[3],titleK[3],text1K[3],label3K[3],text3K[3],label4K[3],url4K[3],
+            img_urlK[4],titleK[4],text1K[4],label3K[4],text3K[4],label4K[4],url4K[4],
+            img_urlK[5],titleK[5],text1K[5],label3K[5],text3K[5],label4K[5],url4K[5],
+            img_urlK[6],titleK[6],text1K[6],label3K[6],text3K[6],label4K[6],url4K[6],
+            img_urlK[7],titleK[7],text1K[7],label3K[7],text3K[7],label4K[7],url4K[7],
+            img_urlK[8],titleK[8],text1K[8],label3K[8],text3K[8],label4K[8],url4K[8],
+            img_urlK[9],titleK[9],text1K[9],label3K[9],text3K[9],label4K[9],url4K[9]
+        )
+        partner_store = (msg1,msg2)
+        line_bot_api.reply_message(event.reply_token,partner_store)
+
+
 
     elif "威淨SNAP酵素清潔劑，開團！" in msg:
         #商品縮圖網址
@@ -276,6 +462,9 @@ def handle_text_message(event):
             img_url[9],title[9],text1[9],label3[9],text3[9],label4[9],url4[9]
         )
         line_bot_api.reply_message(event.reply_token,buy_together)
+
+
+
 
     elif "餐廳，" in msg:
         ask_place = TemplateSendMessage(

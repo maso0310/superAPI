@@ -1,26 +1,29 @@
-import sys
-import time
-import datetime
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials as SAC
-GDriveJSON = 'PythonUpload.json'
-GSpreadSheet = 'UploadByPython'
-WaitSecond = 60
-print('將資料記錄在試算表' ,GSpreadSheet , '每' ,WaitSecond ,'秒')
-print('按下 Ctrl-C中斷執行')
-count = 1
-while True:
-    try:
-        scope = [
-            'https://www.googleapis.com/auth/spreadsheets',
-            'https://www.googleapis.com/auth/drive']
-        key = SAC.from_json_keyfile_name(GDriveJSON, scope)
-        gc = gspread.authorize(key)
-        worksheet = gc.open(GSpreadSheet).sheet1
-    except Exception as ex:
-        print('無法連線Google試算表', ex)
-        sys.exit(1)
-    worksheet.append_row((datetime.datetime.now(), count))
-    count = count+1
-    print('新增一列資料到試算表' ,GSpreadSheet)
-    time.sleep(WaitSecond)
+# update.py
+import re
+
+from urllib.request import urlopen
+
+from bs4 import BeautifulSoup
+
+def get_cheapest(url, text):
+    with urlopen(url) as response:
+        soup = BeautifulSoup(response.read(),'html.parser')
+
+    cheapest_price = cheapest_item = None
+
+    re_price = re.compile(r'\$(\d+)')
+    root = soup.find('td', text=re.compile(text)).parent
+
+    for option in root.find_all('option', text=re_price):
+        item = option.text.strip()
+        price = int(re_price.search(item).group(1))
+        if cheapest_price is None or price < cheapest_price:
+            cheapest_price = price
+            cheapest_item = item
+
+    return (cheapest_item, cheapest_price)
+
+coolpc_url = 'http://www.coolpc.com.tw/evaluate.php'
+ram_text = '記憶體 RAM'
+
+(cheapest_item, cheapest_price) = get_cheapest(coolpc_url, ram_text)
