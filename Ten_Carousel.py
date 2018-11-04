@@ -11,10 +11,10 @@ def Ten_Carousel_Template(
     img_url4_1,title4_1,text4_1,label4_3,text4_3,label4_4,url4_4,
     img_url5_1,title5_1,text5_1,label5_3,text5_3,label5_4,url5_4,
     img_url6_1,title6_1,text6_1,label6_3,text6_3,label6_4,url6_4,
-    img_url7_1,title7_1,text7_1,label7_3,text7_3,label7_4,url7_4,
-    img_url8_1,title8_1,text8_1,label8_3,text8_3,label8_4,url8_4,
-    img_url9_1,title9_1,text9_1,label9_3,text9_3,label9_4,url9_4,
-    img_url10_1,title10_1,text10_1,label10_3,text10_3,label10_4,url10_4
+    img_url7_1,title7_1,text7_1,label7_3,text7_3,label7_4,url7_4
+#    img_url8_1,title8_1,text8_1,label8_3,text8_3,label8_4,url8_4,
+#    img_url9_1,title9_1,text9_1,label9_3,text9_3,label9_4,url9_4,
+#    img_url10_1,title10_1,text10_1,label10_3,text10_3,label10_4,url10_4
 ):
     message = TemplateSendMessage(
         alt_text='請查看手機的訊息',
@@ -127,7 +127,8 @@ def Ten_Carousel_Template(
                             uri=url7_4
                         )
                     ]
-                ),
+                )
+                '''
                 CarouselColumn(
                     thumbnail_image_url=img_url8_1,
                     title=title8_1,
@@ -171,6 +172,7 @@ def Ten_Carousel_Template(
                             label=label10_4,
                             uri=url10_4
                         )
+                        '''
                     ]
                 )
             ]
