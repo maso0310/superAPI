@@ -218,8 +218,7 @@ def handle_text_message(event):
             'https://i.imgur.com/SxDWzYq.jpg',
             'https://i.imgur.com/YrOY6PY.jpg',
             'https://i.imgur.com/w6IsmPx.jpg',
-            'https://i.imgur.com/89U2tMG.jpg',
-            'https://i.imgur.com/Y4EVZQQ.jpg'
+            'https://i.imgur.com/89U2tMG.jpg'
         ]
 
         #商品名稱
@@ -229,8 +228,7 @@ def handle_text_message(event):
             '懷舊牛肉爐3包入  1299$免運',
             '頂級智利鮭魚+厚片土魠魚各3片  1489$免運',
             '宮崎肉多多羊肉爐3包組  1468$免運',
-            '滿2000加購人蔘烏骨雞湯買一送一  450$',
-            '滿2000加購黑蒜頭烏骨雞湯買一送一  450$'
+            '滿2000加購人蔘烏骨雞湯買一送一  450$'
         ]
 
         #商品描述
@@ -240,14 +238,12 @@ def handle_text_message(event):
             '懷舊牛肉爐1250g(包)',
             '鮭魚375g(片)土魠魚300g(片)',
             '肉多多羊肉爐1250g(包)',
-            '人蔘雞湯2800g(包)',
-            '黑蒜頭雞湯2800g(包)'
+            '人蔘雞湯2800g(包)'
         ]
 
         #我要購買的選項
         label3K = [
             '看全系列商品',
-            '我要+1',
             '我要+1',
             '我要+1',
             '我要+1',
@@ -262,13 +258,11 @@ def handle_text_message(event):
             '懷舊牛肉爐3入+1',
             '鮭魚土魠魚3入組合+1',
             '肉多多羊肉爐+1',
-            '滿2000加購人蔘雞湯+1',
-            '滿2000加購黑蒜頭雞湯+1'
+            '滿2000加購人蔘雞湯+1'
         ]
 
         #更多詳細資訊
         label4K = [
-            '瞭解詳情',
             '瞭解詳情',
             '瞭解詳情',
             '瞭解詳情',
@@ -285,8 +279,7 @@ def handle_text_message(event):
             'https://www.give-me-the-money.com/ecommerce/13/117.html',
             'https://www.give-me-the-money.com/ecommerce/25-324/169.html',
             'https://www.give-me-the-money.com/ecommerce/13/73.html',
-            'https://www.give-me-the-money.com/ecommerce/24-324/183.html',
-            'https://www.give-me-the-money.com/ecommerce/24-324/178.html'
+            'https://www.give-me-the-money.com/ecommerce/24-324/183.html'
         ]
 
         msg2 = Ten_Carousel_Template(
@@ -295,7 +288,8 @@ def handle_text_message(event):
             img_urlK[2],titleK[2],text1K[2],label3K[2],text3K[2],label4K[2],url4K[2],
             img_urlK[3],titleK[3],text1K[3],label3K[3],text3K[3],label4K[3],url4K[3],
             img_urlK[4],titleK[4],text1K[4],label3K[4],text3K[4],label4K[4],url4K[4],
-            img_urlK[5],titleK[5],text1K[5],label3K[5],text3K[5],label4K[5],url4K[5])
+            img_urlK[5],titleK[5],text1K[5],label3K[5],text3K[5],label4K[5],url4K[5]
+            )
         partner_store = (msg1)
         line_bot_api.reply_message(event.reply_token,partner_store)
 
