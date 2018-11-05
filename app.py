@@ -301,7 +301,12 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,big_pic)
 
 
-
+    elif "美安網站" in msg:
+        url = 'https://www.shop.com'
+        r = requests.get(url)
+        t = r.text
+        print(t)
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=t))
 
     elif "餐廳，" in msg:
         ask_place = TemplateSendMessage(
