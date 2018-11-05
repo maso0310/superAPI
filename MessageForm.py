@@ -199,27 +199,17 @@ def Carousel_Template(
 #TemplateSendMessage - ImageCarouselTemplate(圖片旋轉木馬)
 
 def image_carousel_message(
-    image_url1,label1,text1,data1,
-    image_url2,label2,text2,data2
+    image_url1,label1,data1
 ):
     message = TemplateSendMessage(
-        alt_text='ImageCarousel template',
+        alt_text='又有好康優惠囉！',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
-                    image_url='https://example.com/item1.jpg',
+                    image_url=image_url1,
                     action=PostbackTemplateAction(
-                        label='postback1',
-                        text='postback text1',
-                        data='action=buy&itemid=1'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url='https://example.com/item2.jpg',
-                    action=PostbackTemplateAction(
-                        label='postback2',
-                        text='postback text2',
-                        data='action=buy&itemid=2'
+                        label=label1,
+                        data=data1
                     )
                 )
             ]
