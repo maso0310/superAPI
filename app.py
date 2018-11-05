@@ -283,12 +283,12 @@ def handle_text_message(event):
         ]
 
         msg2 = Ten_Carousel_Template(
-            img_urlK[0],titleK[0],text1K[0],label3K[0],text3K[0],label4K[0],url4K[0],
-            img_urlK[1],titleK[1],text1K[1],label3K[1],text3K[1],label4K[1],url4K[1],
-            img_urlK[2],titleK[2],text1K[2],label3K[2],text3K[2],label4K[2],url4K[2],
-            img_urlK[3],titleK[3],text1K[3],label3K[3],text3K[3],label4K[3],url4K[3],
-            img_urlK[4],titleK[4],text1K[4],label3K[4],text3K[4],label4K[4],url4K[4],
-            img_urlK[5],titleK[5],text1K[5],label3K[5],text3K[5],label4K[5],url4K[5]
+            img_urlK[0],titleK[0],text1K[0],label4K[0],url4K[0],
+            img_urlK[1],titleK[1],text1K[1],label4K[1],url4K[1],
+            img_urlK[2],titleK[2],text1K[2],label4K[2],url4K[2],
+            img_urlK[3],titleK[3],text1K[3],label4K[3],url4K[3],
+            img_urlK[4],titleK[4],text1K[4],label4K[4],url4K[4],
+            img_urlK[5],titleK[5],text1K[5],label4K[5],url4K[5]
             )
         partner_store = (msg1)
         line_bot_api.reply_message(event.reply_token,partner_store)
