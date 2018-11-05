@@ -95,7 +95,7 @@ def handle_text_message(event):
     print(user_intent)
 
     # 3. 根據使用者的意圖做相對應的回答
-    if "表單" in msg:
+    if "test" in msg:
         #GDriveJSON就輸入下載下來Json檔名稱
         #GSpreadSheet是google試算表名稱
         GDriveJSON = 'LineBot.json'
