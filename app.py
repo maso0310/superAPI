@@ -149,7 +149,7 @@ def handle_text_message(event):
         look = f.read()
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
     
-    elif "商展精選" in msg:
+    elif "亞尼克揪團" in msg:
         img_url = [
             'https://i.imgur.com/8O8fwXP.jpg',
             'https://i.imgur.com/HJvuelW.jpg',
@@ -173,7 +173,7 @@ def handle_text_message(event):
 
         #商品描述
         text1 = [
-            '活動期間11/01~11/11，3件以上免運',
+            '活動期間11/01~11/11，3件以上免運，越多越便宜',
             '《獨家商品》天然竹炭粉捲入北海道奶霜與糖炒芝麻交融的美味。',
             '奢侈地使用日本靜岡製造的高級抹茶粉，香氣深厚濃郁。',
             '來自北海道的乳源，成就豐厚芳醇的自然風味。 ',
@@ -182,58 +182,34 @@ def handle_text_message(event):
             '剛入口的起司帶點口感與焦香，是義大利帕達諾起司醇厚的風味。'
         ]
 
-        #我要購買的選項
-        label3 = [
-            '《食尚厚黑學》',
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1',
-            '我要+1'
-        ]
-
-        #用戶回傳的訊息
-        text3 = [
-            '亞尼克官網https://reurl.cc/6y9gk',
-            '極致黑+1',
-            '靜岡抹茶+1',
-            '特黑巧克力+1',
-            '原味生乳捲+1',
-            '黑魔粒雙漩+1',
-            '起司磚+1'
-        ]
 
         #更多詳細資訊
         label4 = [
-            '瞭解詳情',
-            '瞭解詳情',
-            '瞭解詳情',
-            '瞭解詳情',
-            '瞭解詳情',
-            '瞭解詳情',
-            '瞭解詳情'
+            '立即填寫團購表單',
+            '商品詳細資訊',
+            '商品詳細資訊',
+            '商品詳細資訊',
+            '商品詳細資訊',
+            '商品詳細資訊'
         ]
 
         #使用者進入的網址
         url4 = [
-            'http://buy.yannick.com.tw/website_module.php?website_module_classify_sn=154',
+            'line://app/1610156977-3Wv1zqb1',
             'http://buy.yannick.com.tw/product.php?pid_for_show=4100',
             'http://buy.yannick.com.tw/product.php?pid_for_show=4099',
             'http://buy.yannick.com.tw/product.php?pid_for_show=4098',
             'http://buy.yannick.com.tw/product.php?pid_for_show=4097',
-            'http://buy.yannick.com.tw/product.php?pid_for_show=4096',
-            'http://buy.yannick.com.tw/product.php?pid_for_show=4101'
+            'http://buy.yannick.com.tw/product.php?pid_for_show=4096'
         ]
 
         msg1 = Ten_Carousel_Template(
-            img_url[0],title[0],text1[0],label3[0],text3[0],label4[0],url4[0],
-            img_url[1],title[1],text1[1],label3[1],text3[1],label4[1],url4[1],
-            img_url[2],title[2],text1[2],label3[2],text3[2],label4[2],url4[2],
-            img_url[3],title[3],text1[3],label3[3],text3[3],label4[3],url4[3],
-            img_url[4],title[4],text1[4],label3[4],text3[4],label4[4],url4[4],
-            img_url[5],title[5],text1[5],label3[5],text3[5],label4[5],url4[5],
-            img_url[6],title[6],text1[6],label3[6],text3[6],label4[6],url4[6]
+            img_url[0],title[0],text1[0],label4[0],url4[0],
+            img_url[1],title[1],text1[1],label4[1],url4[1],
+            img_url[2],title[2],text1[2],label4[2],url4[2],
+            img_url[3],title[3],text1[3],label4[3],url4[3],
+            img_url[4],title[4],text1[4],label4[4],url4[4],
+            img_url[5],title[5],text1[5],label4[5],url4[5]
         )
 
         img_urlK = [
@@ -322,7 +298,7 @@ def handle_text_message(event):
             img_urlK[5],titleK[5],text1K[5],label3K[5],text3K[5],label4K[5],url4K[5],
             img_urlK[6],titleK[6],text1K[6],label3K[6],text3K[6],label4K[6],url4K[6]
         )
-        partner_store = (msg1,msg2)
+        partner_store = (msg1)
         line_bot_api.reply_message(event.reply_token,partner_store)
 
 
