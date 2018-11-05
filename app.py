@@ -303,12 +303,15 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,big_pic)
 
 
-    elif "美安網站" in msg:
-        url = 'https://www.shop.com'
-        r = requests.get(url)
-        t = r.text
-        print(t)
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=t))
+    elif "HTC UU" in msg:
+        data={
+            'st':'HTC UU',
+            'sy':'products'
+        }
+        url = 'https://tw.shop.com/search/header/'+'HTC UU'
+        res = requests.post(url,data=data)
+        print(res)
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=res.text))
 
     elif "餐廳，" in msg:
         ask_place = TemplateSendMessage(
