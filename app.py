@@ -296,7 +296,7 @@ def handle_text_message(event):
 
 
     elif "test" in msg:
-        url = 'http://fs1.shop123.com.tw/400394/upload/harddisc/4003940_file_247822470336202018110103.jpg'
+        url = 'https://i.imgur.com/8O8fwXP.jpg'
         big_pic = imagemap_message(url,url,'填寫訂購表單')
         line_bot_api.reply_message(event.reply_token,big_pic)
 
