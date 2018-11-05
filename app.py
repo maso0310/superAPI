@@ -295,7 +295,7 @@ def handle_text_message(event):
 
 
 
-    elif "表單" in msg:
+    elif "這樣更簡單明瞭一點" in msg:
         url = 'https://i.imgur.com/8O8fwXP.jpg'
         big_pic = image_carousel_message(url,'填寫訂購表單','line://app/1610156977-3Wv1zqb1')
         line_bot_api.reply_message(event.reply_token,big_pic)
