@@ -62,12 +62,12 @@ def imagemap_message(base_url,url1,text1):
     message = ImagemapSendMessage(
         base_url=base_url,
         alt_text='this is an imagemap',
-        base_size=BaseSize(height=771, width=823),
+        base_size=BaseSize(height=1200, width=1200),
         actions=[
             URIImagemapAction(
                 link_uri=url1,
                 area=ImagemapArea(
-                    x=0, y=0, width=823, height=771
+                    x=0, y=0, width=1200, height=1200
                 )
             )
         ]
