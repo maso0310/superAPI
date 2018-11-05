@@ -8,6 +8,8 @@ from flask import Flask, request, abort
 import time
 import re
 import csv
+import requests
+from bs4 import BeautifulSoup
 
 #JSON編碼解碼
 import json
