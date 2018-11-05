@@ -342,7 +342,7 @@ def handle_text_message(event):
         }
 
         data={
-            'st':keyword,
+            'st':event.message.text,
             'sy':'products'
         }
         url = 'https://tw.shop.com/search/header/'+event.message.text
