@@ -61,7 +61,7 @@ def sticker_message(package_id,sticker_id):
 def imagemap_message(base_url,url1,text1):
     message = ImagemapSendMessage(
         base_url=base_url,
-        alt_text='this is an imagemap',
+        alt_text='請查看圖片訊息',
         base_size=BaseSize(height=1200, width=1200),
         actions=[
             URIImagemapAction(
