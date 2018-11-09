@@ -67,25 +67,25 @@ def imagemap_message(base_url,url1,url2,url3,url4):
             URIImagemapAction(
                 link_uri=url1,
                 area=ImagemapArea(
-                    x=0, y=0, width=500, height=500
+                    x=0, y=0, width=1000, height=1000
                 )
             ),
             URIImagemapAction(
                 link_uri=url2,
                 area=ImagemapArea(
-                    x=500, y=0, width=500, height=500
+                    x=1000, y=0, width=1000, height=1000
                 )
             ),
             URIImagemapAction(
                 link_uri=url3,
                 area=ImagemapArea(
-                    x=0, y=500, width=500, height=500
+                    x=0, y=1000, width=1000, height=1000
                 )
             ),
             URIImagemapAction(
                 link_uri=url4,
                 area=ImagemapArea(
-                    x=500, y=500, width=500, height=500
+                    x=1000, y=1000, width=1000, height=1000
                 )
             )
         ]
