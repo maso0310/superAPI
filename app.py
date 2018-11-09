@@ -372,6 +372,7 @@ def handle_text_message(event):
         img_url = 'https://i.imgur.com/QmbZg9x.jpg'
         p_url = 'https://www.taibot.com/ecommerce/%E6%9A%A2%E9%8A%B7%E5%95%86%E5%93%81/tiddi-s330.html'
         product = imagemap_message(img_url,p_url,p_url,p_url,p_url)
+        line_bot_api.reply_message(event.reply_token,product)
 
 
 
