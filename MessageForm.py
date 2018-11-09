@@ -58,16 +58,34 @@ def sticker_message(package_id,sticker_id):
     )
     return message
 #ImagemapSendMessage(組圖訊息)
-def imagemap_message(base_url,url1,text1):
+def imagemap_message(base_url,url1,url2,url3,url4):
     message = ImagemapSendMessage(
         base_url=base_url,
-        alt_text='請查看圖片訊息',
-        base_size=BaseSize(height=1200, width=1200),
+        alt_text='又有新的消息了！',
+        base_size=BaseSize(height=210, width=210),
         actions=[
             URIImagemapAction(
                 link_uri=url1,
                 area=ImagemapArea(
-                    x=0, y=0, width=1200, height=1200
+                    x=0, y=0, width=50, height=50
+                )
+            ),
+            URIImagemapAction(
+                link_uri=url1,
+                area=ImagemapArea(
+                    x=50, y=0, width=50, height=50
+                )
+            ),
+            URIImagemapAction(
+                link_uri=url1,
+                area=ImagemapArea(
+                    x=0, y=50, width=50, height=50
+                )
+            ),
+            URIImagemapAction(
+                link_uri=url1,
+                area=ImagemapArea(
+                    x=50, y=50, width=50, height=50
                 )
             )
         ]
