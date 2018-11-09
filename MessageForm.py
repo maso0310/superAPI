@@ -62,30 +62,30 @@ def imagemap_message(base_url,url1,url2,url3,url4):
     message = ImagemapSendMessage(
         base_url=base_url,
         alt_text='又有新的消息了！',
-        base_size=BaseSize(height=768, width=1024),
+        base_size=BaseSize(height=2000, width=2000),
         actions=[
             URIImagemapAction(
                 link_uri=url1,
                 area=ImagemapArea(
-                    x=0, y=0, width=256, height=192
+                    x=0, y=0, width=500, height=500
                 )
             ),
             URIImagemapAction(
-                link_uri=url1,
+                link_uri=url2,
                 area=ImagemapArea(
-                    x=256, y=0, width=256, height=192
+                    x=500, y=0, width=500, height=500
                 )
             ),
             URIImagemapAction(
-                link_uri=url1,
+                link_uri=url3,
                 area=ImagemapArea(
-                    x=0, y=192, width=256, height=192
+                    x=0, y=500, width=500, height=500
                 )
             ),
             URIImagemapAction(
-                link_uri=url1,
+                link_uri=url4,
                 area=ImagemapArea(
-                    x=256, y=192, width=256, height=192
+                    x=500, y=500, width=500, height=500
                 )
             )
         ]
