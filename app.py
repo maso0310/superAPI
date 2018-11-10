@@ -430,7 +430,7 @@ def handle_text_message(event):
                 BoxComponent(
                 type= "box",
                 layout= "vertical",
-                flex= 1,
+                flex= 0,
                 contents= [
                     ImageComponent(
                     type= "image",
@@ -453,14 +453,14 @@ def handle_text_message(event):
                 BoxComponent(
                 type= "box",
                 layout= "vertical",
-                flex= 1,
+                flex= 0,
                 contents= [
                     TextComponent(
                     type= "text",
                     text= "操作步驟教學(使用電腦介面)",
                     gravity= "top",
                     size= "xxs",
-                    flex= 1
+                    flex= 0
                     ),
                     SeparatorComponent(
                     type= "separator"
@@ -470,7 +470,7 @@ def handle_text_message(event):
                     text= "1.免費註冊為Shop.com顧客",
                     gravity= "center",
                     size= "xxs",
-                    flex= 1
+                    flex= 0
                     ),
                     SeparatorComponent(
                     type= "separator"
@@ -480,7 +480,7 @@ def handle_text_message(event):
                     text= "2.用Chrome瀏覽器下載ShopBuddy",
                     gravity= "center",
                     size= "xxs",
-                    flex= 1
+                    flex= 0
                     ),
                     SeparatorComponent(
                     type= "separator"
@@ -490,7 +490,7 @@ def handle_text_message(event):
                     text= "3.時時提醒您領回自己的回饋金",
                     gravity= "bottom",
                     size= "xxs",
-                    flex= 1
+                    flex= 0
                     )
                 ]
                 )
