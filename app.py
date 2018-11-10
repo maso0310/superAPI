@@ -426,7 +426,7 @@ def handle_text_message(event):
             body=BoxComponent(
             type= "box",
             layout= "horizontal",
-            spacing= "md",
+            spacing= "sm",
             contents= [
                 BoxComponent(
                 type= "box",
