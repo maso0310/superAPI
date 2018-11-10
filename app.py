@@ -513,8 +513,8 @@ def handle_text_message(event):
         }
         j = json.dumps(s)
         print(j)
-        b = FlexSendMessage(altText='最新購物工具！',contents=j)
-        line_bot_api.reply_message(event.reply_token,j)
+        b = FlexSendMessage(altText='最新購物工具！',contents=s)
+        line_bot_api.reply_message(event.reply_token,b)
 
 
 #========================以下code用來蒐集使用者錯誤的訊息來加強訓練
