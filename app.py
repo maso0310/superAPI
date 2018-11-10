@@ -407,7 +407,7 @@ def handle_text_message(event):
                 type="text",
                 text= "幫你節省荷包的超級好幫手",
                 weight= "bold",
-                color= "#00BBFF",
+                color= "#009FCC",
                 size= "lg"
                 )
             ]
@@ -417,7 +417,7 @@ def handle_text_message(event):
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
             backgroundColor="#009FCC",
-            aspectRatio= "4:3",
+            aspectRatio= "2:1",
             aspectMode= "fit",
             action= URIAction(
                 type= "uri",
