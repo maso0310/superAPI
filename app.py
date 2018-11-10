@@ -351,7 +351,8 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=res.text))
 
     elif "餐廳，" in msg:
-        message = BubbleContainer(
+        message = flex(
+            type=BubbleContainer(
             header=BoxComponent(
                 layout='vertical',
                 contents=[
@@ -367,7 +368,8 @@ def handle_text_message(event):
                 size='lg',
                 url=profile.picture_url
             )
-        )        
+        )
+        )
         line_bot_api.reply_message(event.reply_token,message)
 
      
