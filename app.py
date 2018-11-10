@@ -413,6 +413,7 @@ def handle_text_message(event):
             ),
             hero=ImageComponent(
             type= "image",
+            flex=0,
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
             aspectRatio= "4:3",
