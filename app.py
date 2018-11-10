@@ -351,22 +351,25 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=res.text))
 
     elif "餐廳，" in msg:
-        ask_place = TemplateSendMessage(
-            alt_text="Please tell me where you are",
-            template=ButtonsTemplate(
-                text="Please tell me where you are",
-                actions=[
-                    URITemplateAction(
-                        label="Send my location",
-                        uri="line://nv/location"
+        message = BubbleContainer(
+            header=BoxComponent(
+                layout='vertical',
+                contents=[
+                    TextComponent(
+                        text=user.id,
+                        weight='bold',
+                        color='#aaaaaa',
+                        size='lg'
                     )
                 ]
+            ),
+            hero=ImageComponent(
+                size='lg',
+                url=user.profile_image_url
             )
-        )
-        line_bot_api.reply_message(event.reply_token,buttons_template_message)
+        )        
+        line_bot_api.reply_message(event.reply_token,message)
 
-        from nearbyplace import restaurant
-        good_restaurant = restaurant()
      
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'
