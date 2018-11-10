@@ -352,7 +352,7 @@ def handle_text_message(event):
 
     elif "餐廳，" in msg:
         message = flex(
-            altText="最新的網購工具！"
+            altText="最新的網購工具！",
             contents=BubbleContainer(
             header=BoxComponent(
                 layout='vertical',
