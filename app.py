@@ -492,9 +492,10 @@ def handle_text_message(event):
                 }
             }
             ]
-        }
+        }j
         }
         j = json.dumps(shopbuddy)
+        print(type(j))
         line_bot_api.reply_message(event.reply_token,j)
 
 
