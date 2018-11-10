@@ -380,9 +380,8 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,product)
 
     elif "最新公告" in msg:
-        s = open('shopbuddy.json',encoding='utf-8')
-        j = json.load(s)
-        line_bot_api.reply_message(event.reply_token,j)
+        s = new_from_json_dict('shopbuddy.json')
+        line_bot_api.reply_message(event.reply_token,s)
 
 
 #========================以下code用來蒐集使用者錯誤的訊息來加強訓練
