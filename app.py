@@ -494,7 +494,8 @@ def handle_text_message(event):
             ]
         }
         }
-        line_bot_api.reply_message(event.reply_token,shopbuddy)
+        j = json.dumps(shopbuddy)
+        line_bot_api.reply_message(event.reply_token,j)
 
 
 #========================以下code用來蒐集使用者錯誤的訊息來加強訓練
