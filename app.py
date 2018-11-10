@@ -415,7 +415,7 @@ def handle_text_message(event):
             type= "image",
             spacing='xs',
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
-            size= "5xl",
+            size= "full",
             aspectRatio= "4:3",
             aspectMode= "fit",
             action= URIAction(
@@ -438,7 +438,7 @@ def handle_text_message(event):
                     url= "https://i.imgur.com/i51rNfd.jpg",
                     aspectMode= "cover",
                     aspectRatio= "4:3",
-                    size= "lg",
+                    size= "md",
                     gravity= "bottom"
                     ),
                     ImageComponent(
@@ -447,7 +447,7 @@ def handle_text_message(event):
                     aspectMode= "cover",
                     aspectRatio= "4:3",
                     margin= "md",
-                    size= "lg"
+                    size= "md"
                     )
                 ]
                 ),
