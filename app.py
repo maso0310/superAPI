@@ -404,14 +404,14 @@ def handle_text_message(event):
             contents= [
                 TextComponent(
                 type="text",
-                text= "幫你大大節省荷包好幫手",
+                text= "幫你節省荷包的超級好幫手",
                 weight= "bold",
                 color= "#aaaaaa",
-                size= "sm"
+                size= "xl"
                 )
             ]
             ),
-            hero=BoxComponent(
+            hero=ImageComponent(
             type= "image",
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
