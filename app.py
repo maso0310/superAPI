@@ -414,6 +414,7 @@ def handle_text_message(event):
             hero=ImageComponent(
             type= "image",
             flex=0,
+            margin='none',
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
             aspectRatio= "4:3",
@@ -454,7 +455,8 @@ def handle_text_message(event):
                 BoxComponent(
                 type= "box",
                 layout= "vertical",
-                flex= 2,
+                flex= 1,
+                margin='none',
                 contents= [
                     TextComponent(
                     type= "text",
@@ -470,7 +472,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "1.註冊為Shop.com免費顧客",
                     gravity= "center",
-                    size= "xs",
+                    size= "xxs",
                     flex= 2
                     ),
                     SeparatorComponent(
@@ -480,7 +482,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "2.用瀏覽器下載ShopBuddy",
                     gravity= "center",
-                    size= "xs",
+                    size= "xxs",
                     flex= 2
                     ),
                     SeparatorComponent(
@@ -490,7 +492,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "3.若有回饋金將會即刻提醒",
                     gravity= "bottom",
-                    size= "xs",
+                    size= "xxs",
                     flex= 1
                     )
                 ]
