@@ -352,7 +352,8 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=res.text))
 
     elif "我是誰" in msg:
-       bubble = BubbleContainer(
+        j = os.path('shopbuddy.json')
+        bubble = BubbleContainer(
             type = "bubble",
             direction='ltr',
             header=BoxComponent(
@@ -381,7 +382,7 @@ def handle_text_message(event):
                 ]
             )
                              )
-       message = FlexSendMessage(alt_text="hello", contents=bubble)
+       message = FlexSendMessage(alt_text="hello", contents=j)
        line_bot_api.reply_message(event.reply_token,message)
      
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
