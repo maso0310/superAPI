@@ -414,7 +414,7 @@ def handle_text_message(event):
             hero=ImageComponent(
             type= "image",
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
-            size= "fit",
+            size= "full",
             aspectRatio= "15:13",
             aspectMode= "fit",
             action= URIAction(
@@ -437,7 +437,7 @@ def handle_text_message(event):
                     url= "https://i.imgur.com/i51rNfd.jpg",
                     aspectMode= "cover",
                     aspectRatio= "4:3",
-                    size= "md",
+                    size= "lg",
                     gravity= "bottom"
                     ),
                     ImageComponent(
@@ -446,7 +446,7 @@ def handle_text_message(event):
                     aspectMode= "cover",
                     aspectRatio= "4:3",
                     margin= "md",
-                    size= "md"
+                    size= "lg"
                     )
                 ]
                 ),
@@ -469,7 +469,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "1.註冊為Shop.com免費顧客",
                     gravity= "center",
-                    size= "xxs",
+                    size= "xs",
                     flex= 2
                     ),
                     SeparatorComponent(
@@ -479,7 +479,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "2.用瀏覽器下載ShopBuddy",
                     gravity= "center",
-                    size= "xxs",
+                    size= "xs",
                     flex= 2
                     ),
                     SeparatorComponent(
@@ -489,7 +489,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "3.若有回饋金將會即刻提醒",
                     gravity= "bottom",
-                    size= "xxs",
+                    size= "xs",
                     flex= 1
                     )
                 ]
