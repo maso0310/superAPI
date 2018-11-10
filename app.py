@@ -380,6 +380,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,product)
 
     elif "最新公告" in msg:
+        s = 
         s = {
             "type": "bubble",
             "header": {
@@ -495,7 +496,8 @@ def handle_text_message(event):
             ]
             }
         }
-        line_bot_api.reply_message(event.reply_token,s)
+        j = FlexSendMessage(s)
+        line_bot_api.reply_message(event.reply_token,j)
 
 
 #========================以下code用來蒐集使用者錯誤的訊息來加強訓練
