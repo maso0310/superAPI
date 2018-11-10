@@ -430,7 +430,7 @@ def handle_text_message(event):
                 BoxComponent(
                 type= "box",
                 layout= "vertical",
-                flex= 2,
+                flex= 1,
                 contents= [
                     ImageComponent(
                     type= "image",
@@ -453,7 +453,7 @@ def handle_text_message(event):
                 BoxComponent(
                 type= "box",
                 layout= "vertical",
-                flex= 2,
+                flex= 1,
                 contents= [
                     TextComponent(
                     type= "text",
@@ -470,7 +470,7 @@ def handle_text_message(event):
                     text= "1.免費註冊為Shop.com顧客",
                     gravity= "center",
                     size= "xxs",
-                    flex= 2
+                    flex= 1
                     ),
                     SeparatorComponent(
                     type= "separator"
@@ -480,7 +480,7 @@ def handle_text_message(event):
                     text= "2.用Chrome瀏覽器下載ShopBuddy",
                     gravity= "center",
                     size= "xxs",
-                    flex= 2
+                    flex= 1
                     ),
                     SeparatorComponent(
                     type= "separator"
