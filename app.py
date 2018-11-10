@@ -487,7 +487,7 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "3.即刻提醒您領回自己的回饋金",
+                    text= "3.時時提醒您領回自己的回饋金",
                     gravity= "bottom",
                     size= "xxs",
                     flex= 1
