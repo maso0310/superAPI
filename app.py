@@ -352,9 +352,6 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=res.text))
 
     elif "我是誰" in msg:
-        j = os.path('shopbuddy.json')
-        print(type(j))
-        print(j)
         bubble = BubbleContainer(
             type = "bubble",
             direction='ltr',
