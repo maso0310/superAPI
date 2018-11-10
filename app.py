@@ -368,14 +368,14 @@ def handle_text_message(event):
         from nearbyplace import restaurant
         good_restaurant = restaurant()
      
-    elif "品質超讚的寢具現在正在特價中！" in msg:
-        img_url = 'https://i.imgur.com/Ghw1W1E.png'
-        p1_url = 'line://app/1610156977-Rj6QJn1Q'
+    elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
+        img_url = 'https://i.imgur.com/UwmK8yX.png'
+        p1_url = 'https://www.cheerspops.com.tw/%E8%92%9F%E8%92%BB%E5%87%8D.html'
         p2_url = 'line://app/1610156977-E6LyX0vy'
         p3_url = 'line://app/1610156977-KEOnxXen'
         p4_url = 'line://app/1610156977-XdeW1GqW'
 
-        product = imagemap_message(img_url,p1_url,p2_url,p3_url,p4_url)
+        product = imagemap_message(img_url,p1_url,p1_url,p1_url,p1_url)
         line_bot_api.reply_message(event.reply_token,product)
 
 
