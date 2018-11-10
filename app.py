@@ -416,6 +416,7 @@ def handle_text_message(event):
             type= "image",
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
+            backgroundColor="#009FCC",
             aspectRatio= "4:3",
             aspectMode= "fit",
             action= URIAction(
