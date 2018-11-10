@@ -353,6 +353,8 @@ def handle_text_message(event):
 
     elif "我是誰" in msg:
         j = os.path('shopbuddy.json')
+        print(type(j))
+        print(j)
         bubble = BubbleContainer(
             type = "bubble",
             direction='ltr',
@@ -382,7 +384,8 @@ def handle_text_message(event):
                 ]
             )
                              )
-       line_bot_api.reply_message(event.reply_token,j)
+        message = FlexSendMessage(alt_text="最新網購工具！", contents=bubble)
+        line_bot_api.reply_message(event.reply_token,message)
      
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'
