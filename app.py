@@ -437,6 +437,7 @@ def handle_text_message(event):
                     url= "https://i.imgur.com/i51rNfd.jpg",
                     aspectMode= "cover",
                     aspectRatio= "4:3",
+                    flex=0,
                     size= "md",
                     gravity= "bottom"
                     ),
@@ -445,6 +446,7 @@ def handle_text_message(event):
                     url= "https://i.imgur.com/daZMJPn.jpg",
                     aspectMode= "cover",
                     aspectRatio= "4:3",
+                    flex=2,
                     margin= "md",
                     size= "md"
                     )
