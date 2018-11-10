@@ -376,6 +376,7 @@ def handle_text_message(event):
         p4_url = 'line://app/1610156977-XdeW1GqW'
 
         product = imagemap_message(img_url,p1_url,p1_url,p1_url,p1_url)
+        print(type(product))
         line_bot_api.reply_message(event.reply_token,product)
 
     elif "最新公告" in msg:
