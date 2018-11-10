@@ -414,8 +414,8 @@ def handle_text_message(event):
             hero=ImageComponent(
             type= "image",
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
-            size= "full",
-            aspectRatio= "15:13",
+            size= "lg",
+            aspectRatio= "20:13",
             aspectMode= "fit",
             action= URIAction(
                 type= "uri",
