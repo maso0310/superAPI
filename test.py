@@ -1,29 +1,118 @@
-# update.py
-import re
-
-from urllib.request import urlopen
-
-from bs4 import BeautifulSoup
-
-def get_cheapest(url, text):
-    with urlopen(url) as response:
-        soup = BeautifulSoup(response.read(),'html.parser')
-
-    cheapest_price = cheapest_item = None
-
-    re_price = re.compile(r'\$(\d+)')
-    root = soup.find('td', text=re.compile(text)).parent
-
-    for option in root.find_all('option', text=re_price):
-        item = option.text.strip()
-        price = int(re_price.search(item).group(1))
-        if cheapest_price is None or price < cheapest_price:
-            cheapest_price = price
-            cheapest_item = item
-
-    return (cheapest_item, cheapest_price)
-
-coolpc_url = 'http://www.coolpc.com.tw/evaluate.php'
-ram_text = '記憶體 RAM'
-
-(cheapest_item, cheapest_price) = get_cheapest(coolpc_url, ram_text)
+import json
+s = {
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "horizontal",
+      "contents": [
+        {
+          "type": "text",
+          "text": "幫你大大節省荷包好幫手",
+          "weight": "bold",
+          "color": "#aaaaaa",
+          "size": "sm"
+        }
+      ]
+    },
+    "hero": {
+      "type": "image",
+      "url": "https://i.imgur.com/7cCG7dd.jpg?1",
+      "size": "full",
+      "aspectRatio": "20:13",
+      "aspectMode": "fit",
+      "action": {
+        "type": "uri",
+        "uri": "line://app/1610156977-pYOvGD5v"
+      }
+    },
+    "body": {
+      "type": "box",
+      "layout": "horizontal",
+      "spacing": "md",
+      "contents": [
+        {
+          "type": "box",
+          "layout": "vertical",
+          "flex": 1,
+          "contents": [
+            {
+              "type": "image",
+              "url": "https://i.imgur.com/i51rNfd.jpg",
+              "aspectMode": "cover",
+              "aspectRatio": "4:3",
+              "size": "sm",
+              "gravity": "bottom"
+            },
+            {
+              "type": "image",
+              "url": "https://i.imgur.com/daZMJPn.jpg",
+              "aspectMode": "cover",
+              "aspectRatio": "4:3",
+              "margin": "md",
+              "size": "sm"
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "flex": 2,
+          "contents": [
+            {
+              "type": "text",
+              "text": "操作步驟教學(電腦介面)",
+              "gravity": "top",
+              "size": "xs",
+              "flex": 1
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "type": "text",
+              "text": "1.註冊為Shop.com免費顧客",
+              "gravity": "center",
+              "size": "xs",
+              "flex": 2
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "type": "text",
+              "text": "2.用瀏覽器下載ShopBuddy",
+              "gravity": "center",
+              "size": "xs",
+              "flex": 2
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "type": "text",
+              "text": "3.若有回饋金將會即刻提醒",
+              "gravity": "bottom",
+              "size": "xs",
+              "flex": 1
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "horizontal",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "立即註冊成為顧客累積回饋金",
+            "uri": "line://app/1610156977-YDl9J6O9"
+          }
+        }
+      ]
+    }
+  }
+j = json.dumps(s)
+print(type(j))
