@@ -511,7 +511,7 @@ def handle_text_message(event):
             ]
             )
         ))
-        message = FlexSendMessage(contents=shopbuddy)
+        message = FlexSendMessage(alt_text='最新購物工具！',contents=shopbuddy)
         line_bot_api.reply_message(event.reply_token,message)
 
 
