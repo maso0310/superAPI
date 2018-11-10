@@ -459,7 +459,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "操作步驟教學(使用電腦介面)",
                     gravity= "top",
-                    size= "xs",
+                    size= "xxs",
                     flex= 1
                     ),
                     SeparatorComponent(
@@ -469,7 +469,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "1.註冊為Shop.com免費顧客",
                     gravity= "center",
-                    size= "xs",
+                    size= "xxs",
                     flex= 2
                     ),
                     SeparatorComponent(
@@ -479,7 +479,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "2.用瀏覽器下載ShopBuddy",
                     gravity= "center",
-                    size= "xs",
+                    size= "xxs",
                     flex= 2
                     ),
                     SeparatorComponent(
@@ -489,7 +489,7 @@ def handle_text_message(event):
                     type= "text",
                     text= "3.若有回饋金將會即刻提醒",
                     gravity= "bottom",
-                    size= "xs",
+                    size= "xxs",
                     flex= 1
                     )
                 ]
