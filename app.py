@@ -419,7 +419,7 @@ def handle_text_message(event):
             aspectMode= "fit",
             action= URIAction(
                 type= "uri",
-                uri= "line://app/1610156977-pYOvGD5v"
+                uri= "https://tw.shop.com/MASO0310/shopbuddy/reg?credituser=R8957656"
             )
             ),
             body=BoxComponent(
@@ -505,7 +505,7 @@ def handle_text_message(event):
                 action=URIAction(
                     type= "uri",
                     label= "立即註冊成為顧客累積回饋金",
-                    uri= "line://app/1610156977-YDl9J6O9"
+                    uri= "https://tw.shop.com/MASO0310/nbts/create-myaccount.xhtml?credituser=R8957656&returnurl=https%3A%2F%2Ftw.shop.com%2F"
                 )
                 )
             ]
