@@ -495,7 +495,6 @@ def handle_text_message(event):
             ]
             }
         }
-        j = get_or_new_from_json_dict(s)
         line_bot_api.reply_message(event.reply_token,s)
 
 
