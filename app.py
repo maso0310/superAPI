@@ -415,7 +415,7 @@ def handle_text_message(event):
             type= "image",
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
-            aspectRatio= "20:13",
+            aspectRatio= "16:13",
             aspectMode= "fit",
             action= URIAction(
                 type= "uri",
@@ -430,7 +430,7 @@ def handle_text_message(event):
                 BoxComponent(
                 type= "box",
                 layout= "vertical",
-                flex= 1,
+                flex= 2,
                 contents= [
                     ImageComponent(
                     type= "image",
