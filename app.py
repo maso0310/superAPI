@@ -415,7 +415,7 @@ def handle_text_message(event):
             type= "image",
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
-            aspectRatio= "10:13",
+            aspectRatio= "15:13",
             aspectMode= "fit",
             action= URIAction(
                 type= "uri",
@@ -436,17 +436,17 @@ def handle_text_message(event):
                     type= "image",
                     url= "https://i.imgur.com/i51rNfd.jpg",
                     aspectMode= "cover",
-                    aspectRatio= "3:3",
-                    size= "sm",
+                    aspectRatio= "4:3",
+                    size= "md",
                     gravity= "bottom"
                     ),
                     ImageComponent(
                     type= "image",
                     url= "https://i.imgur.com/daZMJPn.jpg",
                     aspectMode= "cover",
-                    aspectRatio= "3:3",
+                    aspectRatio= "4:3",
                     margin= "md",
-                    size= "sm"
+                    size= "md"
                     )
                 ]
                 ),
