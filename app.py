@@ -406,7 +406,7 @@ def handle_text_message(event):
                 type="text",
                 text= "幫你節省荷包的超級好幫手",
                 weight= "bold",
-                color= "#77DDFF",
+                color= "#00BBFF",
                 size= "lg"
                 )
             ]
@@ -459,7 +459,6 @@ def handle_text_message(event):
                     type= "text",
                     text= "操作步驟教學(使用電腦介面)",
                     gravity= "top",
-                    weight= "bold",
                     size= "xxs",
                     flex= 1
                     ),
@@ -470,7 +469,6 @@ def handle_text_message(event):
                     type= "text",
                     text= "1.註冊為Shop.com免費顧客",
                     gravity= "center",
-                    weight= "bold",
                     size= "xxs",
                     flex= 2
                     ),
@@ -481,7 +479,6 @@ def handle_text_message(event):
                     type= "text",
                     text= "2.用瀏覽器下載ShopBuddy",
                     gravity= "center",
-                    weight= "bold",
                     size= "xxs",
                     flex= 2
                     ),
@@ -492,7 +489,6 @@ def handle_text_message(event):
                     type= "text",
                     text= "3.若有回饋金將會即刻提醒",
                     gravity= "bottom",
-                    weight= "bold",
                     size= "xxs",
                     flex= 1
                     )
