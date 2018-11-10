@@ -373,11 +373,10 @@ def handle_text_message(event):
                     # callAction, separator, websiteAction
                     SpacerComponent(size='sm'),
                     # callAction
-                     TextComponent(type = "text" ,text="kokoko")
+                     TextComponent(type = "text" ,text="kokoko"),
                     # separator
                     SeparatorComponent()
                     # websiteAction
-
                 ]
             )
                              )
