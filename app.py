@@ -406,8 +406,8 @@ def handle_text_message(event):
                 type="text",
                 text= "幫你節省荷包的超級好幫手",
                 weight= "bold",
-                color= "#aaaaaa",
-                size= "xl"
+                color= "#77DDFF",
+                size= "lg"
                 )
             ]
             ),
@@ -457,7 +457,7 @@ def handle_text_message(event):
                 contents= [
                     TextComponent(
                     type= "text",
-                    text= "操作步驟教學(電腦介面)",
+                    text= "操作步驟教學(使用電腦介面)",
                     gravity= "top",
                     size= "xs",
                     flex= 1
