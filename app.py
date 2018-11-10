@@ -368,7 +368,7 @@ def handle_text_message(event):
         from nearbyplace import restaurant
         good_restaurant = restaurant()
      
-    elif "新消息又來囉！" in msg:
+    elif "品質超讚的寢具現在正在特價中！" in msg:
         img_url = 'https://i.imgur.com/Ghw1W1E.png'
         p1_url = 'line://app/1610156977-Rj6QJn1Q'
         p2_url = 'line://app/1610156977-E6LyX0vy'
