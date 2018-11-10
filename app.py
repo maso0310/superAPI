@@ -395,7 +395,7 @@ def handle_text_message(event):
         print(type(product))
         line_bot_api.reply_message(event.reply_token,product)
 
-    elif "ShopBuddy" in msg:
+    elif "ShopBuddy最新公告" in msg:
         shopbuddy = BubbleContainer(
             type="bubble",
             header=BoxComponent(
@@ -415,7 +415,7 @@ def handle_text_message(event):
             type= "image",
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
-            aspectRatio= "9:13",
+            aspectRatio= "10:13",
             aspectMode= "fit",
             action= URIAction(
                 type= "uri",
@@ -430,13 +430,13 @@ def handle_text_message(event):
                 BoxComponent(
                 type= "box",
                 layout= "vertical",
-                flex= 0,
+                flex= 1,
                 contents= [
                     ImageComponent(
                     type= "image",
                     url= "https://i.imgur.com/i51rNfd.jpg",
                     aspectMode= "cover",
-                    aspectRatio= "4:3",
+                    aspectRatio= "3:3",
                     size= "sm",
                     gravity= "bottom"
                     ),
@@ -444,7 +444,7 @@ def handle_text_message(event):
                     type= "image",
                     url= "https://i.imgur.com/daZMJPn.jpg",
                     aspectMode= "cover",
-                    aspectRatio= "4:3",
+                    aspectRatio= "3:3",
                     margin= "md",
                     size= "sm"
                     )
@@ -453,7 +453,7 @@ def handle_text_message(event):
                 BoxComponent(
                 type= "box",
                 layout= "vertical",
-                flex= 1,
+                flex= 2,
                 contents= [
                     TextComponent(
                     type= "text",
@@ -467,17 +467,7 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "1.免費註冊為Shop.com顧客",
-                    gravity= "center",
-                    size= "xxs",
-                    flex= 1
-                    ),
-                    SeparatorComponent(
-                    type= "separator"
-                    ),
-                    TextComponent(
-                    type= "text",
-                    text= "2.用Chrome瀏覽器下載ShopBuddy",
+                    text= "1.註冊為Shop.com免費顧客",
                     gravity= "center",
                     size= "xxs",
                     flex= 2
@@ -487,10 +477,20 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "3.時時提醒您領回自己的回饋金",
+                    text= "2.用瀏覽器下載ShopBuddy",
+                    gravity= "center",
+                    size= "xxs",
+                    flex= 2
+                    ),
+                    SeparatorComponent(
+                    type= "separator"
+                    ),
+                    TextComponent(
+                    type= "text",
+                    text= "3.若有回饋金將會即刻提醒",
                     gravity= "bottom",
                     size= "xxs",
-                    flex= 2
+                    flex= 1
                     )
                 ]
                 )
