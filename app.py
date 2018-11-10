@@ -417,7 +417,7 @@ def handle_text_message(event):
             size= "full",
             aspectRatio= "20:13",
             aspectMode= "fit",
-            action= URIaction(
+            action= URIAction(
                 type= "uri",
                 uri= "line://app/1610156977-pYOvGD5v"
             )
@@ -502,7 +502,7 @@ def handle_text_message(event):
             contents= [
                 ButtonCompnent(
                 type= "button",
-                action=URIaction(
+                action=URIAction(
                     type= "uri",
                     label= "立即註冊成為顧客累積回饋金",
                     uri= "line://app/1610156977-YDl9J6O9"
@@ -511,8 +511,6 @@ def handle_text_message(event):
             ]
             )
         ))
-        j = json.dumps(s)
-        print(j)
         b = FlexSendMessage(altText='最新購物工具！',contents=s)
         line_bot_api.reply_message(event.reply_token,b)
 
