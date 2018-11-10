@@ -492,7 +492,7 @@ def handle_text_message(event):
                 }
             }
             ]
-        }j
+        }
         }
         j = json.dumps(shopbuddy)
         print(type(j))
