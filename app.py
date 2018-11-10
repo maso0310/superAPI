@@ -352,7 +352,8 @@ def handle_text_message(event):
 
     elif "餐廳，" in msg:
         message = flex(
-            type=BubbleContainer(
+            altText="最新的網購工具！"
+            contents=BubbleContainer(
             header=BoxComponent(
                 layout='vertical',
                 contents=[
@@ -368,8 +369,7 @@ def handle_text_message(event):
                 size='lg',
                 url=profile.picture_url
             )
-        )
-        )
+        ))
         line_bot_api.reply_message(event.reply_token,message)
 
      
