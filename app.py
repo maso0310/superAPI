@@ -495,7 +495,7 @@ def handle_text_message(event):
             ]
             }
         }]
-        j = FlexSendMessage(alt='最新購物工具！',s)
+        j = FlexSendMessage(altText='最新購物工具！',contents=s)
         line_bot_api.reply_message(event.reply_token,j)
 
 
