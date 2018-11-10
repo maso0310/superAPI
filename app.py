@@ -365,7 +365,7 @@ def handle_text_message(event):
             ),
             hero=ImageComponent(
                 size='lg',
-                url=user.picture_url
+                url=profile.picture_url
             )
         )        
         line_bot_api.reply_message(event.reply_token,message)
