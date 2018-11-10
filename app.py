@@ -369,11 +369,11 @@ def handle_text_message(event):
         good_restaurant = restaurant()
      
     elif "新消息又來囉！" in msg:
-        img_url = 'https://i.imgur.com/7vLl8pC.jpg'
-        p1_url = 'https://www.taibot.com/ecommerce/%E6%9A%A2%E9%8A%B7%E5%95%86%E5%93%81/tiddi-s330.html'
-        p2_url = 'https://www.taibot.com/ecommerce/%E6%9A%A2%E9%8A%B7%E5%95%86%E5%93%81/taibot-c688%E9%9A%A8%E8%BA%AB%E7%94%A8%E7%A9%BA%E6%B0%A3%E6%B8%85%E6%B7%A8%E6%A9%9F.html'
-        p3_url = 'https://www.taibot.com/ecommerce/%E6%9A%A2%E9%8A%B7%E5%95%86%E5%93%81/v320%E5%85%A8%E6%96%B0%E7%AC%AC%E4%BA%8C%E4%BB%A3.html'
-        p4_url = 'https://www.taibot.com/ecommerce/%E6%9A%A2%E9%8A%B7%E5%95%86%E5%93%81/coz!i-p-17a%E8%B2%A0%E9%9B%A2%E5%AD%90%E7%A9%BA%E6%B0%A3%E6%B8%85%E6%B7%A8%E6%A9%9F.html'
+        img_url = 'https://i.imgur.com/Ghw1W1E.png'
+        p1_url = 'line://app/1610156977-Rj6QJn1Q'
+        p2_url = 'line://app/1610156977-E6LyX0vy'
+        p3_url = 'line://app/1610156977-KEOnxXen'
+        p4_url = 'line://app/1610156977-XdeW1GqW'
 
         product = imagemap_message(img_url,p1_url,p2_url,p3_url,p4_url)
         line_bot_api.reply_message(event.reply_token,product)
