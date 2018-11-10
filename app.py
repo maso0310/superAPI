@@ -413,7 +413,6 @@ def handle_text_message(event):
             ),
             hero=ImageComponent(
             type= "image",
-            spacing='xs',
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
             aspectRatio= "4:3",
@@ -425,8 +424,8 @@ def handle_text_message(event):
             ),
             body=BoxComponent(
             type= "box",
-            layout="horizontal",
-            spacing='xs',
+            layout= "horizontal",
+            spacing= "md",
             contents= [
                 BoxComponent(
                 type= "box",
@@ -454,8 +453,7 @@ def handle_text_message(event):
                 BoxComponent(
                 type= "box",
                 layout= "vertical",
-                flex= 1,
-                margin='none',
+                flex= 2,
                 contents= [
                     TextComponent(
                     type= "text",
@@ -469,7 +467,7 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "1.註冊為Shop.com免費顧客",
+                    text= "1.免費註冊Shop.com顧客",
                     gravity= "center",
                     size= "xxs",
                     flex= 2
@@ -489,7 +487,7 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "3.若有回饋金將會即刻提醒",
+                    text= "3.時時提醒您領取回饋金",
                     gravity= "bottom",
                     size= "xxs",
                     flex= 1
