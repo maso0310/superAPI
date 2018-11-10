@@ -351,7 +351,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=res.text))
 
     elif "餐廳，" in msg:
-        message = flex(
+        message = FlexSendMessage(
             altText="最新的網購工具！",
             contents=BubbleContainer(
             header=BoxComponent(
