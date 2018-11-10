@@ -395,7 +395,7 @@ def handle_text_message(event):
         print(type(product))
         line_bot_api.reply_message(event.reply_token,product)
 
-    elif "ShopBuddy最新公告" in msg:
+    elif "ShopBuddy" in msg:
         shopbuddy = BubbleContainer(
             type="bubble",
             header=BoxComponent(
@@ -467,7 +467,7 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "1.註冊為Shop.com免費顧客",
+                    text= "1.免費註冊為Shop.com顧客",
                     gravity= "center",
                     size= "xxs",
                     flex= 2
@@ -477,7 +477,7 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "2.用瀏覽器下載ShopBuddy",
+                    text= "2.用Chrome瀏覽器下載ShopBuddy",
                     gravity= "center",
                     size= "xxs",
                     flex= 2
@@ -487,7 +487,7 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "3.若有回饋金將會即刻提醒",
+                    text= "3.即刻提醒您領回自己的回饋金",
                     gravity= "bottom",
                     size= "xxs",
                     flex= 1
