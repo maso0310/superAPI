@@ -400,6 +400,7 @@ def handle_text_message(event):
             type="bubble",
             header=BoxComponent(
             type="box",
+            spacing='md',
             layout="horizontal",
             contents= [
                 TextComponent(
@@ -414,7 +415,7 @@ def handle_text_message(event):
             hero=ImageComponent(
             type= "image",
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
-            size= "5xl",
+            size= "full",
             aspectRatio= "4:3",
             aspectMode= "fit",
             action= URIAction(
