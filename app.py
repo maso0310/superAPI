@@ -380,7 +380,7 @@ def handle_text_message(event):
 
     elif "最新公告" in msg:
         s = open('shopbuddy.json',encoding='utf-8')
-        j = json.dump(s)
+        j = json.load(s)
         line_bot_api.reply_message(event.reply_token,j)
 
 
