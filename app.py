@@ -356,7 +356,7 @@ def handle_text_message(event):
                 layout='vertical',
                 contents=[
                     TextComponent(
-                        text=user.id,
+                        text=uid,
                         weight='bold',
                         color='#aaaaaa',
                         size='lg'
@@ -365,7 +365,7 @@ def handle_text_message(event):
             ),
             hero=ImageComponent(
                 size='lg',
-                url=user.profile_image_url
+                url=user.picture_url
             )
         )        
         line_bot_api.reply_message(event.reply_token,message)
