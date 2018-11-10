@@ -396,7 +396,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,product)
 
     elif "最新公告" in msg:
-        s = BubbleContainer(
+        shopbuddy = BubbleContainer(
             type="bubble",
             header=BoxComponent(
             type="box",
@@ -511,7 +511,7 @@ def handle_text_message(event):
             ]
             )
         ))
-        b = FlexSendMessage(altText='最新購物工具！',contents=s)
+        b = FlexSendMessage(altText='最新購物工具！',contents=shopbuddy)
         line_bot_api.reply_message(event.reply_token,b)
 
 
