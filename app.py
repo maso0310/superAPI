@@ -501,7 +501,6 @@ def handle_text_message(event):
             layout= "horizontal",
             contents= [
                 ButtonCompnent(
-                type= "button",
                 action=URIAction(
                     type= "uri",
                     label= "立即註冊成為顧客累積回饋金",
