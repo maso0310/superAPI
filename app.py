@@ -414,8 +414,7 @@ def handle_text_message(event):
             hero=ImageComponent(
             type= "image",
             flex=0,
-            gravity='center',
-            spacing='none',
+            spacing='xs',
             margin='none',
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
             size= "full",
@@ -428,8 +427,7 @@ def handle_text_message(event):
             ),
             body=BoxComponent(
             type= "box",
-            layout= "baseline",
-            spacing= "none",
+            spacing='xs',
             contents= [
                 BoxComponent(
                 type= "box",
