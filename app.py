@@ -382,8 +382,7 @@ def handle_text_message(event):
                 ]
             )
                              )
-       message = FlexSendMessage(alt_text="hello", contents=j)
-       line_bot_api.reply_message(event.reply_token,message)
+       line_bot_api.reply_message(event.reply_token,j)
      
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'

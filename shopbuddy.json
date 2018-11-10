@@ -1,4 +1,5 @@
-{
+{"altText":"最新網購工具！"
+  {
     "type": "bubble",
     "header": {
       "type": "box",
@@ -113,3 +114,4 @@
       ]
     }
   }
+}
