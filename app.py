@@ -396,7 +396,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,product)
 
     elif "最新公告" in msg:
-        s = {
+        s = [{
             "type": "bubble",
             "header": {
             "type": "box",
@@ -510,7 +510,7 @@ def handle_text_message(event):
                 }
             ]
             }
-        }
+        }]
         j = json.dumps(s)
         print(j)
         b = FlexSendMessage(altText='最新購物工具！',contents=s)
