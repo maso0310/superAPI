@@ -379,7 +379,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,product)
 
     elif "最新公告" in msg:
-        shopbuddy = {
+        shopbuddy = [{
         "type": "bubble",
         "header": {
             "type": "box",
@@ -494,6 +494,7 @@ def handle_text_message(event):
             ]
         }
         }
+        ]
         line_bot_api.reply_message(event.reply_token,shopbuddy)
 
 
