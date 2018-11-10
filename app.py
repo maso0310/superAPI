@@ -400,6 +400,7 @@ def handle_text_message(event):
             type="bubble",
             header=BoxComponent(
             type="box",
+            flex= 0,
             spacing='md',
             layout="horizontal",
             contents= [
