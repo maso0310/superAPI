@@ -350,9 +350,9 @@ def handle_text_message(event):
         print(res)
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=res.text))
 
-    elif "餐廳，" in msg:
+    elif "我是誰" in msg:
         message = FlexSendMessage(
-            altText="最新的網購工具！",
+            altText="test",
             contents=BubbleContainer(
             header=BoxComponent(
                 layout='vertical',

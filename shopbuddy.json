@@ -1,4 +1,5 @@
-{"type": "bubble",
+{
+    "type": "bubble",
     "header": {
       "type": "box",
       "layout": "horizontal",
