@@ -413,11 +413,12 @@ def handle_text_message(event):
             ),
             hero=ImageComponent(
             type= "image",
+            layout="horizontal"
             flex=0,
             spacing='xs',
             margin='none',
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
-            size= "full",
+            size= "5xl",
             aspectRatio= "4:3",
             aspectMode= "fit",
             action= URIAction(
