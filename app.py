@@ -351,27 +351,38 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=res.text))
 
     elif "我是誰" in msg:
-        message = FlexSendMessage(
-            altText="test",
-            contents=BubbleContainer(
-            header=BoxComponent(
+       bubble = BubbleContainer(
+            type = "bubble",
+            direction='ltr',
+            body=BoxComponent(
+                type = "box",
                 layout='vertical',
                 contents=[
-                    TextComponent(
-                        text=uid,
-                        weight='bold',
-                        color='#aaaaaa',
-                        size='lg'
-                    )
-                ]
-            ),
-            hero=ImageComponent(
-                size='lg',
-                url=profile.picture_url
-            )
-        ))
-        line_bot_api.reply_message(event.reply_token,message)
+                    # title
+                    TextComponent(type = " text",text='Brown Cafe', weight='bold', size='xl')
+                    # review
 
+                    # info
+                     ]
+            ),
+            footer=BoxComponent(
+                type = "box",
+                layout='vertical',
+                spacing='sm',
+                contents=[
+                    # callAction, separator, websiteAction
+                    SpacerComponent(size='sm'),
+                    # callAction
+                     TextComponent(type = "text" ,text="kokoko")
+                    # separator
+                    SeparatorComponent()
+                    # websiteAction
+
+                ]
+            )
+                             )
+       message = FlexSendMessage(alt_text="hello", contents=bubble)
+       line_bot_api.reply_message(event.reply_token,message)
      
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'
