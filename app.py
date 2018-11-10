@@ -410,7 +410,7 @@ def handle_text_message(event):
                 size= "sm"
                 )
             ]
-            ,
+            ),
             hero=BoxComponent(
             type= "image",
             url= "https://i.imgur.com/7cCG7dd.jpg?1",
@@ -510,7 +510,7 @@ def handle_text_message(event):
                 )
             ]
             )
-        ))
+        )
         message = FlexSendMessage(alt_text='最新購物工具！',contents=shopbuddy)
         line_bot_api.reply_message(event.reply_token,message)
 
