@@ -217,7 +217,14 @@ def Carousel_Template(
 #TemplateSendMessage - ImageCarouselTemplate(圖片旋轉木馬)
 
 def image_carousel_message(
-    image_url1,label1,url1
+    image_url1,label1,url1,
+    image_url2,label2,url2,
+    image_url3,label3,url3,
+    image_url4,label4,url4,
+    image_url5,label5,url5,
+    image_url6,label6,url6,
+    image_url7,label7,url7,
+    image_url8,label8,url8,
 ):
     message = TemplateSendMessage(
         alt_text='又有好康優惠囉！',
@@ -228,6 +235,55 @@ def image_carousel_message(
                     action=URITemplateAction(
                         label=label1,
                         uri=url1
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url=image_url2,
+                    action=URITemplateAction(
+                        label=label2,
+                        uri=url2
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url=image_url3,
+                    action=URITemplateAction(
+                        label=label3,
+                        uri=url3
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url=image_url4,
+                    action=URITemplateAction(
+                        label=label4,
+                        uri=url4
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url=image_url5,
+                    action=URITemplateAction(
+                        label=label5,
+                        uri=url5
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url=image_url6,
+                    action=URITemplateAction(
+                        label=label6,
+                        uri=url6
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url=image_url7,
+                    action=URITemplateAction(
+                        label=label7,
+                        uri=url7
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url=image_url8,
+                    action=URITemplateAction(
+                        label=label8,
+                        uri=url8
                     )
                 )
             ]
