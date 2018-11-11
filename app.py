@@ -1,3 +1,4 @@
+#店主店名
 shop_name = 'ipei1008'
 
 #flask(不知道做啥的)
@@ -68,7 +69,6 @@ def is_alphabet(uchar):
     else:
         return "en"
 # ================= API語言客製區 End =================
-
 
 # ================= 獲得使用者訊息 =================
 @handler.add(MessageEvent, message=TextMessage)
