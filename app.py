@@ -1,3 +1,5 @@
+shop_name = "maso0310"
+
 #flask(不知道做啥的)
 from flask import Flask, request, abort
 
@@ -395,7 +397,7 @@ def handle_text_message(event):
         print(type(product))
         line_bot_api.reply_message(event.reply_token,product)
 
-    elif "Shop_buddy" in msg:
+    elif "Shop Buddy" in msg:
         shopbuddy = BubbleContainer(
             type="bubble",
             header=BoxComponent(
@@ -415,17 +417,14 @@ def handle_text_message(event):
             ),
             hero=ImageComponent(
             type= "image",
-            url= "https://i.imgur.com/7cCG7dd.jpg?1",
+            url= "https://i.imgur.com/cBCxtqM.jpg",
             size= "full",
-            gravity="top",
-            align="start",
-            margin="xs",
-            backgroundColor="#009FCC",
+            backgroundColor="#33FFFF",
             aspectRatio= "2:1",
             aspectMode= "fit",
             action= URIAction(
                 type= "uri",
-                uri= "https://tw.shop.com/MASO0310/shopbuddy/reg?credituser=R8957656"
+                uri= "https://tw.shop.com/"+shop_name+"/shopbuddy/reg?credituser=R8957656"
             )
             ),
             body=BoxComponent(
@@ -444,8 +443,15 @@ def handle_text_message(event):
                     aspectMode= "cover",
                     aspectRatio= "4:3",
                     flex=0,
-                    size= "md",
-                    gravity= "bottom"
+                    size= "md"
+                    ),
+                    ImageComponent(
+                    type= "image",
+                    url= "https://i.imgur.com/XEXfWvJ.jpg",
+                    aspectMode= "cover",
+                    aspectRatio= "4:3",
+                    flex=1,
+                    size= "md"
                     ),
                     ImageComponent(
                     type= "image",
@@ -465,7 +471,7 @@ def handle_text_message(event):
                 contents= [
                     TextComponent(
                     type= "text",
-                    text= "操作步驟教學(使用電腦介面)",
+                    text= "操作步驟教學(使用電腦操作)",
                     gravity= "top",
                     size= "xxs",
                     flex= 1
@@ -475,7 +481,7 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "1.免費註冊Shop.com顧客",
+                    text= "1.免費註冊為Shop.com顧客",
                     gravity= "center",
                     size= "xxs",
                     flex= 2
@@ -513,7 +519,7 @@ def handle_text_message(event):
                 action=URIAction(
                     type= "uri",
                     label= "立即註冊成為顧客累積回饋金",
-                    uri= "https://tw.shop.com/ipei1008/nbts/create-myaccount.xhtml?credituser=R8957656&returnurl=https%3A%2F%2Ftw.shop.com%2F"
+                    uri= "https://tw.shop.com/"+shop_name+"/nbts/create-myaccount.xhtml?credituser=R8957656&returnurl=https%3A%2F%2Ftw.shop.com%2F"
                 )
                 )
             ]
