@@ -395,7 +395,7 @@ def handle_text_message(event):
         print(type(product))
         line_bot_api.reply_message(event.reply_token,product)
 
-    elif "ShopBuddy" in msg:
+    elif "超強工具" in msg:
         shopbuddy = BubbleContainer(
             type="bubble",
             header=BoxComponent(
