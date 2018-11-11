@@ -397,7 +397,7 @@ def handle_text_message(event):
         print(type(product))
         line_bot_api.reply_message(event.reply_token,product)
 
-    elif "Shop Buddy" in msg:
+    elif "Shop Buddy！" in msg:
         shopbuddy = BubbleContainer(
             type="bubble",
             header=BoxComponent(
@@ -446,8 +446,15 @@ def handle_text_message(event):
                     aspectMode= "cover",
                     aspectRatio= "4:3",
                     flex=0,
-                    size= "md",
-                    gravity= "bottom"
+                    size= "md"
+                    ),
+                    ImageComponent(
+                    type= "image",
+                    url= "https://i.imgur.com/XEXfWvJ.jpg",
+                    aspectMode= "cover",
+                    aspectRatio= "4:3",
+                    flex=0,
+                    size= "md"
                     ),
                     ImageComponent(
                     type= "image",
