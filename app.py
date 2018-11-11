@@ -306,7 +306,7 @@ def handle_text_message(event):
         big_pic = image_carousel_message(url,'填寫訂購表單','line://app/1610156977-3Wv1zqb1')
         line_bot_api.reply_message(event.reply_token,big_pic)
 
-    elif "store" in msg:
+    elif "最新合作廠商與優惠資訊" in msg:
         image =[
             'https://i.imgur.com/vZyWRBZ.jpg',
             'https://i.imgur.com/3SLpF1Y.jpg',
