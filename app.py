@@ -417,7 +417,7 @@ def handle_text_message(event):
             ),
             hero=ImageComponent(
             type= "image",
-            url= "https://i.imgur.com/7cCG7dd.jpg?1",
+            url= "https://i.imgur.com/jINtACf.png",
             size= "full",
             backgroundColor="#33FFFF",
             aspectRatio= "2:1",
