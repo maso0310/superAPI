@@ -527,6 +527,7 @@ def handle_text_message(event):
             )
         )
         message = FlexSendMessage(alt_text='最新購物工具！',contents=shopbuddy)
+        print("https://tw.shop.com/"+shop_name+"/shopbuddy?credituser="+SessionauxData)
         line_bot_api.reply_message(event.reply_token,message)
 
 
