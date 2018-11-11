@@ -1,7 +1,12 @@
 #店主店名
+<<<<<<< HEAD
 shop_name = 'MASO0310'
 SessionauxData='R8957656'
 
+=======
+shop_name = 'IPEI1008'
+SessionauxData='R7308513'
+>>>>>>> dde3c849c851ec09655fd8380affba4e88b46aa1
 #flask(不知道做啥的)
 from flask import Flask, request, abort
 
@@ -70,7 +75,6 @@ def is_alphabet(uchar):
     else:
         return "en"
 # ================= API語言客製區 End =================
-
 
 # ================= 獲得使用者訊息 =================
 @handler.add(MessageEvent, message=TextMessage)
@@ -522,12 +526,17 @@ def handle_text_message(event):
                     type= "uri",
                     label= "立即註冊成為顧客累積回饋金",
                     uri= "https://tw.shop.com/"+shop_name+"/nbts/create-myaccount.xhtml?credituser="+SessionauxData+"&returnurl=https%3A%2F%2Ftw.shop.com%2F"
+<<<<<<< HEAD
+=======
+                    #    "https://tw.shop.com/MASO0310/nbts/create-myaccount.xhtml?credituser=R8957656&returnurl=https%3A%2F%2Ftw.shop.com%2F"
+>>>>>>> dde3c849c851ec09655fd8380affba4e88b46aa1
                 )
                 )
             ]
             )
         )
         message = FlexSendMessage(alt_text='最新購物工具！',contents=shopbuddy)
+        print("https://tw.shop.com/"+shop_name+"/shopbuddy?credituser="+SessionauxData)
         line_bot_api.reply_message(event.reply_token,message)
 
 
