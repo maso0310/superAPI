@@ -1,4 +1,5 @@
-shop_name = "maso0310"
+#店主店名
+shop_name = 'maso0310'
 
 #flask(不知道做啥的)
 from flask import Flask, request, abort
