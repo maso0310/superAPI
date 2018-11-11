@@ -289,17 +289,17 @@ def image_carousel_message(
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url=image_url8,
+                    image_url=image_url9,
                     action=URITemplateAction(
-                        label=label8,
-                        uri=url8
+                        label=label9,
+                        uri=url9
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url=image_url8,
+                    image_url=image_url10,
                     action=URITemplateAction(
-                        label=label8,
-                        uri=url8
+                        label=label10,
+                        uri=url10
                     )
                 )
             ]
