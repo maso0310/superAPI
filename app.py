@@ -1,6 +1,6 @@
 #店主店名
-shop_name = 'ipei1008'
-
+shop_name = 'IPEI1008'
+SessionauxData='R7308513'
 #flask(不知道做啥的)
 from flask import Flask, request, abort
 
@@ -424,7 +424,7 @@ def handle_text_message(event):
             aspectMode= "fit",
             action= URIAction(
                 type= "uri",
-                uri= "https://tw.shop.com/"+shop_name+"/nbts/create-myaccount.xhtml?credituser=R0003331&returnurl=https%3A%2F%2Ftw.shop.com%2Fshopbuddy"
+                uri= "https://tw.shop.com/"+shop_name+"/shopbuddy?credituser="+SessionauxData
             )
             ),
             body=BoxComponent(
@@ -519,7 +519,8 @@ def handle_text_message(event):
                 action=URIAction(
                     type= "uri",
                     label= "立即註冊成為顧客累積回饋金",
-                    uri= "https://tw.shop.com/"+shop_name+"/shopbuddy?credituser=R0003331"
+                    uri= "https://tw.shop.com/"+shop_name+"/nbts/create-myaccount.xhtml?credituser="+SessionauxData+"&returnurl=https%3A%2F%2Ftw.shop.com%2F"
+                    #    "https://tw.shop.com/MASO0310/nbts/create-myaccount.xhtml?credituser=R8957656&returnurl=https%3A%2F%2Ftw.shop.com%2F"
                 )
                 )
             ]
