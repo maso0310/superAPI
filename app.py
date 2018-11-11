@@ -453,7 +453,7 @@ def handle_text_message(event):
                     url= "https://i.imgur.com/XEXfWvJ.jpg",
                     aspectMode= "cover",
                     aspectRatio= "4:3",
-                    flex=0,
+                    flex=1,
                     size= "md"
                     ),
                     ImageComponent(
