@@ -397,7 +397,7 @@ def handle_text_message(event):
         print(type(product))
         line_bot_api.reply_message(event.reply_token,product)
 
-    elif "Shop Buddy！" in msg:
+    elif "Shop Buddy" in msg:
         shopbuddy = BubbleContainer(
             type="bubble",
             header=BoxComponent(
@@ -474,7 +474,7 @@ def handle_text_message(event):
                 contents= [
                     TextComponent(
                     type= "text",
-                    text= "操作步驟教學(使用電腦介面)",
+                    text= "操作步驟教學(使用電腦操作)",
                     gravity= "top",
                     size= "xxs",
                     flex= 1
@@ -484,7 +484,7 @@ def handle_text_message(event):
                     ),
                     TextComponent(
                     type= "text",
-                    text= "1.免費註冊Shop.com顧客",
+                    text= "1.免費註冊為Shop.com顧客",
                     gravity= "center",
                     size= "xxs",
                     flex= 2
