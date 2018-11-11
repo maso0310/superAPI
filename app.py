@@ -576,10 +576,6 @@ def handle_text_message(event):
                     type= "uri",
                     label= "立即註冊成為顧客累積回饋金",
                     uri= "https://tw.shop.com/"+shop_name+"/nbts/create-myaccount.xhtml?credituser="+SessionauxData+"&returnurl=https%3A%2F%2Ftw.shop.com%2F"
-<<<<<<< HEAD
-=======
-                    #    "https://tw.shop.com/MASO0310/nbts/create-myaccount.xhtml?credituser=R8957656&returnurl=https%3A%2F%2Ftw.shop.com%2F"
->>>>>>> dde3c849c851ec09655fd8380affba4e88b46aa1
                 )
                 )
             ]
