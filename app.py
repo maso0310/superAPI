@@ -395,7 +395,7 @@ def handle_text_message(event):
         print(type(product))
         line_bot_api.reply_message(event.reply_token,product)
 
-    elif "超強工具" in msg:
+    elif "Shop_buddy" in msg:
         shopbuddy = BubbleContainer(
             type="bubble",
             header=BoxComponent(
@@ -513,7 +513,7 @@ def handle_text_message(event):
                 action=URIAction(
                     type= "uri",
                     label= "立即註冊成為顧客累積回饋金",
-                    uri= "https://tw.shop.com/MASO0310/nbts/create-myaccount.xhtml?credituser=R8957656&returnurl=https%3A%2F%2Ftw.shop.com%2F"
+                    uri= "https://tw.shop.com/ipei1008/nbts/create-myaccount.xhtml?credituser=R8957656&returnurl=https%3A%2F%2Ftw.shop.com%2F"
                 )
                 )
             ]
