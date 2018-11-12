@@ -233,6 +233,13 @@ def image_carousel_message(
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
+                    image_url=image_url0,
+                    action=URITemplateAction(
+                        label=label0,
+                        uri=url0
+                    )
+                ),
+                ImageCarouselColumn(
                     image_url=image_url1,
                     action=URITemplateAction(
                         label=label1,
@@ -293,13 +300,6 @@ def image_carousel_message(
                     action=URITemplateAction(
                         label=label9,
                         uri=url9
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url=image_url10,
-                    action=URITemplateAction(
-                        label=label10,
-                        uri=url10
                     )
                 )
             ]
