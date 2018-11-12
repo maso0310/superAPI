@@ -164,16 +164,16 @@ def handle_text_message(event):
     elif "最新合作廠商與優惠資訊" in msg:
         
         image =[
-            'https://i.imgur.com/vZyWRBZ.jpg',
-            'https://i.imgur.com/3SLpF1Y.jpg',
-            'https://i.imgur.com/pbxKqbB.jpg',
-            'https://i.imgur.com/wOOvCXL.jpg',
-            'https://i.imgur.com/Z6kZQqM.jpg',
-            'https://i.imgur.com/2AX5DKl.jpg',
-            'https://i.imgur.com/zeq8AW9.jpg',
-            'https://i.imgur.com/gLsu6pV.jpg',
-            'https://i.imgur.com/cOpUfNd.jpg',
-            'https://i.imgur.com/cqu7IA7.jpg'
+            'https://i.imgur.com/vZyWRBZb.jpg',
+            'https://i.imgur.com/3SLpF1Yb.jpg',
+            'https://i.imgur.com/pbxKqbBb.jpg',
+            'https://i.imgur.com/wOOvCXLb.jpg',
+            'https://i.imgur.com/Z6kZQqMb.jpg',
+            'https://i.imgur.com/2AX5DKlb.jpg',
+            'https://i.imgur.com/zeq8AW9b.jpg',
+            'https://i.imgur.com/gLsu6pVb.jpg',
+            'https://i.imgur.com/cOpUfNdb.jpg',
+            'https://i.imgur.com/cqu7IA7b.jpg'
         ]
         
         label = [
@@ -216,6 +216,7 @@ def handle_text_message(event):
         )
         line_bot_api.reply_message(event.reply_token,message)
 '''
+
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'
         p1_url = 'https://www.cheerspops.com.tw/%E8%92%9F%E8%92%BB%E5%87%8D.html'
