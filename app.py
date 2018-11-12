@@ -160,7 +160,7 @@ def handle_text_message(event):
         url = 'https://i.imgur.com/8O8fwXP.jpg'
         big_pic = image_carousel_message(url,'填寫訂購表單','line://app/1610156977-3Wv1zqb1')
         line_bot_api.reply_message(event.reply_token,big_pic)
-'''
+
     elif "最新合作廠商與優惠資訊" in msg:
         
         image =[
@@ -215,7 +215,7 @@ def handle_text_message(event):
             image[9],label[9],url[9]
         )
         line_bot_api.reply_message(event.reply_token,message)
-'''
+
 
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'
