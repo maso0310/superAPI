@@ -216,7 +216,7 @@ def handle_text_message(event):
         )
         line_bot_api.reply_message(event.reply_token,message)
 '''
- 
+
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'
         p1_url = 'https://www.cheerspops.com.tw/%E8%92%9F%E8%92%BB%E5%87%8D.html'
