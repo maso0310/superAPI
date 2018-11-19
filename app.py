@@ -157,7 +157,7 @@ def handle_text_message(event):
 
     elif "週年慶" in msg:
         url = 'https://lh6.googleusercontent.com/7eqrodxaHO8u4D05jNVJNWkUV0eBNPKBHp9KSOFVC2tGOIFpO821iRhw3jPvCRiPnd-32akbeGNnBz29GsQCe2fV4gCxKjoFoylCCCuWQXHXZVO9pZXCnCcbbLYggPgqjLNkHQff6mdB2S0'
-        big_pic = image_carousel_message1(url,'感恩週年慶填問卷送歲末禮物','line://app/1610156977-x4KwQLJw')
+        big_pic = image_carousel_message1(url,'填問卷送禮物','line://app/1610156977-x4KwQLJw')
         line_bot_api.reply_message(event.reply_token,big_pic)
 
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
