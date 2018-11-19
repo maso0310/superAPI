@@ -155,7 +155,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
     
 
-    elif "週年慶" in msg:
+    elif "Maso商城週年慶，感謝大家長期以來的支持" in msg:
         url = 'https://i.imgur.com/nMcOcAR.jpg?1'
         big_pic = image_carousel_message1(url,'填問卷送禮物','line://app/1610156977-x4KwQLJw')
         line_bot_api.reply_message(event.reply_token,big_pic)
