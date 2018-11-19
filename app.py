@@ -155,67 +155,10 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
     
 
-    elif "這樣更簡單明瞭一點" in msg:
-        print(type(event.message))
+    elif "週年慶" in msg:
         url = 'https://i.imgur.com/8O8fwXP.jpg'
-        big_pic = image_carousel_message(url,'填寫訂購表單','line://app/1610156977-3Wv1zqb1')
+        big_pic = image_carousel_message(url,'感恩週年慶填問卷送歲末禮物','line://app/1610156977-x4KwQLJw')
         line_bot_api.reply_message(event.reply_token,big_pic)
-
-    elif "最新合作廠商與優惠資訊" in msg:
-        
-        image =[
-            'https://i.imgur.com/vZyWRBZb.jpg',
-            'https://i.imgur.com/3SLpF1Yb.jpg',
-            'https://i.imgur.com/pbxKqbBb.jpg',
-            'https://i.imgur.com/wOOvCXLb.jpg',
-            'https://i.imgur.com/Z6kZQqMb.jpg',
-            'https://i.imgur.com/2AX5DKlb.jpg',
-            'https://i.imgur.com/zeq8AW9b.jpg',
-            'https://i.imgur.com/gLsu6pVb.jpg',
-            'https://i.imgur.com/cOpUfNdb.jpg',
-            'https://i.imgur.com/cqu7IA7b.jpg'
-        ]
-        
-        label = [
-            '香帥蛋糕',
-            '阿舍食堂',
-            '找好東西',
-            '戀家小舖',
-            '披薩市美食超市',
-            '聯華食品',
-            '名品會',
-            '泰山購物網',
-            '阿瘦皮鞋',
-            '家樂福'
-        ]
-
-        url = [
-            'https://www.siangshuaicake.com.tw/index.html',
-            'https://www.a-shashop.com/index.html',
-            'https://www.citiesocial.com/?view=general_audiences&utm_source=shop.com&utm_medium=cps&RID=C5331501-t1541913134769028994&Click_ID=10274d2194f5572fc7175847c73ace',
-            'https://www.lovingfamily.com.tw/TC/index.aspx?utm_source=twshop',
-            'https://www.pizzafood.com.tw/?RID=C5331501-t1541913321116085191&Click_ID=10279800f3b6f7f86aeab9b50680d1',
-            'https://shop.lianhwa.com.tw/?RID_trans=C5331501-t1541913380813290778&Click_ID_trans=102d88d6507aa7a52432074d75e95d&utm_source=markettaiwan&utm_medium=C5331501-t1541913380813290778&utm_campaign=102d88d6507aa7a52432074d75e95d',
-            'https://shop.vipoutlet.com.tw/?RID=C5331501-t1541913423965942408&Click_ID=10281a018fdd2801ff8cb6c2b561e3',
-            'https://www.taisunshop.com.tw/?RID=C5331501-t1541913602022850082&Click_ID=1022f1714bba85cebdb727f002b445',
-            'https://www.asoshop.com.tw/index.html',
-            'https://online.carrefour.com.tw/tw/?utm_source=twshop&utm_medium=cps&vtm_channel=shopcom&RID=C5331501-t1541913738156597867&Click_ID=102fe34bf64ad89c9f06af19cbe9e2'
-        ]
-
-        message = image_carousel_message(
-            image[0],label[0],url[0],
-            image[1],label[1],url[1],
-            image[2],label[2],url[2],
-            image[3],label[3],url[3],
-            image[4],label[4],url[4],
-            image[5],label[5],url[5],
-            image[6],label[6],url[6],
-            image[7],label[7],url[7],
-            image[8],label[8],url[8],
-            image[9],label[9],url[9]
-        )
-        line_bot_api.reply_message(event.reply_token,message)
-
 
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'
