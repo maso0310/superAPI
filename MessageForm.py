@@ -215,8 +215,27 @@ def Carousel_Template(
 
 
 #TemplateSendMessage - ImageCarouselTemplate(圖片旋轉木馬)
+def image_carousel_message1(
+    image_url0,label0,url0
+):
+    message = TemplateSendMessage(
+        alt_text='又有好康優惠囉！',
+        template=ImageCarouselTemplate(
+            columns=[
+                ImageCarouselColumn(
+                    image_url=image_url0,
+                    action=URITemplateAction(
+                        label=label0,
+                        uri=url0
+                    )
+                )
+            ]
+        )
+    )
+    return message
 
-def image_carousel_message(
+
+def image_carousel_message10(
     image_url0,label0,url0,
     image_url1,label1,url1,
     image_url2,label2,url2,
