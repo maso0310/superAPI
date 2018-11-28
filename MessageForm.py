@@ -219,7 +219,7 @@ def image_carousel_message1(
     image_url0,label0,url0
 ):
     message = TemplateSendMessage(
-        alt_text='又有好康優惠囉！',
+        alt_text='快來看有什麼好消息！',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
