@@ -153,7 +153,11 @@ def handle_text_message(event):
         f = open('finance.txt','r',encoding='UTF-8')
         look = f.read()
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
-    
+
+    elif "全新生活問卷" in msg:
+        output = image_carousel_message1('https://e.share.photo.xuite.net/fairc/1e0df66/5172143/260290231_m.jpg','健康飲食問卷調查','line://app/1610156977-prP8M5q8')
+        line_bot_api.reply_message(event.reply_token,output)
+#line://app/1610156977-prP8M5q8
 
     elif "Maso商城週年慶，感謝大家長期以來的支持" in msg:
         url = 'https://i.imgur.com/nMcOcAR.jpg?1'
