@@ -154,7 +154,7 @@ def handle_text_message(event):
         look = f.read()
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=look))
 
-    elif "全新生活健康飲食問卷調查" in msg:
+    elif "全新生活問卷調查" in msg:
         output = image_carousel_message1('https://e.share.photo.xuite.net/fairc/1e0df66/5172143/260290231_m.jpg','健康飲食問卷調查','line://app/1610156977-prP8M5q8')
         line_bot_api.reply_message(event.reply_token,output)
 #line://app/1610156977-prP8M5q8
