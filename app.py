@@ -14,6 +14,7 @@ import re
 import csv
 import requests
 from bs4 import BeautifulSoup
+import tempfile
 
 #JSON編碼解碼
 import json
