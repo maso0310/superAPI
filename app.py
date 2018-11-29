@@ -354,6 +354,7 @@ def handle_message(event):
 @handler.add(MessageEvent, message=(ImageMessage))
 def handle_message(event):
     #如果LINE用戶端傳送過來的是圖片
+    static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
     if isinstance(event.message, ImageMessage):
     #先設定選擇的檔案附檔名
         ext = 'jpg'
