@@ -14,7 +14,13 @@ import re
 import csv
 import requests
 from bs4 import BeautifulSoup
-import tempfile
+
+#IMGUR上傳
+from imgurpython import ImgurClient
+
+import tempfile, os
+from config import client_id, client_secret, album_id, access_token, refresh_token, line_channel_access_token, \
+    line_channel_secret
 
 #JSON編碼解碼
 import json
@@ -373,15 +379,10 @@ def handle_message(event):
             }
             client.upload_from_path(path, config=config, anon=False)
             #os.remove(path)
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text='上傳成功'))
             #job =  q.fetch_job(result.id)
             #print(job.result)
         except:
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text='上傳失敗'))
+            pass            
         return 0
 
 
