@@ -375,8 +375,8 @@ def handle_message(event):
             config = {
                 'album': album_id,
                 'name': image_name,
-                'title': 'Catastrophe!',
-                'description': 'Cute kitten being cute on '
+                'title': image_name,
+                'description': '機器人備份圖片'
             }
             path = os.path.join('static', 'tmp', dist_name)
             client.upload_from_path(path, config=config, anon=False)
