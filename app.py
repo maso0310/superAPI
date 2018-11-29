@@ -47,7 +47,7 @@ ai = apiai.ApiAI('084bce6e157c47d39d5cb23715b47b69')
 line_bot_api = LineBotApi('TNwu7tqho7m8MnMSmG8jpAF8tWl+hzBQzb/JKdbDBJv3HkMAUJiz8uo0nS0hG89tbsjQk8IV02p/v5ChZ1txRKjMlvPufgBPak5Y5AEwJt84wc9Mocg+yeZ8oyRQcfwFKnfmNaNRJR27Qc9r6iY38AdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('d184dfc3ec38e22fb7edf6b7275023a8')
 
-
+static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -354,7 +354,6 @@ def handle_message(event):
 @handler.add(MessageEvent, message=(ImageMessage))
 def handle_message(event):
     #如果LINE用戶端傳送過來的是圖片
-    static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
     if isinstance(event.message, ImageMessage):
     #先設定選擇的檔案附檔名
         ext = 'jpg'
