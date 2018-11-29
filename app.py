@@ -17,7 +17,6 @@ from bs4 import BeautifulSoup
 
 #IMGUR上傳
 from imgurpython import ImgurClient
-
 import tempfile, os
 from config import client_id, client_secret, album_id, access_token, refresh_token, line_channel_access_token, \
     line_channel_secret
