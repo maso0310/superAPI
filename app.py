@@ -355,6 +355,8 @@ def handle_message(event):
 @handler.add(MessageEvent, message=(ImageMessage, TextMessage))
 def handle_message(event):
     uid = event.source.user_id
+    profile = line_bot_api.get_profile(uid)
+    print(profile.display_name)
     if isinstance(event.message, ImageMessage):
         ext = 'jpg'
         message_content = line_bot_api.get_message_content(event.message.id)
@@ -367,7 +369,7 @@ def handle_message(event):
         dist_name = os.path.basename(dist_path)
         os.rename(tempfile_path, dist_path)
         time_now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        image_name = time_now + uid
+        image_name = time_now + "_" +profile.display_name
         try:
             client = ImgurClient(client_id, client_secret, access_token, refresh_token)
             config = {
