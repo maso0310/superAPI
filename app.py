@@ -350,20 +350,27 @@ def handle_message(event):
     line_bot_api.reply_message(event.reply_token, message)
 '''
 
+#APP的main函數
 @handler.add(MessageEvent, message=(ImageMessage))
 def handle_message(event):
-    uid = event.source.user_id
+    #如果LINE用戶端傳送過來的是圖片
     if isinstance(event.message, ImageMessage):
+    #先設定選擇的檔案附檔名
         ext = 'jpg'
+        #擷取訊息內容
         message_content = line_bot_api.get_message_content(event.message.id)
+        print(message_content)
+        #建立臨時目錄
         with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
+        #將臨時目錄寫入路徑tempfile_path
             for chunk in message_content.iter_content():
                 tf.write(chunk)
             tempfile_path = tf.name
-
+        #臨時路徑+副檔名
         dist_path = tempfile_path + '.' + ext
+        #未知
         dist_name = os.path.basename(dist_path)
-
+        #os.rename(old,new)將舊檔名改成新檔名
         os.rename(tempfile_path, dist_path)
         path = os.path.join('static', 'tmp', dist_name)
         print("接收到的圖片路徑："+path)
