@@ -1,6 +1,4 @@
-import os
-j = os.path.basename('shopbuddy.json')
-f = open('shopbuddy.json',encoding='utf-8')
-print(j)
-print(f)
-print(type(f))
+import datetime
+import re
+time_now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+print(time_now)

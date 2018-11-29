@@ -10,6 +10,7 @@ from flask import Flask, request, abort
 
 #基礎模組
 import time
+import datetime
 import re
 import csv
 import requests
@@ -353,6 +354,7 @@ def handle_message(event):
 #APP的main函數
 @handler.add(MessageEvent, message=(ImageMessage, TextMessage))
 def handle_message(event):
+    uid = event.source.user_id
     if isinstance(event.message, ImageMessage):
         ext = 'jpg'
         message_content = line_bot_api.get_message_content(event.message.id)
@@ -364,11 +366,13 @@ def handle_message(event):
         dist_path = tempfile_path + '.' + ext
         dist_name = os.path.basename(dist_path)
         os.rename(tempfile_path, dist_path)
+        time_now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        image_name = time_now + uid
         try:
             client = ImgurClient(client_id, client_secret, access_token, refresh_token)
             config = {
                 'album': album_id,
-                'name': 'Catastrophe!',
+                'name': image_name,
                 'title': 'Catastrophe!',
                 'description': 'Cute kitten being cute on '
             }
