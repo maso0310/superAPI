@@ -344,7 +344,44 @@ def handle_message(event):
     line_bot_api.reply_message(event.reply_token, message)
 '''
 
+@handler.add(MessageEvent, message=(ImageMessage))
+def handle_message(event):
+    uid = event.source.user_id
+    if isinstance(event.message, ImageMessage):
+        ext = 'jpg'
+        message_content = line_bot_api.get_message_content(event.message.id)
+        with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
+            for chunk in message_content.iter_content():
+                tf.write(chunk)
+            tempfile_path = tf.name
 
+        dist_path = tempfile_path + '.' + ext
+        dist_name = os.path.basename(dist_path)
+
+        os.rename(tempfile_path, dist_path)
+        path = os.path.join('static', 'tmp', dist_name)
+        print("接收到的圖片路徑："+path)
+
+        try:
+            client = ImgurClient(client_id, client_secret, access_token, refresh_token)
+            config = {
+                'album': 'UthLp77',
+                'name': '2018/11/29',
+                'title': 'uid',
+                'description': 'Cute kitten being cute on '
+            }
+            client.upload_from_path(path, config=config, anon=False)
+            #os.remove(path)
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text='上傳成功'))
+            #job =  q.fetch_job(result.id)
+            #print(job.result)
+        except:
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text='上傳失敗'))
+        return 0
 
 
 import os
