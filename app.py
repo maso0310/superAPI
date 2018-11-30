@@ -369,13 +369,13 @@ def handle_message(event):
         dist_name = os.path.basename(dist_path)
         os.rename(tempfile_path, dist_path)
         time_now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        image_name = time_now + "_" +profile.display_name
+        #image_name = time_now + "_" +profile.display_name
         try:
             client = ImgurClient(client_id, client_secret, access_token, refresh_token)
             config = {
                 'album': album_id,
-                'name': image_name,
-                'title': image_name,
+                'name': dist_name,
+                'title': time_now,
                 'description': '機器人備份圖片'
             }
             path = os.path.join('static', 'tmp', dist_name)
