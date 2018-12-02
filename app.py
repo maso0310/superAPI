@@ -354,9 +354,6 @@ def handle_message(event):
 #APP的main函數
 @handler.add(MessageEvent, message=(ImageMessage, TextMessage))
 def handle_message(event):
-    uid = event.source.user_id
-    profile = line_bot_api.get_profile(uid)
-    print(profile.display_name)
     if isinstance(event.message, ImageMessage):
         ext = 'jpg'
         message_content = line_bot_api.get_message_content(event.message.id)
