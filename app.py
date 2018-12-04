@@ -355,6 +355,8 @@ def handle_message(event):
 @handler.add(MessageEvent, message=(ImageMessage, TextMessage))
 def handle_message(event):
     if isinstance(event.message, ImageMessage):
+        uid = event.source.user_id # user id
+        profile = line_bot_api.get_profile(uid)
         ext = 'jpg'
         message_content = line_bot_api.get_message_content(event.message.id)
         with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
@@ -366,13 +368,13 @@ def handle_message(event):
         dist_name = os.path.basename(dist_path)
         os.rename(tempfile_path, dist_path)
         time_now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        #image_name = time_now + "_" +profile.display_name
+        image_name = time_now + "_" +profile.display_name
         try:
             client = ImgurClient(client_id, client_secret, access_token, refresh_token)
             config = {
                 'album': album_id,
-                'name': dist_name,
-                'title': time_now,
+                'name': image_name,
+                'title': image_name,
                 'description': '機器人備份圖片'
             }
             path = os.path.join('static', 'tmp', dist_name)
