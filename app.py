@@ -352,7 +352,7 @@ def handle_message(event):
 '''
 
 #APP的main函數
-@handler.add(MessageEvent, message=(ImageMessage, TextMessage))
+@handler.add(MessageEvent, message=ImageMessage)
 def handle_message(event):
     if isinstance(event.message, ImageMessage):
         uid = event.source.user_id # user id
