@@ -181,7 +181,7 @@ def handle_text_message(event):
         product = imagemap_message(img_url,p1_url,p1_url,p1_url,p1_url)
         print(type(product))
         line_bot_api.reply_message(event.reply_token,product)
-
+        
     elif "Shop Buddy" in msg:
         shopbuddy = BubbleContainer(
             type="bubble",
