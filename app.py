@@ -175,6 +175,10 @@ def handle_text_message(event):
         sticker_reply = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,sticker_reply)
 
+    elif "安安，安靜" in msg:
+        sticker_reply = sticker_message(2,3)
+        line_bot_api.reply_message(event.reply_token,sticker_reply)
+
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'
         p1_url = 'https://www.cheerspops.com.tw/%E8%92%9F%E8%92%BB%E5%87%8D.html'
