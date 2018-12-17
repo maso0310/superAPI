@@ -171,7 +171,7 @@ def handle_text_message(event):
         big_pic = image_carousel_message1(url,'填問卷送禮物','line://app/1610156977-x4KwQLJw')
         line_bot_api.reply_message(event.reply_token,big_pic)
 
-    elif "查夥伴商店" im msg:
+    elif "查夥伴商店" in msg:
         key_word = msg.replace("查夥伴商店","")
         url = "https://tw.shop.com/maso0310/search/"+key_word
         msg = text_message(url)
