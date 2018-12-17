@@ -177,6 +177,12 @@ def handle_text_message(event):
         msg = text_message(url)
         line_bot_api.reply_message(event.reply_token,msg)
 
+    elif "google" in msg:
+        key_word = msg.replace("google","")
+        url = "https://www.google.com/search?q=" + key key_word
+        msg = text_message(url)
+        line_bot_api.reply_message(event.reply_token,msg)
+
     elif "安安，安靜" in msg:
         sticker_reply = sticker_message(2,3)
         line_bot_api.reply_message(event.reply_token,sticker_reply)
