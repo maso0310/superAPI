@@ -170,6 +170,10 @@ def handle_text_message(event):
         url = 'https://i.imgur.com/nMcOcAR.jpg?1'
         big_pic = image_carousel_message1(url,'填問卷送禮物','line://app/1610156977-x4KwQLJw')
         line_bot_api.reply_message(event.reply_token,big_pic)
+    
+    elif "安安" in msg:
+        sticker_reply = sticker_message(1,1)
+        line_bot_api.reply_message(event.reply_token,sticker_reply)
 
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
         img_url = 'https://i.imgur.com/UwmK8yX.png'
