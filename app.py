@@ -173,7 +173,7 @@ def handle_text_message(event):
 
     elif "查夥伴商店" in msg:
         key_word = msg.replace("查夥伴商店","")
-        url = "https://tw.shop.com/maso0310/search/"+key_word
+        url = "https://tw.shop.com/search/"+key_word
         msg = text_message(url)
         line_bot_api.reply_message(event.reply_token,msg)
 
