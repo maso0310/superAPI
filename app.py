@@ -172,7 +172,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token,big_pic)
     
     elif "安安" in msg:
-        sticker_reply = sticker_message(1,1)
+        sticker_reply = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,sticker_reply)
 
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
