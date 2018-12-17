@@ -179,7 +179,7 @@ def handle_text_message(event):
 
     elif "google" in msg:
         key_word = msg.replace("google","")
-        url = "https://www.google.com/search?q=" + key key_word
+        url = "https://www.google.com/search?q=" + key_word
         msg = text_message(url)
         line_bot_api.reply_message(event.reply_token,msg)
 
