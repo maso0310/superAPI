@@ -171,12 +171,13 @@ def handle_text_message(event):
         big_pic = image_carousel_message1(url,'填問卷送禮物','line://app/1610156977-x4KwQLJw')
         line_bot_api.reply_message(event.reply_token,big_pic)
     
-    elif "安安" in msg:
-        sticker_reply = sticker_message(1,2)
-        line_bot_api.reply_message(event.reply_token,sticker_reply)
 
     elif "安安，安靜" in msg:
         sticker_reply = sticker_message(2,3)
+        line_bot_api.reply_message(event.reply_token,sticker_reply)
+
+    elif "安安" in msg:
+        sticker_reply = sticker_message(1,2)
         line_bot_api.reply_message(event.reply_token,sticker_reply)
 
     elif "來看看包裝精美的蒟蒻禮盒吧" in msg:
