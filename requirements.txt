@@ -15,4 +15,4 @@ imgurpython==1.1.7
 numpy==1.15.2
 oauth2client==4.1.3
 requests==2.20.0
-urllib3==1.24
+urllib3==1.24.2
